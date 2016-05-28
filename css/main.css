@@ -13,6 +13,7 @@ body {
   width: 100%;
   font-family: 'Karla', sans-serif;
   font-size: 14px;
+  min-width: 1024px;
 }
 
 h1, h2, h3 {
@@ -168,6 +169,7 @@ header h2 {
   width: 1024px;
   height: 500px;
   color: white;
+  text-align: center;
 }
 
 #benefitsleft {
@@ -259,6 +261,11 @@ header h2 {
   background-color: rgb(133, 230, 68);
 }
 
+#worldteam p {
+  margin: 30px auto;
+  width: 50%;
+}
+
 footer {
   color: white;
   text-align: center;
@@ -268,6 +275,11 @@ footer h1 {
   color: white;
   font-weight: normal;
   font-size: 38px;
+  padding-top: 80px;
+}
+
+footer p {
+  margin: 30px auto;
 }
 
 footer button {
