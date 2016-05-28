@@ -4,22 +4,30 @@
 
 body {
   margin: 0 auto;
-  width: 1024px;
+  width: 100%;
   font-family: 'Karla', sans-serif;
+  font-size: 14px;
+}
+
+h1, h2, h3 {
+    -webkit-margin-before: 0px; -webkit-margin-after: 0px; -webkit-margin-start: 0px; -webkit-margin-end: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 header {
   background: url('../img/header-desktop.jpg');
-  background-size: 100%;
+  background-size: cover;
   height: 678.4px;
   background-repeat: no-repeat;
   border-bottom: 5px solid #73c63a;
 }
 
 #vision {
+  margin: 0 auto;
   background-color: white;
   height: 350px;
-  width: 100%;
+  width: 1024px;
 }
 
 #benefits {
@@ -31,6 +39,7 @@ header {
 }
 
 #howitworks {
+  margin: 0 auto;
   background-color: white;
   height: 350px;
   width: 100%;
@@ -38,17 +47,16 @@ header {
 
 #worldteam {
   background: url('../img/5-bg.png');
-  background-size: 100% 678.4px;
   background-repeat: repeat-x;
   width: 100%;
-  height: 678.4px;
+  height: 600px;
 }
 
 footer {
   width: 100%;
   height: 350.57px;
   background: url('../img/footer-desktop.jpg');
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -59,7 +67,7 @@ footer {
 #headercontent {
   color: white;
   margin: 0 auto;
-  width: 674;
+  width: 1024px;
   height: 528.4px;
   padding-top: 150px;
   text-align: justify;
@@ -83,22 +91,21 @@ footer {
 
 header p {
   display: inline;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 header h2 {
   display: inline-block;
-  -webkit-margin-before: 0px; -webkit-margin-after: 0px; -webkit-margin-start: 0px; -webkit-margin-end: 0px;
   padding: 0px;
   margin: 40px 10px 0px 0px;
   padding: 2px 5px 2px 5px;
-  font-size: 12px;
+  font-size: 14px;
   background-color:rgba(0, 0, 0, 0.3);
 }
 
 #visioncontent {
   margin: 0 auto;
-  width: 100%;
+  width: 1024px;
   height: 100%;
 }
 
@@ -108,12 +115,133 @@ header h2 {
   height: 100%;
 }
 
+#visionblank {
+  float: left;
+  width: 50%;
+  height:33.3333%;
+}
+
 #visionright {
+  float: left;
+  width: 50%;
+  height: 66.6666%;
+}
+
+#visionright h1 {
+  font-size: 38px;
+  color: #3491d2;
+  font-weight: normal;
+}
+
+#visionimage {
+  margin: 15%;
+}
+
+#benefitstop {
+  padding-top: 60px;
+  height: 118.4px;
+  width: 100%;
+  text-align: center;
+}
+
+#benefitstop h1 {
+  color: white;
+  font-weight: normal;
+  font-size: 38px;
+  padding-bottom: 10px;
+}
+
+#benefitstop p {
+  color: white;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+#benefitscontent {
+  margin: 0 auto;
+  width: 1024px;
+  height: 500px;
+  color: white;
+}
+
+#benefitsleft {
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+}
+
+#benefitsmid {
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+}
+
+#benefitsright {
+  float: left;
+  width: 33.3333%;
+  height: 100%;
+}
+
+.imagedesc {
+  margin-top: -15px;
+  font-weight: bold;
+  height: 2em;
+}
+
+#benefitscontent img {
+  margin: 20%;
+}
+
+#howcontent {
+  margin: 0 auto;
+  width: 1024px;
+  height: 100%;
+}
+
+#howleft {
   float: left;
   width: 50%;
   height: 100%;
 }
 
-#visionimage {
-  margin: 20%;
+#howblank {
+  float: left;
+  width: 50%;
+  height:33.3333%;
+}
+
+#howright {
+  float: left;
+  width: 50%;
+  height: 66.6666%;
+}
+
+#howright h1 {
+  font-size: 38px;
+  color: #3491d2;
+  font-weight: normal;
+}
+
+#howimage {
+  margin: 10%;
+}
+
+#worldteam {
+  text-align: center;
+}
+
+#worldteam h1 {
+  color: white;
+  font-weight: normal;
+  font-size: 38px;
+}
+
+footer {
+  color: white;
+}
+
+footer h1 {
+  color: white;
+  font-weight: normal;
+  font-size: 38px;
 }
