@@ -26,10 +26,15 @@ h1, h2, h3 {
     padding: 0px;
 }
 
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
 header {
   background: url('../img/1-background-earthsun.jpg');
   background-size: cover;
-  height: 678.4px;
+  height: 778.4px;
   background-repeat: no-repeat;
   border-bottom: 5px solid #73c63a;
 }
@@ -46,7 +51,7 @@ header {
   background-size: 100% 678.4px;
   background-repeat: repeat-x;
   width: 100%;
-  height: 678.4px;
+  height: 648.4px;
 }
 
 #howitworks {
@@ -71,9 +76,6 @@ footer {
   background-repeat: no-repeat;
 }
 
-#vision h1 {
-
-}
 
 #headertitle {
   padding-top: 20px;
@@ -105,8 +107,10 @@ footer {
   color: white;
   margin: 0 auto;
   width: 1024px;
-  height: 498.4px;
+  height: 598.4px;
   text-align: justify;
+  background-image: url('../img/1-blockchainoverlay.png');
+  background-size: cover;
 }
 
 #headerleft {
@@ -115,8 +119,9 @@ footer {
   height: 100%;
   padding-left: 5%;
   padding-right: 5%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   border-top-left-radius: 10px;
+  text-align: center;
 }
 
 #headerright {
@@ -125,19 +130,45 @@ footer {
   height: 100%;
   padding-left: 5%;
   padding-right: 5%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   border-top-right-radius: 10px;
+}
+
+#headerleft img {
+  float: left;
+  clear: both;
+  margin-top: 0px;
+}
+
+#headerleft img:first-child {
+  margin-top: 80px;
+  width: 120px;
+  height: 120px;
+  margin-left: 175px;
+}
+
+#headerleft img:nth-child(2) {
+  width: 250px;
+  height: 250px;
+  margin-left: 110px;
+}
+
+#headerleft img:nth-child(3) {
+  width: 120px;
+  height: 120px;
+  margin-left: 170px;
 }
 
 header p {
   display: inline;
   font-size: 15px;
+  text-shadow: 1px 0px 1px #bbb;
 }
 
 header h2 {
   display: inline-block;
   padding: 0px;
-  margin: 40px 10px 0px 0px;
+  margin: 80px 10px 0px 0px;
   padding: 2px 5px 2px 5px;
   font-size: 15px;
   background-color:rgba(0, 0, 0, 0.3);
@@ -200,9 +231,10 @@ header h2 {
 #benefitscontent {
   margin: 0 auto;
   width: 1024px;
-  height: 500px;
+  height: 470px;
   color: white;
   text-align: center;
+  margin-top: -30px;
 }
 
 #benefitsleft {
@@ -224,13 +256,17 @@ header h2 {
 }
 
 .imagedesc {
-  margin-top: -15px;
+  margin-top: -20%;
   font-weight: bold;
-  height: 2em;
+  height: 4em;
 }
 
 #benefitscontent img {
-  margin: 20%;
+  margin: 30%;
+}
+
+.benefitsp {
+  padding: 0px 15px 0px 15px;
 }
 
 #howcontent {
@@ -258,7 +294,9 @@ header h2 {
 }
 
 #howright p {
-  padding-right: 10%;
+  padding-right: 15%;
+  font-size: 18px;
+  text-align: justify;
 }
 
 #howright h1 {
@@ -273,12 +311,6 @@ header h2 {
 
 #worldteam {
   text-align: center;
-}
-
-#worldteam h1 {
-  color: white;
-  font-weight: normal;
-  font-size: 38px;
 }
 
 #worldteam button {
@@ -299,9 +331,38 @@ header h2 {
 }
 
 #worldteam p {
-  margin: 30px auto;
+  margin: 20px auto 10px auto;
   width: 50%;
 }
+
+#worldteam img {
+  margin-top: -5px;
+  width: 583px;
+  height: 298px;
+}
+
+#worldteam h1 {
+  color: white;
+  font-size: 38px;
+  margin-top: 30px;
+  font-weight: lighter;
+}
+
+#worldteam h2 {
+  margin: 40px 0px;
+  font-weight: lighter;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+}
+
+#worldchain {
+  height: 278px;
+  width: 100%;
+  background: url('../img/1-blockchainoverlay.png');
+  background-size: cover;
+}
+
 
 footer {
   color: white;
@@ -316,7 +377,8 @@ footer h1 {
 }
 
 footer p {
-  margin: 30px auto;
+  margin: 25px auto 45px auto;
+  font-size: 18px;
 }
 
 footer button {
