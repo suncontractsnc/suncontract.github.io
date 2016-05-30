@@ -313,23 +313,6 @@ header h2 {
   text-align: center;
 }
 
-#worldteam button {
-  background-color: #73c63a;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 24px;
-  padding: 15px 100px;
-  border-radius: 15px;
-  font-weight: bold;
-  box-shadow: 0px 0px 5px #555;
-
-}
-
-#worldteam button:hover {
-  background-color: rgb(133, 230, 68);
-}
-
 #worldteam p {
   margin: 20px auto 10px auto;
   width: 50%;
@@ -349,7 +332,7 @@ header h2 {
 }
 
 #worldteam h2 {
-  margin: 40px 0px;
+  margin: 25px 0px 10px 0px;
   font-weight: lighter;
   color: #fff;
   font-family: 'Open Sans', sans-serif;
