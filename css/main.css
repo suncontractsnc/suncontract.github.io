@@ -13,7 +13,7 @@ body {
   width: 100%;
   font-family: 'Karla', sans-serif;
   font-size: 14px;
-  min-width: 1024px;  
+  min-width: 960px;  
 }
 
 button {
@@ -106,7 +106,7 @@ footer {
 #headercontent {
   color: white;
   margin: 0 auto;
-  width: 1024px;
+  width: 960px;
   height: 598.4px;
   text-align: justify;
   background-image: url('../img/1-blockchainoverlay.png');
@@ -176,7 +176,7 @@ header h2 {
 
 #visioncontent {
   margin: 0 auto;
-  width: 1024px;
+  width: 960px;
   height: 100%;
 }
 
@@ -230,7 +230,7 @@ header h2 {
 
 #benefitscontent {
   margin: 0 auto;
-  width: 1024px;
+  width: 960px;
   height: 470px;
   color: white;
   text-align: center;
@@ -271,7 +271,7 @@ header h2 {
 
 #howcontent {
   margin: 0 auto;
-  width: 1024px;
+  width: 960px;
   height: 100%;
 }
 
