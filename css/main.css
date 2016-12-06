@@ -436,7 +436,6 @@ footer button:hover {
 }
 
 .carousel {
-    background-color: #3491D2;
     height: 400px;
 }
 
@@ -468,7 +467,7 @@ footer button:hover {
     }
     .header {
         width: 320px;
-         padding-top: 20px;
+        padding-top: 20px;
         background-image: url('../img/1-shadow_s.png');
     }
     .carousel .item span {
@@ -509,8 +508,8 @@ footer button:hover {
         padding-top: 70px;
     }
     .carousel {
-        background-color: #3491D2;
         height: 400px;
+        background: rgba(0, 0, 0, .5);
     }
     .carousel .item span {
         position: relative;
