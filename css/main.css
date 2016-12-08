@@ -519,4 +519,7 @@ footer button:hover {
         font-family: "Open Sans";
         font-size: 48px;
     }
+    .world {
+        height: 300px;
+    }
 }
