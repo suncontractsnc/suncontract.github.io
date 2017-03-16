@@ -264,6 +264,16 @@ header h2 {
     margin-top: -30px;
 }
 
+.new_fofoter {
+    height: 108px;
+    background: black;
+}
+
+.new_fofoter img {
+    margin: 35 0 35 35;
+    height: 38px;
+}
+
 #benefitsleft {
     float: left;
     width: 33.3333%;
