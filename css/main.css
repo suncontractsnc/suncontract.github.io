@@ -2,6 +2,10 @@
   optimise main layout for 1024px width
 */
 
+.content_width {
+    width: 1022px !important;
+}
+
 html {
     margin: 0;
     padding: 0;
@@ -44,8 +48,18 @@ header {
     border-bottom: 5px solid #73c63a;
 }
 
+#mainlogo {
+    width: 300px;
+}
+
 .vision {
+    margin-top: 50px;
+    margin-bottom: 100px;
     background-color: white;
+}
+
+.vision div.image {
+    margin-top: 25px;
 }
 
 .benefits {
@@ -59,12 +73,18 @@ header {
     margin: 10px;
     background-color: white;
     width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .worldteam {
     background: url('../img/5-bg.png');
     background-repeat: repeat-x;
     width: 100%;
+}
+
+.worldteam .title {
+    color: white;
 }
 
 .header {
@@ -172,14 +192,17 @@ header p {
     display: inline;
     font-size: 15px;
     text-shadow: 1px 0px 1px #bbb;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
 }
 
 header h2 {
     display: inline-block;
     padding: 2px 5px 2px 5px;
     margin-right: 10px;
-    font-size: 15px;
     background-color: rgba(0, 0, 0, 0.3);
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
 }
 
 #headerright h2:nth-of-type(1) {
@@ -198,6 +221,36 @@ header h2 {
     background-color: white;
 }
 
+.navbar .icon-bar {
+    background-color: black;
+}
+
+.navbar-right a {
+    font-family: "Open Sans";
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#top_image {
+    background-image: url('../img/solar-panel.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 800px;
+}
+
+#top_image .logo {
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+#top_image .title {
+    display: block;
+    margin: 0 auto;
+    color: #6d6d6d;
+    font-family: "Open Sans";
+}
 
 /*
 #visioncontent {
@@ -218,11 +271,11 @@ header h2 {
 }
 
 #visionright h1 {
-    font-size: 38px;
     color: #3491d2;
     font-weight: 300;
     font-family: "Open Sans";
     line-height: 48px;
+    font-size: 48px;
 }
 
 .headeline-images {
@@ -232,6 +285,13 @@ header h2 {
 
 .visionimage {
     max-height: 200px;
+}
+
+#image_people {
+    background-image: url('../img/people.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1500px;
 }
 
 #benefitstop {
@@ -356,6 +416,13 @@ header h2 {
     margin-top: 15%;
 }
 
+#image_light {
+    background-image: url('../img/light.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 1500px;
+}
+
 #worldteam {
     text-align: center;
 }
@@ -393,6 +460,40 @@ header h2 {
     width: 100%;
     background: url('../img/1-blockchainoverlay.png');
     background-size: cover;
+}
+
+#video {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    background: black;
+}
+
+#video .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#video .overlay:hover {
+    cursor: pointer;
+}
+
+#video .play_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px; 
+    height: 100px;
+    background-image: url('../img/play.png');
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    display: visible;
+}
+
+#video .play_button:hover { 
+    cursor: pointer;
 }
 
 footer {
@@ -468,54 +569,138 @@ footer button:hover {
     width: 320px;
 }
 
+@media (min-width: 100px) {
+    #top_image .title {
+        width: 220px;
+        font-size: 16px;
+    }
+}
+
 @media (min-width: 320px) {
+#mainlogo {
+        width: 300px;
+    }
+    #top_image .title {
+        width: 220px;
+        font-size: 16px;
+    }
     .custom_container {
         width: 320px!;
     }
     .pagewidth {
         width: 320px !important;
     }
+    .navbar .container-fluid {
+        width: 100%;
+    }
     .header {
         width: 320px;
-        padding-top: 20px;
+        /*padding-top: 20px;*/
         background-image: url('../img/1-shadow_s.png');
     }
+    header h2 {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    header h2.sun { width: 77px; }
+    header h2.blockchain { width: 105px; }
+    header h2.peer { width: 117px; }
+
     .carousel .item span {
         font-size: 22px;
     }
     .carousel {
         height: 250px;
     }
+    #visionright h1 {
+        text-align: center;
+    }
+    .howitworks {
+        padding: 40px 0;
+    }
+    .benefits {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
 }
 
 @media (min-width: 768px) {
+    .navbar .container-fluid {
+        width: auto;
+    }
+    #mainlogo {
+        width: 500px;
+    }
+    #top_image .title {
+        width: 360px;
+        font-size: 26px;
+    }
     .custom_container {
         width: 768px;
     }
     .pagewidth {
         width: 768px !important;
     }
+    .navbar .container-fluid {
+        width: 768px;
+    }
     .header {
         width: 768px;
-        padding-top: 60px;
+        /*padding-top: 60px;*/
         background-image: url('../img/1-shadow_s.png');
+    }
+    header h2 {
+        display: inline-block;
+        width: auto !important;
     }
     .carousel .item span {
         font-size: 32px;
     }
+    .vision {
+        padding-top: 15px;
+    }
+    #visionright h1 {
+        text-align: center;
+    }
+    .howitworks {
+        padding: 40px 0;
+    }
+    .benefits {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .benefitsp {
+        padding: 0;
+    }
 }
 
-@media (min-width: 995px) {
+
+@media (min-width: 1060px) {
+    #mainlogo {
+        width: auto;
+    }
+    #top_image .title {
+        font-size: 38px;
+        width: 515px;
+    }
     .custom_container {
-        width: 945px;
+        width: 1022px;
         padding: 10px;
     }
+    #visionright h1 {
+        text-align: left;
+    }
     .pagewidth {
-        width: 945px !important;
+        width: 1022px !important;
+    }
+    .navbar .container-fluid {
+        width: 1022px;
     }
     .header {
-        width: 945px;
-        padding-top: 70px;
+        width: 1022px;
+        /*padding-top: 70px;*/
     }
     .carousel {
         height: 400px;
