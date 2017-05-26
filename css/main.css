@@ -184,9 +184,6 @@ section h1 {
 }
 
 header {
-    background: url('../img/1-background-earthsun.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
     border-bottom: 5px solid #73c63a;
 }
 
