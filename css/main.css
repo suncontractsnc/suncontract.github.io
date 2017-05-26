@@ -253,6 +253,10 @@ footer {
     color: white;
 }
 
+footer img {
+  margin-left: 10px;
+}
+
 #headertitle {
     padding-top: 10px;
     font-family: 'Open Sans', sans-serif;
