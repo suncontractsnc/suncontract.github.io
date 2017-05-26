@@ -69,6 +69,10 @@ a, a:visited, a:link, a:hover {
   padding-bottom: 50px;
 }
 
+.team {
+  padding-top: 50px;
+}
+
 .team img {
   width: 150px;
   height: 150px;
@@ -155,7 +159,7 @@ div {
 }
 
 .team h1 {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
 }
 
 .name {
