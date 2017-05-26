@@ -119,6 +119,7 @@ section {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   padding-top: 50px;
+  overflow: hidden;
 }
 
 .roadmap {
@@ -681,6 +682,11 @@ footer img {
         width: 220px;
         font-size: 16px;
     }
+    #top_image {
+      height: 200px;
+    }
+    section {padding: 0px 5px;}
+    .video {padding: 0px;}
 }
 
 @media (min-width: 320px) {
@@ -691,6 +697,11 @@ footer img {
         width: 220px;
         font-size: 16px;
     }
+
+    #top_image {
+      height: 350px;
+    }
+
     .custom_container {
         width: 320px!;
     }
@@ -744,6 +755,11 @@ footer img {
         width: 360px;
         font-size: 26px;
     }
+
+    #top_image {
+      height:800px;
+    }
+
     .custom_container {
         width: 768px;
     }
@@ -781,6 +797,7 @@ footer img {
     .benefitsp {
         padding: 0;
     }
+    section {padding: 0px;}
 }
 
 
