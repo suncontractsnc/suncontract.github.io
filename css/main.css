@@ -403,7 +403,7 @@ header h2 {
 #top_image .logo {
     display: block;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 50px;
 }
 
 #top_image .title {
@@ -767,6 +767,9 @@ footer img {
     }
     #mainlogo {
         width: 500px;
+    }
+    #top_image .logo {
+        margin-top: 200px;
     }
     #top_image .title {
         width: 360px;
