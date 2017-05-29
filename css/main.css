@@ -34,6 +34,7 @@ body {
     height: 0;
     padding-bottom: 56.25%;
 }
+
 .videocontainer iframe {
     position: absolute;
     top: 0;
@@ -42,67 +43,75 @@ body {
     height: 100%;
 }
 
-a, a:visited, a:link, a:hover {
-  text-decoration: none !important;
+a,
+a:visited,
+a:link,
+a:hover {
+    text-decoration: none !important;
 }
 
-.karla { font-family: 'Karla', serif; }
-.opensans { font-family: 'Open Sans', sans-serif; }
+.karla {
+    font-family: 'Karla', serif;
+}
+
+.opensans {
+    font-family: 'Open Sans', sans-serif;
+}
 
 .whitepaper {
-  padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .whitepaper p {
-  font-size: 20px;
-  padding: 15px 0px 35px 0px;
+    font-size: 20px;
+    padding: 15px 0px 35px 0px;
 }
 
 .about p {
-  font-size: 20px;
-  padding: 40px 0px 80px 0px;
+    font-size: 20px;
+    padding: 40px 0px 80px 0px;
 }
 
 .justify {
-  text-align: justify;
+    text-align: justify;
 }
 
-.about .item div{
-  padding: 10px 0 5px 0;
+.about .item div {
+    padding: 10px 0 5px 0;
 }
 
 .about .item div:nth-of-type(2) {
-  text-align: justify;
-  padding-bottom: 50px;
+    text-align: justify;
+    padding-bottom: 50px;
 }
 
 .team {
-  padding-top: 50px;
+    padding-top: 50px;
 }
 
 .team img {
-  width: 150px;
-  height: 150px;
+    width: 150px;
+    height: 150px;
 }
 
 nav {
-  display: block;
+    display: block;
 }
 
 .green {
-  color: #73c63a;
+    color: #73c63a;
 }
 
 .black {
-  color: #505050;
+    color: #505050;
 }
 
 .blue {
-  color: rgb(53, 145, 209);
+    color: rgb(53, 145, 209);
 }
 
 .white {
-  color: white;
+    color: white;
 }
 
 .timeline {
@@ -112,10 +121,10 @@ nav {
 }
 
 .timeline .x {
-  display: inline-block;
-  margin-left: 50px;
-  color: white;
-  text-align: left;
+    display: inline-block;
+    margin-left: 50px;
+    color: white;
+    text-align: left;
 }
 
 .line {
@@ -131,15 +140,15 @@ nav {
 }
 
 section {
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  padding-top: 50px;
-  overflow: hidden;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding-top: 50px;
+    overflow: hidden;
 }
 
 .roadmap {
-  background:linear-gradient(rgb(114, 197, 58), rgb(53, 145, 209));
-  padding: 60px 0 100px 0;
+    background: linear-gradient(rgb(114, 197, 58), rgb(53, 145, 209));
+    padding: 60px 0 100px 0;
 }
 
 button {
@@ -158,15 +167,15 @@ h3 {
 }
 
 div {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 .team .item {
-      margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .team h1 {
-  padding-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .name {
@@ -177,11 +186,11 @@ div {
 }
 
 .position {
-  text-align: center;
-  color: #3481d2;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 15px;
+    text-align: center;
+    color: #3481d2;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
 section h1 {
@@ -199,18 +208,18 @@ header {
 }
 
 .bio {
-  text-align: justify;
+    text-align: justify;
 }
 
 .tokensale {
-  text-align: center;
-  padding-bottom: 100px;
-  font-size: 20px;
-  padding-top: 100px;
+    text-align: center;
+    padding-bottom: 100px;
+    font-size: 20px;
+    padding-top: 100px;
 }
 
 .tokensale p {
-      padding: 15px 0px 15px 0px;
+    padding: 15px 0px 15px 0px;
 }
 
 .vision {
@@ -258,11 +267,11 @@ footer {
     background-color: black;
     text-align: center;
     color: white;
-    margin-top: 50px;
+    /*margin-top: 50px;*/
 }
 
 footer img {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 #headertitle {
@@ -413,6 +422,7 @@ header h2 {
     color: #6d6d6d;
     font-family: "Open Sans";
 }
+
 
 /*
 #visioncontent {
@@ -631,8 +641,8 @@ footer p {
 }
 
 footer img {
-  margin-top: 30px;
-  position: inline-block;
+    margin-top: 30px;
+    position: inline-block;
 }
 
 .button {
@@ -651,7 +661,10 @@ footer img {
     background-color: rgb(63, 175, 255);
 }
 
-.button, .button:link, .button:hover, .button:visited {
+.button,
+.button:link,
+.button:hover,
+.button:visited {
     text-decoration: none;
 }
 
@@ -701,25 +714,27 @@ footer img {
         font-size: 16px;
     }
     #top_image {
-      height: 200px;
+        height: 200px;
     }
-    section {padding: 0px 5px;}
-    .video {padding: 0px;}
+    section {
+        padding: 0px 5px;
+    }
+    .video {
+        padding: 0px;
+    }
 }
 
 @media (min-width: 320px) {
-#mainlogo {
+    #mainlogo {
         width: 300px;
     }
     #top_image .title {
         width: 220px;
         font-size: 16px;
     }
-
     #top_image {
-      height: 350px;
+        height: 350px;
     }
-
     .custom_container {
         width: 320px!;
     }
@@ -739,11 +754,15 @@ footer img {
         margin: 0 auto;
         margin-top: 10px;
     }
-
-    header h2.sun { width: 77px; }
-    header h2.blockchain { width: 105px; }
-    header h2.peer { width: 117px; }
-
+    header h2.sun {
+        width: 77px;
+    }
+    header h2.blockchain {
+        width: 105px;
+    }
+    header h2.peer {
+        width: 117px;
+    }
     .carousel .item span {
         font-size: 22px;
     }
@@ -776,11 +795,9 @@ footer img {
         width: 360px;
         font-size: 26px;
     }
-
     #top_image {
-      height:800px;
+        height: 800px;
     }
-
     .custom_container {
         width: 768px;
     }
@@ -818,9 +835,11 @@ footer img {
     .benefitsp {
         padding: 0;
     }
-    section {padding: 0px; padding-top: 50px;}
+    section {
+        padding: 0px;
+        padding-top: 50px;
+    }
 }
-
 
 @media (min-width: 1060px) {
     #mainlogo {
