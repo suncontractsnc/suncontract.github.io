@@ -709,6 +709,9 @@ footer img {
 }
 
 @media (min-width: 100px) {
+    .navbar-brand {
+        width: 200px;
+    }
     #top_image .title {
         width: 220px;
         font-size: 16px;
@@ -725,6 +728,9 @@ footer img {
 }
 
 @media (min-width: 320px) {
+    .navbar-brand {
+        width: 230px;
+    }
     #mainlogo {
         width: 300px;
     }
@@ -734,9 +740,10 @@ footer img {
     }
     #top_image {
         height: 350px;
+        padding-top: 40px;
     }
     .custom_container {
-        width: 320px!;
+        width: 320px;
     }
     .pagewidth {
         width: 320px !important;
@@ -779,9 +786,23 @@ footer img {
         padding-top: 40px;
         padding-bottom: 60px;
     }
+    .vision #visionright p {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .howitworks #visionright p {
+        padding-top: 20px;
+        text-align: center;
+    }
+    .team .bio {
+        padding: 0 50px;
+    }
 }
 
 @media (min-width: 768px) {
+    .navbar-brand {
+        width: auto;
+    } 
     .navbar .container-fluid {
         width: auto;
     }
@@ -839,6 +860,21 @@ footer img {
         padding: 0px;
         padding-top: 50px;
     }
+    .vision #visionright p {
+        padding-top: 0px;
+        text-align: justify;
+    }
+    .howitworks #visionright p {
+        padding-top: 0px;
+        text-align: justify;
+    }
+}
+
+/*@media (min-width: 991px) {*/
+@media (min-width: 767px) {
+    .about .item div:nth-of-type(2) {
+        text-align: center;
+    }
 }
 
 @media (min-width: 1060px) {
@@ -848,6 +884,7 @@ footer img {
     #top_image .title {
         font-size: 38px;
         width: 515px;
+        padding-top: 0px;
     }
     .custom_container {
         width: 1022px;
@@ -880,5 +917,8 @@ footer img {
     }
     .world {
         height: 300px;
+    }
+    .about .item div:nth-of-type(2) {
+        text-align: justify;
     }
 }
