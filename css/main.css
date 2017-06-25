@@ -157,11 +157,6 @@ section {
     padding: 60px 0 100px 0;
 }
 
-.press {
-        background: rgb(244, 244, 244);
-        padding: 60px 0 100px 0;
-}
-
 button {
     outline: none;
 }
@@ -679,7 +674,7 @@ header h2 {
     background-size: cover;
 }
 
-footer p {
+footer div {
     margin: 45px 0 0 0;
     font-size: 18px;
     padding: 0;
@@ -688,6 +683,16 @@ footer p {
 footer img {
     margin-top: 30px;
     position: inline-block;
+}
+
+footer a,
+footer a:hover,
+footer a:visited {
+    color: white;
+}
+
+footer .separator {
+    padding: 0 5px;
 }
 
 .button {
@@ -967,6 +972,21 @@ footer img {
         position: absolute;
         top: 185px;
         left: 300px;
+    }
+}
+
+@media(max-width: 1060px) {
+    .navbar-nav > li > a {
+        font-size: 14px;
+        padding: 15px 10px !important;
+    }
+
+    .navbar .lang-holder .lang {
+        font-size: 14px;
+    }
+
+    .navbar .lang-holder .separator {
+        padding: 0 2px;
     }
 }
 

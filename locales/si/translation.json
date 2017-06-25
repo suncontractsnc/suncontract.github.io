@@ -102,5 +102,6 @@
   "blog_1_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id iaculis nunc. Curabitur efficitur magna et odio maximus tempus.",
   "blog_2_title": "Our second blog post",
   "blog_2_date": "12/8/2016",
-  "blog_2_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id iaculis nunc. Curabitur efficitur magna et odio."
+  "blog_2_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id iaculis nunc. Curabitur efficitur magna et odio.",
+  "terms_of_use": "Pogoji uporabe"
 }
