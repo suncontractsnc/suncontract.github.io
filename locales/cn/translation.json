@@ -27,7 +27,7 @@
   "how_it_works_title": "如何工作",
   "how_it_works_desc": "SunContract联手独立电力生产商和消费者。他们可以通过SunContract的手机APP接入去中心化能源市场平台.",
   "interested_title": "感兴趣吗?",
-  "interested_desc": "代币发售于北京时间22：00，星期三，六月二十八号开始，持续四周至七月二十五日。请在下方订阅我们的邮件，你将收到有关参加代币发售的介绍，以及收到slack渠道的邀请.",
+  "interested_desc": "代币发售于北京时间15：00，星期三，六月二十八号开始，持续四周至七月二十五日。请在下方订阅我们的邮件，你将收到有关参加代币发售的介绍，以及收到slack渠道的邀请.",
   "email_title": "电子邮件地址",
   "q1_2016_title": "Q1 2016",
   "q1_2016_desc": "SunContract 想法",
@@ -90,5 +90,10 @@
   "jnm_title": "Dr Jesus Nieto Martin",
   "jnm_desc": "能源市场顾问",
   "partner_title": "合作伙伴",
-  "press":  "SUNCONTRACT 最新进展"
+  "press":  "SUNCONTRACT 最新进展",
+    "tomi_title": "Tomislav Mucic",
+  "tomi_desc": "块链顾问",
+  "gregorKarlovsek_title": "Gregor Karlovsek MBA",
+  "gregorKarlovsek_desc": "块链能源顾问",
+    "terms_of_use": "Terms of Use"
 }
