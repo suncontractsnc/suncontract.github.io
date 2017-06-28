@@ -5,7 +5,7 @@
     previousDollar: 0,
     previousEth: 0,
     timer: null,
-    countdowndata: new Date(Date.UTC(2017, 05, 28, 16, 30, 0, 0)), //'Jun 28, 2017 8:00:00').getTime(), // end date
+    //countdowndata: new Date(Date.UTC(2017, 05, 28, 16, 30, 0, 0)), //'Jun 28, 2017 8:00:00').getTime(), // end date
     init: function() {
         self = this;
         // Select all links with hashes
