@@ -10,10 +10,11 @@
 
     <title>SunContract</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla' rel='stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/main.css?v=6" rel="stylesheet" type="text/css">
+    <link href="css/main.css?v=7" rel="stylesheet" type="text/css">
+    <link href="css/stepper.css?v=3" rel="stylesheet" type="text/css">
     <link id="favicon" rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
     <!-- Latest compiled and minified CSS -->
@@ -21,8 +22,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/i18next.min.js"></script>
-
-    <script src="js/index.js?v=2"></script>
+    <script src="js/ua-parser.min.js"></script>
+    <script src="js/index.js?v=4"></script>
+    <script src="js/progressbar.min.js?v=3"></script>
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
     <meta property="og:site_name" content="SunContract" />
@@ -96,26 +98,194 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
     </nav>
 
     <header>
+
         <div id="top_image">
+
             <div class="info">
                 <div class="data row">
-                    <h1 data-i18n="[html]translation:home_titile">SNC Token Sale (ICO)</h1>
-                    <h3><span data-i18n="[html]translation:start_p1">June 28</span><sup data-i18n="[html]translation:start_p2">th</sup>
-                        <span data-i18n="[html]translation:start_p3">, 2017</span>
-                    </h3>
-
+                    <h1 data-i18n="[html]translation:token_live">SNC Token Sale (ICO) live</h1>
+                   
+                    <h3>Join multi trillion energy market</h3>
                     <div class="left col-md-12">
                         <div class="row">
+                            <div class="desc karla" data-i18n="[html]translation:token_bonus">Bonus 11.500 SNC:</div>
                             <div class="value opensans" data-role="days_left">-</div>
-                            <br />
-                            <h3 data-i18n="[html]translation:join_multitrillion">Join multi trillion energy market potential</h3>
-                            <a href="#tokensale" data-i18n="[html]translation:subscribe" class="round-btn karla">SUBSCRIBE</a>
+                            <a href="/ico.html" class="round-btn karla" data-i18n="[html]translation:token_contribute">CONTRIBUTE NOW</a>
                         </div>
-                    </div>
+
+                        <div class="row last">
+                            <div class="col-md-6">
+                                <div class="value opensans">
+                                    <img src="/img/usd.svg" />
+                                    <span data-role="total_investment_dollar" data-speed="1000" data-from="0" data-to="0">-</span>
+                                </div>
+                                <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED SO FAR</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="value opensans">
+                                    <img src="/img/ethereum-header.png" />
+                                    <span data-role="total_investment_eth" data-speed="1000" data-from="0" data-to="0">-</span>
+                                </div>
+                                <div class="desc karla"  data-i18n="[html]translation:token_contributed">CONTRIBUTED SO FAR</div>
+                            </div>
+                        </div>
+                        </div>
                 </div>
             </div>
+
         </div>
+
     </header>
+    <section class="milestones">
+        <div class="container">
+            <div class="mmm_box rmap_box">
+
+                <div class="mmm_box__in">
+
+                    <div class="rmap clearfix hidden-xs">
+
+                        <div class="rmap__col" data-step="1">
+                            <h5>0 – 5K ETH</h5>
+                            <div class="numb">
+                                <span>1</span>
+                            </div>
+                            <h4 data-i18n="[html]translation:t1">P2P Trading Platform</h4>
+                        </div>
+                        <!--.rmap__col-->
+
+                        <div class="rmap__col" data-step="2">
+                            <h5>5K – 10K ETH</h5>
+                            <div class="numb">
+                                <span>2</span>
+                            </div>
+                            <h4 data-i18n="[html]translation:t2">Implementing the P2P Platform on a national level</h4>
+                        </div>
+                        <!--.rmap__col-->
+
+                        <div class="rmap__col" data-step="3">
+                            <h5>10K – 25K ETH</h5>
+                            <div class="numb">
+                                <span>3</span>
+                            </div>
+                            <h4  data-i18n="[html]translation:t3">Commercializing the P2P Platform on an international level</h4>
+                        </div>
+                        <!--.rmap__col-->
+
+                        <div class="rmap__col" data-step="4">
+                            <h5>25K – 40K ETH</h5>
+                            <div class="numb">
+                                <span>4</span>
+                            </div>
+                            <h4  data-i18n="[html]translation:t4">Flexibility market and demand response services</h4>
+                        </div>
+                        <!--.rmap__col-->
+
+                        <div class="rmap__col" data-step="5">
+                            <h5>40K – 60K ETH</h5>
+                            <div class="numb">
+                                <span>5</span>
+                            </div>
+                            <h4  data-i18n="[html]translation:t5">Increasing the trading volume of P2P Platform with renewables and energy storage</h4>
+                        </div>
+                        <div class="rmap__col" data-step="6">
+                            <h5>60K – 70K ETH</h5>
+                            <div class="numb">
+                                <span>6</span>
+                            </div>
+                            <h4  data-i18n="[html]translation:t6">Increasing the market share, acqusitions and expansions</h4>
+                        </div>
+                        <div class="rmap__col" data-step="7">
+                            <h5>70K – 100K ETH</h5>
+                            <div class="numb">
+                                <span>7</span>
+                            </div>
+                            <h4  data-i18n="[html]translation:t7">Further grid services development</h4>
+                        </div>
+                        <!--.rmap__col-->
+                    </div>
+                    <!--.rmap-->
+
+                    <div class="mar_box_acc stepper-xs visible-xs">
+
+                        <div class="bar-background"></div>
+
+                        <div class="col row" style="margin-top: 0;" data-step="1">
+                            <div class="numb col-xs-3">
+                                <span>1</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>0 – 5K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t1">P2P Trading Platform</span>
+                            </div>
+                        </div>
+
+                        <div class="col row" data-step="2">
+                            <div class="numb col-xs-3">
+                                <span>2</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>5K – 10K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t2">Implementing the P2P Platform on a national level</span>
+                            </div>
+                        </div>
+
+                        <div class="col row" data-step="3">
+                            <div class="numb col-xs-3">
+                                <span>3</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>10K – 25K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t3">Commercializing the P2P Platform on an international level</span>
+                            </div>
+                        </div>
+
+                        <div class="col row" data-step="4">
+                            <div class="numb col-xs-3">
+                                <span>4</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>25K – 40K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t4">Flexibility market and demand response services</span>
+                            </div>
+                        </div>
+
+                        <div class="col row" data-step="5">
+                            <div class="numb col-xs-3">
+                                <span>5</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>40K – 60K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t5">Increasing the trading volume of P2P Platform with renewables and energy storage</span>
+                            </div>
+                        </div>
+                        <div class="col row" data-step="6">
+                            <div class="numb col-xs-3">
+                                <span>6</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>60K – 70K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t6">Increasing the market share, acqusitions and expansions</span>
+                            </div>
+                        </div>
+                        <div class="col row" data-step="7">
+                            <div class="numb col-xs-3">
+                                <span>7</span>
+                            </div>
+                            <div class="col-xs-9">
+                                <h4>70K – 100K ETH</h4>
+                                <span class="desc"  data-i18n="[html]translation:t7">Further grid services development</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--.mmm_box__in-->
+            </div>
+            <!--.mmm_box-->
+        </div>
+    </section>
     <section class="whitepaper" id="whitepaper">
         <div class="custom_container">
             <div class="row top-buffer">
@@ -129,7 +299,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
 
     <section class="about opensans" id="about">
         <div class="custom_container">
-            <p data-i18n="[html]translation:content_about">SunContract is an energy trading platform that utilizes blockchain technology to create a new business model for buying and selling electricity. If you believe that blockchain technology can solve many of today's problems and that we are the
+            <p data-i18n="[html]translation:content_about">SunContract is an energy trading platform that utilises blockchain technology to create a new business model for buying and selling electricity. If you believe that blockchain technology can solve many of today's problems and that we are the
                 team to take it to the energy sector, you are welcome to contribute.</p>
 
             <div class="grid row">
@@ -226,170 +396,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
         </div>
     </section>
 
-    <section class="tokensale" id="tokensale">
-        <div class="custom_container">
-            <div class="row top-buffer">
-                <h1 class="green" data-i18n="[html]translation:interested_title">Interested?</h1>
-                <p data-i18n="[html]translation:interested_desc">Token sale starts on Wednesday, <b>June 28<sup>th</sup></b> and will last for four weeks until <b>July 25<sup>th</sup></b>. <br />Exact start will be at <b>3PM</b> UTC time. Subscribe below to join our Mailing List to get exact instructions
-                    regarding participating in our tokensale and to receive a <a href="https://suncontractteam.slack.com/join/shared_invite/">Slack channel</a> invitation.</p>
-                <!-- Begin MailChimp Signup Form -->
-
-                <style type="text/css">
-                    #mc_embed_signup form {
-                        text-align: center;
-                        padding: 10px 0 10px 0;
-                    }
-                    
-                    .mc-field-group {
-                        display: inline-block;
-                        width: 100%;
-                        padding-bottom: 20px;
-                    }
-                    /* positions input field horizontally */
-                    
-                    #mc_embed_signup input.email {
-                        font-family: "Open Sans", "sans-serif", Arial, Helvetica, Verdana, sans-serif;
-                        font-size: 15px;
-                        border: 1px solid #ABB0B2;
-                        -webkit-border-radius: 3px;
-                        -moz-border-radius: 3px;
-                        border-radius: 3px;
-                        color: #343434;
-                        background-color: #fff;
-                        box-sizing: border-box;
-                        height: 32px;
-                        padding: 0px 0.4em;
-                        display: inline-block;
-                        margin: 0;
-                        width: 350px;
-                        vertical-align: top;
-                    }
-                    
-                    #mc_embed_signup label {
-                        display: block;
-                        padding-bottom: 10px;
-                        font-size: 20px;
-                    }
-                    
-                    #mc_embed_signup .clear {
-                        display: inline-block;
-                    }
-                    /* positions button horizontally in line with input */
-                    
-                    #mc_embed_signup div#mce-responses {
-                        float: left;
-                        top: -1.4em;
-                        padding: 0em .5em 0em .5em;
-                        overflow: hidden;
-                        width: 90%;
-                        margin: 0 5%;
-                        clear: both;
-                    }
-                    
-                    #mc_embed_signup div.response {
-                        padding: 0 0 20px 0;
-                        font-weight: bold;
-                        z-index: 1;
-                    }
-                    
-                    #mc_embed_signup #mce-error-response {
-                        display: none;
-                    }
-                    
-                    #mc_embed_signup #mce-success-response {
-                        color: #529214;
-                        display: none;
-                    }
-                    
-                    #mc_embed_signup label.error {
-                        display: block;
-                        float: none;
-                        width: auto;
-                        margin-left: 1.05em;
-                        text-align: left;
-                        padding: .5em 0;
-                    }
-                    
-                    @media (max-width: 768px) {
-                        #mc_embed_signup input.email {
-                            width: 90%;
-                            margin-bottom: 5px;
-                        }
-                        #mc_embed_signup .clear {
-                            display: block;
-                            width: 100%
-                        }
-                    }
-                    
-                    #mc_embed_signup {
-                        background: transparent;
-                        clear: left;
-                        font: inherit;
-                        font-size: 14px;
-                        width: 100%;
-                    }
-                    
-                    #mc-embedded-subscribe {
-                        background-color: #73c63a;
-                        color: white;
-                        border: none;
-                        cursor: pointer;
-                        font-size: 24px;
-                        padding: 15px 100px;
-                        border-radius: 15px;
-                        font-weight: normal;
-                        box-shadow: 0px 0px 5px #555;
-                        width: 350px;
-                        box-sizing: border-box;
-                        margin: 0;
-                        outline: none;
-                    }
-                    
-                    #mc-embedded-subscribe:hover {
-                        background-color: rgb(63, 175, 255);
-                    }
-                    
-                    #mce-EMAIL {
-                        text-align: center;
-                    }
-                    
-                    .mce_inline_error {
-                        color: #6B0505 !important;
-                        background-color: inherit !important;
-                    }
-                </style>
-                <div id="mc_embed_signup">
-                    <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <div class="mc-field-group">
-                                <label for="mce-EMAIL" data-i18n="[html]translation:email_title">Email Address </label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="satoshin@gmx.com">
-                            </div>
-                            <div id="mce-responses" class="clear">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                        </div>
-                    </form>
-                </div>
-                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                <script type='text/javascript'>
-                    (function($) {
-                        window.fnames = new Array();
-                        window.ftypes = new Array();
-                        fnames[0] = 'EMAIL';
-                        ftypes[0] = 'email';
-                    }(jQuery));
-                    var $mcj = jQuery.noConflict(true);
-                </script>
-                <!--End mc_embed_signup-->
-
-            </div>
-        </div>
-    </section>
+ 
 
     <section class="roadmap" id="roadmap">
         <h1 class="white" data-i18n="[html]translation:timeline_title">Timeline</h1>
@@ -447,12 +454,14 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
     </section>
 
 
+
     <section class="team">
         <h1 class="blue" data-i18n="[html]translation:team_title">Team</h1>
         <div class="row">
             <div class="item col-md-4">
                 <img src="img/faces/GregorNovak.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:gregor_novak_title">MSc Gregor Novak</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:gregor_novak_title">MSc Gregor Novak</span>
                     <a href="https://www.linkedin.com/in/gregor-novak-520b72142/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:gregor_novak_desc">Co-founder, CEO</div>
@@ -460,9 +469,10 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
             <div class="item col-md-4">
                 <img src="img/faces/mojcaBajec.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:mojca_bajec_title">Mojca Bajec</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:mojca_bajec_title">Mojca Bajec</span>
                     <a href=" https://www.linkedin.com/in/mojca-bajec-9770264a" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
-                   </div>
+                </div>
 
                 <div class="position opensans" data-i18n="[html]translation:mojca_bajec_desc">Co-founder, CFO</div>
                 <div class="bio"></div>
@@ -495,7 +505,8 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
             <div class="item col-md-4">
                 <img src="img/faces/AlesKroflic.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:ales_kroflic_title">PhD Ales Kroflic</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:ales_kroflic_title">PhD Ales Kroflic</span>
                     <a href="https://www.linkedin.com/in/ales-kroflic-08480258/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:ales_kroflic_desc">Analysis</div>
@@ -503,7 +514,8 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
             <div class="item col-md-4">
                 <img src="img/faces/lp.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:luka_pusic_title">Luka Pusic</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:luka_pusic_title">Luka Pusic</span>
                     <a href="https://www.linkedin.com/in/lukapusic/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:luka_pusic_desc">Information Security</div>
@@ -511,7 +523,8 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
             <div class="item col-md-4">
                 <img src="img/faces/JernejBlaj.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:jernej_blaj_title">Jernej Blaj</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:jernej_blaj_title">Jernej Blaj</span>
                     <a href="https://www.linkedin.com/in/jernej-blaj-44178110/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:jernej_blaj_desc">SunContract Middle East</div>
@@ -541,14 +554,15 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
                 <div class="position opensans" data-i18n="[html]translation:KatjaOgrin">SunContract Massachusetts</div>
                 <div class="bio"></div>
             </div>
-            
+
         </div>
 
         <h1 class="blue" data-i18n="[html]translation:advisors_title">Advisors</h1>
         <div class="row">
             <div class="item col-md-4">
                 <img src="img/faces/JonathanGalea.png">
-                <div class="name opensans"><span data-i18n="[html]translation:jonathan_galea_title">Jonathan Galea</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:jonathan_galea_title">Jonathan Galea</span>
                     <a href="https://www.linkedin.com/in/jonathan-galea-5421419a/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:jonathan_galea_desc">Blockchain Legal Advice, Founder of BitMalta</div>
@@ -556,7 +570,8 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
             <div class="item col-md-4">
                 <img src="img/faces/milanGabor.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:milan_gabor_title">Milan Gabor</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:milan_gabor_title">Milan Gabor</span>
                     <a href="https://www.linkedin.com/in/milan-gabor-1257051/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:milan_gabor_desc">Information Security</div>
@@ -565,7 +580,8 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             <div class="item col-md-4">
                 <img src="img/faces/tomazLajovic.jpg">
 
-                <div class="name opensans"><span data-i18n="[html]translation:tomaz_lajovic_title">Tomaz Lajovic</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:tomaz_lajovic_title">Tomaz Lajovic</span>
                     <a href="  https://www.linkedin.com/in/tomazlajovic/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:tomaz_lajovic_desc">Energy Legal Advice</div>
@@ -582,7 +598,8 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
             <div class="item col-md-4">
                 <img src="img/faces/Leo_lu.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:leolu_title">Leo Lu</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:leolu_title">Leo Lu</span>
                     <a href="https://www.linkedin.com/in/ileolu/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:leolu_desc">Solar Market Advice</div>
@@ -621,7 +638,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
                 <div class="position opensans" data-i18n="[html]translation:sebastjanStucl_desc">Blockchain Business Advice</div>
                 <div class="bio"></div>
             </div>
-            
+
         </div>
 
         <h1 class="blue" data-i18n="[html]translation:escrow_title">Escrow</h1>
@@ -629,19 +646,22 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             <div class="item col-md-4"></div>
             <div class="item col-md-4">
                 <img src="img/faces/JuricMatjaz.jpg">
-                <div class="name opensans"><span data-i18n="[html]translation:matjaz_b_juric_title">PhD Matjaz B. Juric</span>
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:matjaz_b_juric_title">PhD Matjaz B. Juric</span>
                     <a href="https://www.linkedin.com/in/matjaz-b-juric-93b645/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
                 </div>
                 <div class="position opensans" data-i18n="[html]translation:matjaz_b_juric_desc">Full Professor at University of Ljubljana</div>
-                <div class="bio" data-i18n="[html]translation:matjaz_b_juric_bio">Matjaz B. Juric holds a Ph.D. in computer and information science. He is a Full Professor at the University of Ljubljana, Faculty of Computer and Information Science. Matjaz is the head of Laboratory for Integration of Information Systems
+                <div class="bio" data-i18n="[html]translation:matjaz_b_juric_bio">
+                    Matjaz B. Juric holds a Ph.D. in computer and information science. He is a Full Professor at the University of Ljubljana, Faculty of Computer and Information Science. Matjaz is the head of Laboratory for Integration of Information Systems
                     and the head of the SOA and Cloud Computing Competence Centre. Matjaz is a Java Champion, IBM Champion and Oracle ACE Director. He has gathered extensive experience in cloud and blockchain projects. More specificaly, he has been leading
-                    Horizont 2020 research projects utilizing blockchain and smart contracts on the Ethereum platform. <a target="_blank" href="res/MatjazBJuric.pdf">Learn more</a></div>
+                    Horizont 2020 research projects utilizing blockchain and smart contracts on the Ethereum platform. <a target="_blank" href="res/MatjazBJuric.pdf">Learn more</a>
+                </div>
             </div>
         </div>
         <h1 class="blue" data-i18n="[html]translation:partner_title">Partners</h1>
         <div class="row">
             <div class="item col-md-4">
-                <a href="http://sonce.com"><img src="img/partners/sonce_logo.svg"></a>  
+                <a href="http://sonce.com"><img src="img/partners/sonce_logo.svg"></a>
             </div>
             <div class="item col-md-4">
                 <a href="http://spartan.si"><img src="img/partners/spartan_logo.png"></a>
@@ -652,20 +672,9 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             <div class="item col-md-4">
                 <a href="http://netis.si"><img src="img/partners/netis_logo.svg"></a>
             </div>
-            </div>
+        </div>
     </section>
 
-    <!--<section class="roadmap" id="partners">
-        <h1 class="white" data-i18n="[html]translation:timeline_title">Partners</h1>
-        <div class="row">
-            <div class="item col-md-6">
-                <img src="img/partners/logo_sunesis_big.png">
-            </div>
-            <div class="item col-md-6">
-                <img src="img/partners/sonce logo.png">
-            </div>
-        </div>
-    </section>-->
     </div>
     </div>
     <footer>
@@ -678,7 +687,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
         <div>
             <span data-i18n="[html]translation:copyright">&copy; 2017 - SunContract</span>
             <span class="separator">|</span>
-            <a href="/res/Suncontract terms of ICO_v8.pdf" target="_blank" data-i18n="[html]translation:terms_of_use">Terms of use</a>
+            <a href="/res/SuncontracttermsofICO_v7.pdf" target="_blank" data-i18n="[html]translation:terms_of_use">Terms of use</a>
         </div>
     </footer>
 

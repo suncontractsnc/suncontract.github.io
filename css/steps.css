@@ -1,0 +1,318 @@
+body {
+    background: #fff;
+    margin: 10px;
+}
+
+.container {
+    max-width: 960px;
+}
+
+#top_image {
+    background-image: url('../img/solar-panel.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 800px;
+    z-index: 100;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+#narrow-frame .modal-body {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+#invest-wizard {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#invest-wizard .nav-wizard {
+    display: inline-block;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.btn-prev {
+    float: left;
+}
+
+.btn-next {
+}
+
+.modal-footer {
+}
+
+#form-captcha .modal-body {
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.g-recaptcha {
+    margin: 0 auto;
+    min-height: 120px;
+}
+
+.g-recaptcha > * {
+    display: inline-block;
+}
+
+#terms-of-service {
+    min-height: 200px;
+    max-height: 350px;
+    overflow-y: scroll;
+    text-align: left;
+}
+
+input[name='accept'] {
+    margin-top: 20px;
+}
+
+#form-terms {
+    text-align: right;
+    margin-top: 20px;
+}
+
+    #form-terms .btn {
+        margin-left: 20px;
+    }
+
+#passphrase {
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+    background: #ffd;
+    font-family: monospace;
+}
+
+#deposit-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+    #deposit-wrapper h3 {
+        margin-top: 0;
+    }
+
+.nav-pills.nav-wizard > li a[disabled] {
+    cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px) {
+    #invest-wizard {
+        display: none;
+    }
+
+    .nav-pills.nav-wizard > li {
+        margin-bottom: 20px;
+    }
+}
+
+#deform {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.qr-code {
+    margin: 10px auto;
+    display: block;
+    max-height: 150px;
+}
+
+.item-confirm_private_key {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.data-p {
+    word-break: break-all;
+}
+
+.data {
+    font-family: monospace;
+    font-size: 80%;
+}
+
+#shapeshift-wrapper {
+    margin: 20px 0;
+}
+
+.address-text {
+    word-break: break-all;
+    font-family: monospace;
+    font-size: 80%;
+}
+
+.body-animated-wizard .modal-body {
+    opacity: 0;
+    transform: translate(300px,0);
+    visibility: hidden;
+    transition: opacity 0.5s,transform 0.5s;
+}
+
+.body-animated-wizard.page-in .animated {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0);
+}
+
+.body-animated-wizard.page-out .animated {
+    opacity: 0;
+    transform: translate(-300px,0);
+}
+
+#mc_embed_signup form {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.mc-field-group {
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 20px;
+}
+/* positions input field horizontally */
+
+#mc_embed_signup input.email {
+    font-family: "Open Sans", "sans-serif", Arial, Helvetica, Verdana, sans-serif;
+    font-size: 15px;
+    border: 1px solid #ABB0B2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #343434;
+    background-color: #fff;
+    box-sizing: border-box;
+    height: 32px;
+    padding: 0px 0.4em;
+    display: inline-block;
+    margin: 0;
+    width: 350px;
+    vertical-align: top;
+}
+
+#mc_embed_signup label {
+    display: block;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+
+#mc_embed_signup .clear {
+    display: inline-block;
+}
+/* positions button horizontally in line with input */
+
+#mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em .5em 0em .5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+}
+
+#mc_embed_signup div.response {
+    padding: 0 0 20px 0;
+    font-weight: bold;
+    z-index: 1;
+}
+
+#mc_embed_signup #mce-error-response {
+    display: none;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+}
+
+#mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: .5em 0;
+}
+
+@media (max-width: 768px) {
+    #mc_embed_signup input.email {
+        width: 90%;
+        margin-bottom: 5px;
+    }
+
+    #mc_embed_signup .clear {
+        display: block;
+        width: 100%
+    }
+}
+
+#mc_embed_signup {
+    background: transparent;
+    clear: left;
+    font: inherit;
+    font-size: 14px;
+    width: 100%;
+}
+
+#mc-embedded-subscribe {
+    background-color: #73c63a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 15px 100px;
+    border-radius: 15px;
+    font-weight: normal;
+    box-shadow: 0px 0px 5px #555;
+    width: 350px;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+}
+
+    #mc-embedded-subscribe:hover {
+        background-color: rgb(63, 175, 255);
+    }
+
+#mce-EMAIL {
+    text-align: center;
+}
+
+.mce_inline_error {
+    color: #6B0505 !important;
+    background-color: inherit !important;
+}
+
+.step_content {
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.terms_checkbox {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.step_title {
+    text-align: center;
+}
+
+.list-inline .list-group-item {
+    width: 32%;
+    border: 0;
+}
+.list-inline {
+    margin:0 !important;
+}
