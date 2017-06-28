@@ -1,7 +1,7 @@
 ﻿var Sun = {
     browserData: undefined,
     currentProgressValue: -1,
-    countdowndata: new Date(Date.UTC(2017, 06, 05, 15, 0, 0, 0)),
+    countdowndata: new Date(Date.UTC(2017, 06, 06, 16, 30, 0, 0)),
     previousDollar: 0,
     previousEth: 0,
     timer: null,
@@ -106,7 +106,7 @@
         var self = Sun;
         $.ajax({
                 type: 'GET',
-                url: 'http://api.suncontract.org/api/values'
+                url: 'https://api.suncontract.org/api/values'
             })
             .done(function(resp) {
                 // rounding down to 2 decimal places
