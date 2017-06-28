@@ -19,7 +19,7 @@
 })();
 var Sun = {
     timer: null,
-    countdowndata: new Date(Date.UTC(2017, 05, 28, 16, 35, 0, 0)), //'Jun 28, 2017 8:00:00').getTime(), // end date
+    countdowndata: new Date(Date.UTC(2017, 05, 28, 16, 37, 0, 0)), //'Jun 28, 2017 8:00:00').getTime(), // end date
     init: function() {
         self = this;
         // Select all links with hashes
