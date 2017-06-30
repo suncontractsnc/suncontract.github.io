@@ -4,8 +4,8 @@
     countdowndata: new Date(Date.UTC(2017, 06, 06, 16, 30, 0, 0)),
     previousDollar: 0,
     previousEth: 0,
+    utcTime: 0,
     timer: null,
-    //countdowndata: new Date(Date.UTC(2017, 05, 28, 16, 30, 0, 0)), //'Jun 28, 2017 8:00:00').getTime(), // end date
     init: function() {
         self = this;
         // Select all links with hashes
@@ -113,6 +113,13 @@
                 var dollar = Math.round(resp.dollarPrice * resp.totalETH);
                 var eth = Math.round(resp.totalETH);
 
+                if (self.utcTime != resp.epochToBlock) {
+                    var d = new Date(0);
+                    d.setUTCSeconds(resp.epochToBlock);
+                    self.countdowndata = d;
+                    self.utcTime = resp.epochToBlock;
+                }
+
                 $('[data-role="total_investment_dollar"]').text(dollar.toLocaleString());
                 $('[data-role="total_investment_eth"]').text(eth.toLocaleString());
                 var item = $('[data-role="total_investment_dollar"]');
@@ -121,14 +128,17 @@
                 self.updateCountersRound(item);
                 self.previousDollar = dollar;
 
+
                 item = $('[data-role="total_investment_eth"]');
                 item.attr("data-from", self.previousEth);
                 item.attr("data-to", eth);
                 self.updateCountersRound(item);
                 self.previousEth = eth;
-
-
                 self.setProgress(eth);
+
+                
+                
+               
             })
             .fail(function() {
                 $('[data-role="total_investment_dollar"]').text('-');

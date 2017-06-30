@@ -57,6 +57,7 @@ a:hover {
 .whitepaper {
     padding-bottom: 20px;
     padding-top: 0;
+    margin-bottom: 100px;
 }
 .whitepaper p {
     font-size: 20px;
