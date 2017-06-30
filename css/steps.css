@@ -97,12 +97,17 @@ input[name='accept'] {
     line-height: 1.5;
 }
 
-    #deposit-wrapper h3 {
-        margin-top: 0;
-    }
+#deposit-wrapper h3 {
+    margin-top: 0;
+}
 
 .nav-pills.nav-wizard > li a[disabled] {
     cursor: not-allowed;
+}
+
+.list-group-item-text {
+    font-size: 17px;
+    word-break: break-all;
 }
 
 @media screen and (max-width: 768px) {
@@ -112,6 +117,10 @@ input[name='accept'] {
 
     .nav-pills.nav-wizard > li {
         margin-bottom: 20px;
+    }
+
+    #terms-of-service {
+        max-height: 600px !important;
     }
 }
 
