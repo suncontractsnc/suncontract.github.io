@@ -949,7 +949,7 @@ footer .separator {
     }
     .custom_container_ico {
         width: 320px;
-        height: 835px;
+        height: 865px;
     }
     .pagewidth {
         width: 320px !important;
@@ -1026,7 +1026,7 @@ footer .separator {
         height: auto;
     }
     .custom_container_ico {
-        width: 768px;
+        width:865px;
         height: auto;
     }
     .pagewidth {
