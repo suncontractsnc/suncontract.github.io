@@ -17,13 +17,13 @@
 
         .rmap__col {
             float: left;
-            width: 14%;
+            width: 33%;
             overflow: hidden;
             cursor: pointer;
         }
 
         .rmap__col h5 {
-            text-align: left;
+            text-align: center;
             margin: 0 0 25px 15px;
             font: 16px/26px "Open Sans", Arial, Helvetica, sans-serif;
         }
@@ -33,7 +33,7 @@
             z-index: 1;
             width: 54px;
             height: 54px;
-            margin: 0 0 23px;
+            margin: 0 auto;
             border: 3px solid transparent;
             padding: 6px;
 
@@ -174,7 +174,7 @@
             padding: 0 20px 0 0;
             font-size: 14px;
             line-height: 24px;
-            text-align: left;
+            text-align: center;
 
             -webkit-transition: all .25s ease-in;
             -moz-transition: all .25s ease-in;
