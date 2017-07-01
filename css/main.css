@@ -824,14 +824,15 @@ footer .separator {
             counter-increment: item
         }
 
-/*type="I"*/
+/*type="I"
 
 .ico #top_image {
     height: 100%;
-}
-.ico #top_image #page-wrapper {
-    padding-top: 70px;
-}
+}*/
+    .ico #top_image #page-wrapper {
+        padding-top: 50px;
+        padding-bottom: 90px;
+    }
 
 @media(max-width: 767px) {
     .ico #top_image {
