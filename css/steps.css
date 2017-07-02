@@ -337,21 +337,21 @@ footer p {
 }
 @media (max-width: 750px) {
     .ico #top_image {
-        height: 1130px;
+        /* height: 1130px;*/
     }
     .custom_container_ico {
         width: 400px;
-        height: 820px;
+      
     }
 }
 @media (max-width: 450px) {
     .terms .custom_container_ico {
         width: 300px;
-        height: 860px;
+       
     }
     .email .custom_container_ico {
         width: 300px;
-        height: 925px;
+       
     }
     footer {
         padding-top: 20px;
@@ -369,7 +369,7 @@ footer p {
 @media (max-width: 330px) {
     .terms .custom_container_ico {
         width: 270px;
-        height: 860px;
+       
     }
     .email .custom_container_ico {
         width: 270px;
