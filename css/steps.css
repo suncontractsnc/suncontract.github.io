@@ -68,6 +68,15 @@ body {
     overflow-y: scroll;
     text-align: left;
 }
+@media (max-height: 800px) {
+    #terms-of-service {
+        min-height: 200px;
+        max-height: 200px;
+        overflow-y: scroll;
+        text-align: left;
+    }
+}
+
 
 input[name='accept'] {
     margin-top: 20px;
