@@ -58,6 +58,14 @@
               var tabID = $(this).data("tab-content");
               $(tabID).show();
 
+              if (tabID.indexOf('terms') >= 0) {
+                    $('#page-wrapper').removeClass('email');
+                    $('#page-wrapper').addClass('terms');
+              } else if (tabID.indexOf('email') >= 0) {
+                    $('#page-wrapper').removeClass('terms');
+                    $('#page-wrapper').addClass('email');
+              }
+
               var tabTitle = $(this).data("tab-title");
               $(tabTitle).show();
           } else {

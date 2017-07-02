@@ -824,22 +824,10 @@ footer .separator {
             counter-increment: item
         }
 
-/*type="I"
-
-.ico #top_image {
-    height: 100%;
-}*/
-    .ico #top_image #page-wrapper {
-        padding-top: 50px;
-        padding-bottom: 90px;
-    }
-
-@media(max-width: 767px) {
-    .ico #top_image {
-        height: 1050px;
-    }
+.ico #top_image #page-wrapper {
+    padding-top: 50px;
+    padding-bottom: 90px;
 }
-
 
 @media (max-width: 1500px) {
     .info .data .left .value {
@@ -947,10 +935,6 @@ footer .separator {
     .custom_container {
         width: 320px;
     }
-    .custom_container_ico {
-        width: 320px;
-        height: 865px;
-    }
     .pagewidth {
         width: 320px !important;
     }
@@ -1000,6 +984,67 @@ footer .separator {
         padding: 0 50px;
     }
 }
+
+@media (max-width: 380px) {
+    .info .data .left .round-btn {
+        width: 150px;
+    }
+    .tokensale p {
+        font-size: 14px;
+        padding: 15px 30px;
+    }
+    .about p {
+        font-size: 14px;
+        padding: 20px;
+    }
+    .about .item div:nth-of-type(2) {
+        padding: 50px;
+    }
+    section h1 {
+        font-size: 32px;
+    }
+    #visionright h1 {
+        font-size: 32px;
+    }
+    .vision #visionright p, 
+    .howitworks #visionright p,
+    .whitepaper p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+    .whitepaper p {
+        padding: 20px
+    }
+    .button {
+        padding: 15px 75px;
+    }
+    .timeline {
+        padding-left: 20px;
+    }
+    .timeline .x {
+        margin-left: 20px;
+    }
+    .timeline .x div {
+        width: 165px;
+    }
+    footer img {
+        margin-top: 10px;
+        margin-left: 5px;
+        width: 30px;
+    }
+    footer div {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+    .name, .position {
+        width: 250px; 
+        margin: 0 auto;
+    }
+    .bio {
+        padding: 0 50px;
+    }
+}
+
 @media (min-width: 768px) {
     .navbar-brand {
         width: auto;
@@ -1033,12 +1078,10 @@ footer .separator {
         width: 768px !important;
     }
     .navbar .container-fluid {
-        width: 768px;
+        width: 800px;
     }
     .header {
         width: 768px;
-        /*padding-top: 60px;*/
-        
         background-image: url('../img/1-shadow_s.png');
     }
     header h2 {
@@ -1077,6 +1120,7 @@ footer .separator {
         text-align: justify;
     }
 }
+
 @media (min-width: 767px) {
     .about .item div:nth-of-type(2) {
         text-align: center;
