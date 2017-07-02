@@ -114,6 +114,18 @@ input[name='accept'] {
     cursor: not-allowed;
 }
 
+@media (max-height: 800px) {
+    #invest-wizard {
+        display: none;
+    }
+    .ico #top_image #page-wrapper {
+        padding-bottom:145px;
+    } 
+    .nav-pills.nav-wizard > li {
+        margin-bottom: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     #invest-wizard {
         display: none;
