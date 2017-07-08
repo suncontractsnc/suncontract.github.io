@@ -59,11 +59,11 @@
               $(tabID).show();
 
               if (tabID.indexOf('terms') >= 0) {
-                    $('#page-wrapper').removeClass('email');
-                    $('#page-wrapper').addClass('terms');
+                    $('body').removeClass('email');
+                    $('body').addClass('terms');
               } else if (tabID.indexOf('email') >= 0) {
-                    $('#page-wrapper').removeClass('terms');
-                    $('#page-wrapper').addClass('email');
+                    $('body').removeClass('terms');
+                    $('body').addClass('email');
               }
 
               var tabTitle = $(this).data("tab-title");

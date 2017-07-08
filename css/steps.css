@@ -1,5 +1,14 @@
 body {
     background: #fff;
+    padding: 0;
+}
+
+footer {
+    width: 100%;
+    height: 115px;
+    background-color: black;
+    text-align: center;
+    color: white;
 }
 
 .container {
@@ -12,7 +21,7 @@ body {
     background-size: 100% 100%;
     width: 100%;
     height: 100%;
-    z-index: 100;
+    /*z-index: 100;*/
     margin: 0 auto;
     margin-top: 70px;
 }
@@ -43,7 +52,16 @@ body {
 .btn-next {
 }
 
-.modal-footer {
+.step_content {
+
+}
+
+.modal-body,
+.modal-footer  {
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.45);
 }
 
 #form-captcha .modal-body {
@@ -61,22 +79,67 @@ body {
     display: inline-block;
 }
 
+#top_image #page-wrapper {
+    height: 70%;
+}
+
+.custom_container_ico {
+    height: 65%;
+}
+
+.email .custom_container_ico {
+    height: 550px;
+}
+
 #terms-of-service {
-    min-height: 200px;
-    max-height: 400px;
+    /*min-height: 200px;*/
+    /*max-height: 400px;*/
+    height: 100%;
     overflow-y: scroll;
     text-align: left;
 }
-@media (max-height: 800px) {
-    #terms-of-service {
-        min-height: 200px;
-        max-height: 200px;
-        overflow-y: scroll;
-        text-align: left;
-    }
-   
+
+#tab_content_terms {
+    height: 86%;
 }
 
+@media (max-height: 800px) {
+    body {
+        min-height: 850px;
+        max-height: 850px;
+        overflow-y: scroll;
+    }
+    #top_image {
+        height: 750px;
+    }
+    .terms #invest-wizard {
+        display: none;
+    }
+    .terms .custom_container_ico {
+        height: 370px;
+        margin-top: 25px;
+    }
+    .terms_checkbox {
+        margin: 0;
+    }
+    .email .custom_container_ico {
+        height: 465px;
+        margin-top: 25px;
+        font-size: 14px;
+    }
+    .email #invest-wizard {
+        display: none;
+    }
+    .email .tab_content_email img {
+        height: 85px;
+    }
+    .email .list-group {
+        font-size: 12px;
+    }
+    .email .list-group h4 {
+        font-size: 14px;
+    }
+}
 
 input[name='accept'] {
     margin-top: 20px;
@@ -87,9 +150,9 @@ input[name='accept'] {
     margin-top: 20px;
 }
 
-    #form-terms .btn {
-        margin-left: 20px;
-    }
+#form-terms .btn {
+    margin-left: 20px;
+}
 
 #passphrase {
     padding: 10px;
@@ -115,12 +178,6 @@ input[name='accept'] {
 }
 
 @media (max-height: 800px) {
-    #invest-wizard {
-        display: none;
-    }
-    .ico #top_image #page-wrapper {
-        padding-bottom:145px;
-    } 
     .nav-pills.nav-wizard > li {
         margin-bottom: 20px;
     }
@@ -314,13 +371,6 @@ input[name='accept'] {
     background-color: inherit !important;
 }
 
-.step_content {
-    font-family: "Open Sans";
-    font-size: 20px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.45);
-}
-
 .terms_checkbox {
     margin-top: 20px;
     font-size: 20px;
@@ -343,20 +393,25 @@ footer p {
 }
 
 @media (max-width: 900px) {
+    body.email {
+        min-height: 1000px;
+    }
+    .email #top_image {
+        height: 1000px;
+    }
     .custom_container_ico {
         width: 700px;
     }
 }
 @media (max-width: 750px) {
-    .ico #top_image {
-        /* height: 1130px;*/
-    }
     .custom_container_ico {
         width: 400px;
-      
     }
 }
 @media (max-width: 450px) {
+    body.email {
+        min-height: 1120px;
+    }
     .terms .custom_container_ico {
         width: 300px;
        
@@ -366,7 +421,7 @@ footer p {
        
     }
     footer {
-        padding-top: 20px;
+        height: 125px;
     }
     footer img {
         margin-top: 10px;
@@ -377,11 +432,13 @@ footer p {
         margin-top: 20px;
         font-size: 14px;
     }
+    footer p {
+        padding: 0;
+    }
 }
 @media (max-width: 330px) {
     .terms .custom_container_ico {
         width: 270px;
-       
     }
     .email .custom_container_ico {
         width: 270px;
