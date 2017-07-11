@@ -349,8 +349,14 @@ header h2 {
 }
 .navbar .lang-holder .lang {
     color: #23527c;
+    margin-left: 10px;
+    font-size: 15px;
 }
-.navbar .lang-holder .lang.selected {
+    .navbar .lang-holder .lang.selected {
+        color: rgb(115, 198, 58);
+        font-weight: bold;
+    }
+.selected_lang {
     color: rgb(115, 198, 58);
     font-weight: bold;
 }

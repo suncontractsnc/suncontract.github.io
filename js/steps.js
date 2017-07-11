@@ -1,3 +1,4 @@
+var snc_to_eth = 0;
 (function ($) {
   "use strict";
 
@@ -99,6 +100,12 @@
               changeActiveTab("#navigation_terms");
           }
       });
+      $("#navigation_contribution").on("click", function () {
+          if (!this.hasAttribute("disabled") && $("#accept").prop("checked")) {
+              changeActiveTab("#navigation_contribution");
+          }
+      });
+
       $("#navigation_email").on("click", function () {
           if (!this.hasAttribute("disabled") && $("#accept").prop("checked")) {
               changeActiveTab("#navigation_email");
@@ -115,11 +122,25 @@
       $("#accept").click(function () {
           validateCheckboxes();
       });
-      /*
-      $("#citizenship").click(function () {
-          validateCheckboxes();
-      });*/
-
+      $("#contribution_value").keyup(function () {
+          if (isNaN($(this).val()) === false) {
+              $("#snc_to_receive").text($(this).val() * snc_to_eth);
+              $("#btn-next-to-email").prop("disabled", false);
+              $("#btn-next-to-email").removeAttr("disabled");
+              $('[data-role="show-conversion"]').show();
+          }
+          else {
+              $("#btn-next-to-email").attr('disabled', 'disabled');
+              $('[data-role="show-conversion"]').hide();
+          }
+      });
+      $('[data-role="show-conversion"]').hide();
+      $.ajax({
+          type: 'GET',
+          url: 'https://api.suncontract.org/api/values'
+      }).done(function (resp) {
+          snc_to_eth = resp.sncEthConversion; 
+          });
   });
 
 })(jQuery);

@@ -18,13 +18,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-    <link href="css/main.css?v=20" rel="stylesheet" type="text/css">
-    <link href="css/stepper.css?v=15" rel="stylesheet" type="text/css">
-    <link href="css/mailchimp.css?v=15" rel="stylesheet" type="text/css">
+    <link href="css/main.css?v=21" rel="stylesheet" type="text/css">
+    <link href="css/stepper.css?v=22" rel="stylesheet" type="text/css">
+    <link href="css/mailchimp.css?v=16" rel="stylesheet" type="text/css">
 
     <script src="js/i18next.min.js"></script>
     <script src="js/ua-parser.min.js"></script>
-    <script src="js/index.js?v=16"></script>
+    <script src="js/index.js?v=18"></script>
     <script src="js/progressbar.min.js?v=6"></script>
 
     <link id="favicon" rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
@@ -80,20 +80,27 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
                 <a href="#"><img class="navbar-brand" src="img/logo.svg" /></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="myNavbar" style="max-height:388px;">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="https://suncontract.org/ico.html" style="color: #73c63a;" data-i18n="[html]translation:token_sale">TOKEN SALE</a></li>
                     <li><a href="#about" data-i18n="[html]translation:about">ABOUT</a></li>
                     <li><a href="res/whitepaper.pdf" target="_blank" data-i18n="[html]translation:whitepaper">WHITEPAPER</a></li>
                     <li><a id="blog_href" href="http://blog.suncontract.org/" target="_blank" data-i18n="[html]translation:blog">BLOG</a></li>
                     <li><a href="https://github.com/SunContract/wiki/wiki/FAQ" target="_blank" data-i18n="[html]translation:faq">FAQ</a></li>
-                    <li class="lang-holder">
-                        <div>
-                            <span class="lang selected" data-lang="en">EN</span>
-                            <span class="separator">|</span>
-                            <span class="lang" data-lang="si">SLO</span>
-                            <span class="separator">|</span>
-                            <span class="lang" data-lang="cn">中文</span>
+                    <li>
+                        <div class="dropdown lang-holder">
+                            <div data-toggle="dropdown">
+                                <span class="selected_lang" id="slected_lang">EN</span>
+                                <span class="caret"></span>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><span class="lang" data-lang="en">EN</span></li>
+                                <li><span class="lang" data-lang="si">SLO</span></li>
+                                <li><span class="lang" data-lang="cn">中文</span></li>
+                                <li><span class="lang" data-lang="ko">KO</span></li>
+                                <li><span class="lang" data-lang="jp">JP</span></li>
+                                <li><span class="lang" data-lang="ru">RU</span></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -115,15 +122,19 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
                     <h3 data-i18n="[html]translation:join_multitrillion">Join the multi trillion energy market</h3>
                     <div class="left col-md-12">
                         <div class="row">
-                            <div class="desc karla" data-i18n="[html]translation:token_bonus">Current bonus 11,000.00 SNC active for:</div>
+                            <div class="desc karla">
+                                <span  data-i18n="[html]translation:token_bonus1">Current bonus</span> 
+                                <span id="token_bonus">11,000.00</span> 
+                                <span  data-i18n="[html]translation:token_bonus2">SNC active for:</span>
+                            </div>
                             <div class="value opensans" data-role="days_left">-</div>
-                            <a href="/ico.html" class="round-btn karla" onclick="fbq('track', 'InitiateCheckout');" data-i18n="[html]translation:token_contribute">CONTRIBUTE NOW</a>
+                            <a href="ico.html" class="round-btn karla" onclick="fbq('track', 'InitiateCheckout');" data-i18n="[html]translation:token_contribute">CONTRIBUTE NOW</a>
                         </div>
 
-                        <div class="row last">
+                        <div class="row ">
                             <div class="col-md-6">
                                 <div class="value opensans">
-                                    <img src="/img/usd.svg" />
+                                    <img src="img/usd.svg" />
                                     <span data-role="total_investment_dollar" data-speed="1000" data-from="0" data-to="0">-</span>
                                 </div>
                                 <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED SO FAR</div>
@@ -132,14 +143,19 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
 
                             <div class="col-md-6">
                                 <div class="value opensans">
-                                    <img src="/img/ethereum-header.png" />
+                                    <img src="img/ethereum-header.png" />
                                     <span data-role="total_investment_eth" data-speed="1000" data-from="0" data-to="0">-</span>
                                 </div>
                                 <div class="desc karla"  data-i18n="[html]translation:token_contributed">CONTRIBUTED SO FAR</div>
                                 <br />
                             </div>
                         </div>
+                        <div class="row last">
+                            <div class="desc karla" data-i18n="[html]translation:ico_ends">ICO ends:</div>
+                            <div class="value opensans" data-role="ico_days_left">-</div>
+                           
                         </div>
+                    </div>
                 </div>
             </div>
 

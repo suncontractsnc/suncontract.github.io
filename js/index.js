@@ -2,6 +2,7 @@
     browserData: undefined,
     currentProgressValue: -1,
     countdowndata: new Date(Date.UTC(2017, 06, 06, 16, 30, 0, 0)),
+    countdownend: new Date(Date.UTC(2017, 06, 06, 16, 30, 0, 0)),
     previousDollar: 0,
     previousEth: 0,
     utcTime: 0,
@@ -101,6 +102,18 @@
 
             $('[data-role="days_left"]').text(output)
 
+            distance = Sun.countdownend - now;
+
+            days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            output = days + "d " + hours + "h " +
+                minutes + "m " + seconds + "s ";
+
+            $('[data-role="ico_days_left"]').text(output)
+
             // end date reached
             if (distance < 0) {
                 clearInterval(x);
@@ -124,10 +137,14 @@
                     d.setUTCSeconds(resp.epochToBlock);
                     self.countdowndata = d;
                     self.utcTime = resp.epochToBlock;
+
+                    var d2 = new Date(0);
+                    self.countdownend = d2.setUTCSeconds(resp.endEpoch);
                 }
 
                 $('[data-role="total_investment_dollar"]').text(dollar.toLocaleString());
                 $('[data-role="total_investment_eth"]').text(eth.toLocaleString());
+                $("#token_bonus").text(Number(Math.round(resp.sncEthConversion)).toLocaleString('en'));
                 var item = $('[data-role="total_investment_dollar"]');
                 item.attr("data-from", self.previousDollar);
                 item.attr("data-to", dollar);
@@ -219,6 +236,23 @@ var Localization = {
 
     setLang: function (newLang) {
         var self = this;
+        if (newLang === "en") {
+            $("#slected_lang").text("EN");
+        }
+        else if (newLang === "si") {
+            $("#slected_lang").text("SLO");
+        }
+        else if (newLang === "cn") {
+            $("#slected_lang").text("中文");
+        }
+        else if (newLang === "ko") {
+            $("#slected_lang").text("KO");
+        } else if (newLang === "ru") {
+            $("#slected_lang").text("RU");
+        } else if (newLang === "jp") {
+            $("#slected_lang").text("JP");
+        }
+      
         $('[data-role="flag"]').removeClass("selected_flag");
         if (newLang == "si") {
             $("#blog_href").attr("href", "http://blogslo.suncontract.org")
