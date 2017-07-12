@@ -250,7 +250,7 @@ var Localization = {
         } else if (newLang === "ru") {
             $("#slected_lang").text("RU");
         } else if (newLang === "jp") {
-            $("#slected_lang").text("JP");
+            $("#slected_lang").text("日本語");
         }
       
         $('[data-role="flag"]').removeClass("selected_flag");
@@ -260,6 +260,13 @@ var Localization = {
         } else {
             $("#blog_href").attr("href", "http://blog.suncontract.org/")
             $("#flag_en").addClass("selected_flag");
+        }
+        if (newLang === "jp") {
+            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperjp.pdf")
+        }
+        else
+        {
+            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaper.pdf")
         }
         i18n.setLng(newLang, function (t) {
             $('[data-i18n]').i18n();
