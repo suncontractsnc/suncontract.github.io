@@ -264,6 +264,9 @@ var Localization = {
         if (newLang === "jp") {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperjp.pdf")
         }
+        else if (newLang === "ru") {
+            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperru.pdf")
+        }
         else
         {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaper.pdf")
