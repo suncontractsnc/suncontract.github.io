@@ -1,4 +1,6 @@
 var snc_to_eth = 0;
+var eth_value = 0;
+var snc_value = 0;
 (function ($) {
   "use strict";
 
@@ -109,6 +111,26 @@ var snc_to_eth = 0;
       $("#navigation_email").on("click", function () {
           if (!this.hasAttribute("disabled") && $("#accept").prop("checked")) {
               changeActiveTab("#navigation_email");
+              dataLayer.push({
+                  "event": "transaction",
+                  "ecommerce": {
+                      "purchase": {
+                          "actionField": {
+                              "id": Math.random().toString(),
+                              "affiliation": "suncontract.org",
+                              "revenue": snc_value,
+                              "tax": 0,
+                              "shipping": 0
+                          },
+                          "products": [{
+                              "id": "ETH",
+                              "name": "ETH",
+                              "price": eth_value,
+                              "quantity": 1
+                          }]
+                      }
+                  }
+              });
           }
       });
 
@@ -128,6 +150,9 @@ var snc_to_eth = 0;
               $("#btn-next-to-email").prop("disabled", false);
               $("#btn-next-to-email").removeAttr("disabled");
               $('[data-role="show-conversion"]').show();
+              snc_value = $(this).val() * snc_to_eth;
+              eth_value = $(this).val();
+              
           }
           else {
               $("#btn-next-to-email").attr('disabled', 'disabled');

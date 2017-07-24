@@ -144,7 +144,7 @@
 
                 $('[data-role="total_investment_dollar"]').text(dollar.toLocaleString());
                 $('[data-role="total_investment_eth"]').text(eth.toLocaleString());
-                $("#token_bonus").text(Number(Math.round(resp.sncEthConversion)).toLocaleString('en'));
+               
                 var item = $('[data-role="total_investment_dollar"]');
                 item.attr("data-from", self.previousDollar);
                 item.attr("data-to", dollar);
