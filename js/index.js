@@ -267,6 +267,9 @@ var Localization = {
         else if (newLang === "ru") {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperru.pdf")
         }
+        else if (newLang === "cn") {
+            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperch.pdf")
+        }        
         else
         {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaper.pdf")
