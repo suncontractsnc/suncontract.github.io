@@ -269,7 +269,10 @@ var Localization = {
         }
         else if (newLang === "cn") {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperch.pdf")
-        }        
+        }
+        else if (newLang === "ko") {
+            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperko.pdf")
+        }
         else
         {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaper.pdf")
