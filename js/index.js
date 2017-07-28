@@ -271,7 +271,7 @@ var Localization = {
             $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperch.pdf")
         }
         else if (newLang === "ko") {
-            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperko.pdf")
+            $('[data-role="whitepaper_href"]').attr("href", "res/whitepaperkor.pdf")
         }
         else
         {
