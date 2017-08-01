@@ -47,6 +47,8 @@
         self.updateCountersRound(item);
         item = $('[data-role="total_contributors"]');
         self.updateCountersRound(item);
+        item = $('[data-role="total_investment_eth"]');
+        self.updateCountersRound(item);
     },
     setProgress: function(value) {
 
@@ -105,7 +107,7 @@
                 }
 
                 $('[data-role="total_investment_dollar"]').text(dollar.toLocaleString());
-                $('[data-role="total_investment_eth"]').text(eth.toLocaleString());
+              
                
                 var item = $('[data-role="total_investment_dollar"]');
                 item.attr("data-from", self.previousDollar);
@@ -114,11 +116,7 @@
                 self.previousDollar = dollar;
 
 
-                item = $('[data-role="total_investment_eth"]');
-                item.attr("data-from", self.previousEth);
-                item.attr("data-to", eth);
-                self.updateCountersRound(item);
-                self.previousEth = eth;
+               
                 //self.setProgress(eth);
 
                 
@@ -127,7 +125,7 @@
             })
             .fail(function() {
                 $('[data-role="total_investment_dollar"]').text('-');
-                $('[data-role="total_investment_eth"]').text('-');
+               
             });
     },
     updateCountersRound: function(item) {
