@@ -29,13 +29,6 @@
                     }
                 }
             });
-       
-        var uaParser = new UAParser();
-        this.browserData = uaParser.getBrowser();
-      
-
-        //this.getInvestment();
-        //timer = setInterval(this.getInvestment, 10 * 1000);
         $('.lang').click(function () {
             var lang = $(this).data().lang;
             $('.lang').removeClass('selected');
@@ -49,86 +42,6 @@
         self.updateCountersRound(item);
         item = $('[data-role="total_investment_eth"]');
         self.updateCountersRound(item);
-        //item = $('[data-role="total_investment_dollar"]');
-        //self.updateCountersRound(item);
-    },
-    setProgress: function(value) {
-
-        $('.rmap__col').toArray().forEach(function(a) { $(a).removeClass('rmap__col--active') });
-        $('.stepper-xs .col').toArray().forEach(function(a) { $(a).removeClass('col--active') });
-
-        if (value >= 0) {
-            $('.rmap [data-step="1"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="1"]').addClass('col--active');
-        }
-        if (value >= 5000) {
-            $('.rmap [data-step="2"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="2"]').addClass('col--active');
-        }
-        if (value >= 10000 ) {
-            $('.rmap [data-step="3"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="3"]').addClass('col--active');
-        }
-        if (value >= 25000 ) {
-            $('.rmap [data-step="4"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="4"]').addClass('col--active');
-        }
-        if (value >= 40000 ) {
-            $('.rmap [data-step="5"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="5"]').addClass('col--active');
-        }
-        if (value >= 60000 ) {
-            $('.rmap [data-step="6"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="6"]').addClass('col--active');
-        }
-        if (value >= 70000) {
-            $('.rmap [data-step="7"]').addClass('rmap__col--active');
-            $('.stepper-xs [data-step="7"]').addClass('col--active');
-        }
-    },
-   
-    getInvestment: function() {
-        var self = Sun;
-        $.ajax({
-                type: 'GET',
-                url: 'https://api.suncontract.org/api/values'
-            })
-            .done(function(resp) {
-                // rounding down to 2 decimal places
-                var dollar = Math.round(resp.dollarPrice * resp.totalETH);
-                var eth = Math.round(resp.totalETH);
-
-                if (self.utcTime != resp.epochToBlock) {
-                    var d = new Date(0);
-                    d.setUTCSeconds(resp.epochToBlock);
-                    self.countdowndata = d;
-                    self.utcTime = resp.epochToBlock;
-
-                    var d2 = new Date(0);
-                    self.countdownend = d2.setUTCSeconds(resp.endEpoch);
-                }
-
-                $('[data-role="total_investment_dollar"]').text(dollar.toLocaleString());
-              
-               
-                var item = $('[data-role="total_investment_dollar"]');
-                item.attr("data-from", self.previousDollar);
-                item.attr("data-to", dollar);
-                self.updateCountersRound(item);
-                self.previousDollar = dollar;
-
-
-               
-                //self.setProgress(eth);
-
-                
-                
-               
-            })
-            .fail(function() {
-                $('[data-role="total_investment_dollar"]').text('-');
-               
-            });
     },
     updateCountersRound: function(item) {
         item.countTo({
