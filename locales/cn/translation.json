@@ -80,7 +80,7 @@
   "start_p1": "六月二十八日",
   "start_p2": "",
   "start_p3": "2017",
-  "join_multitrillion": "加入万亿元的能源市场",
+  "join_multitrillion": "Results of Token Sale",
   "subscribe": "订阅",
   "timeline_title": "时间线",
   "katja_orign_title": "Katja Ogrin",
@@ -98,7 +98,7 @@
   "sebastjanStucl_title": "Sebastjan Stucl",
   "sebastjanStucl_desc": "块链商业顾问",
   "terms_of_use": "使用条款",
-  "token_live": "SNC 代币发售 进行中!",
+  "token_live": "SNC Token Sale has finished! Thank you for your contributions!",
   "token_bonus1": " ",
   "token_bonus2": " SNC 红包:",
   "token_contribute": "现在参与",
@@ -115,5 +115,10 @@
   "borisHorvat_title": "PhD Boris Horvat",
   "borisHorvat_desc": "Business Model Advice",
     "jernejTonejc_title": "PhD Jernej Tonejc",
-  "jernejTonejc_desc": "Security Advice"
+  "jernejTonejc_desc": "Security Advice",
+    "ico_contributors": "Number of contributors:",
+  "hitbtc": "HitBTC",
+  "gatehub": "GateHUB",
+  "exchanges": "SNC is already LISTED ON HitBTC and soon will be followed by GateHub:",
+  "distributed_snc": "DISTRIBUTED SNC"
 }

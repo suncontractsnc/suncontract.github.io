@@ -29,7 +29,7 @@
                     }
                 }
             });
-        this.startCountdown();
+       
         var uaParser = new UAParser();
         this.browserData = uaParser.getBrowser();
       
@@ -43,6 +43,10 @@
 
             Localization.setLang(lang);
         });
+        var item = $('[data-role="total_investment_snc"]');
+        self.updateCountersRound(item);
+        item = $('[data-role="total_contributors"]');
+        self.updateCountersRound(item);
     },
     setProgress: function(value) {
 
@@ -78,49 +82,7 @@
             $('.stepper-xs [data-step="7"]').addClass('col--active');
         }
     },
-    startCountdown: function () {
-        Sun.countdown();
-        var x = setInterval(function () {
-            Sun.countdown();
-        }, 1000);
-    },
-    countdown: function() {
-        var x = setInterval(function() {
-
-            // now
-            var now = new Date().getTime();
-            // diff
-            var distance = Sun.countdowndata - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            var output = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
-
-            $('[data-role="days_left"]').text(output)
-
-            distance = Sun.countdownend - now;
-
-            days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            output = days + "d " + hours + "h " +
-                minutes + "m " + seconds + "s ";
-
-            $('[data-role="ico_days_left"]').text(output)
-
-            // end date reached
-            if (distance < 0) {
-                clearInterval(x);
-                $('[data-role="days_left"]').text("-");
-            }
-        }, 1000);
-    },
+   
     getInvestment: function() {
         var self = Sun;
         $.ajax({
@@ -157,7 +119,7 @@
                 item.attr("data-to", eth);
                 self.updateCountersRound(item);
                 self.previousEth = eth;
-                self.setProgress(eth);
+                //self.setProgress(eth);
 
                 
                 

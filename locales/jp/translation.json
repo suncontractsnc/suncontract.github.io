@@ -108,7 +108,7 @@
   "start_p1": "６月２８日",
   "start_p2": "th",
   "start_p3": ", ２０１７年",
-  "join_multitrillion": "盛大なエネルギー市場の可能性を活用しよう",
+  "join_multitrillion": "Results of Token Sale",
   "subscribe": "今すぐ購読する",
   "katja_orign_title": "Katja Ogrin",
   "katja_orign_desc": "SunContract Massachusetts",
@@ -136,7 +136,7 @@
   "blog_2_date": "２０１６年８月１２日",
   "blog_2_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam id iaculis nunc. Curabitur efficitur magna et odio.",
   "terms_of_use": "利用規約",
-  "token_live": "SNCトークン（ＩＣＯ）発売中！",
+  "token_live": "SNC Token Sale has finished! Thank you for your contributions!",
   "token_bonus": "現在のボーナス１１．５００ＳＮＣは有効です。:",
   "token_contribute": "今すぐ貢献する",
   "token_contributed": "今まで貢献された",
@@ -152,5 +152,10 @@
   "borisHorvat_title": "PhD Boris Horvat",
   "borisHorvat_desc": "Business Model Advice",
     "jernejTonejc_title": "PhD Jernej Tonejc",
-  "jernejTonejc_desc": "Security Advice"
+  "jernejTonejc_desc": "Security Advice",
+      "ico_contributors": "Number of contributors:",
+  "hitbtc": "HitBTC",
+  "gatehub": "GateHUB",
+  "exchanges": "SNC is already LISTED ON HitBTC and soon will be followed by GateHub:",
+  "distributed_snc": "DISTRIBUTED SNC"
 }

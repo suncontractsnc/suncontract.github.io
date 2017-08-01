@@ -556,6 +556,7 @@ header h2 {
     width: 583px;
     height: 298px;
 }
+
 #worldteam h1 {
     color: white;
     font-size: 38px;
@@ -695,9 +696,9 @@ footer .separator {
 }
 .info .data .left .row {
     /*width: 500px;*/
-    /*margin: 0 auto;*/
+    /*margin: 0 auto;
     
-    margin-bottom: 90px;
+    margin-bottom: 90px;*/
 }
 .info .data .left .row.last {
     margin-bottom: 30px;
@@ -795,6 +796,11 @@ footer .separator {
     top: 115px;
     left: 130px;
 }
+.exchange_image {
+    height: 150px;
+    width: 150px;
+    margin: 0px;
+}
 #k30 {
     position: absolute;
     top: 225px;
@@ -832,6 +838,7 @@ footer .separator {
     /*padding-top: 50px;
     padding-bottom: 90px;*/
 }
+
 
 @media (max-width: 1500px) {
     .info .data .left .value {

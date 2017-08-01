@@ -108,7 +108,7 @@
   "start_p1": "28 июня",
   "start_p2": "th",
   "start_p3": ", 2017",
-  "join_multitrillion": "Станьте частью многомиллионных возможностей энергетического рынка",
+  "join_multitrillion": "Results of Token Sale",
   "subscribe": "ПОДПИСАТЬСЯ",
   "katja_orign_title": "Katja Ogrin",
   "katja_orign_desc": "SunContract Массачусетс",
@@ -136,7 +136,7 @@
   "blog_2_date": "12/8/2016",
   "blog_2_description": "",
   "terms_of_use": "Правила пользования",
-  "token_live": "Началась продажа токенов SNC (ICO)!",
+  "token_live": "SNC Token Sale has finished! Thank you for your contributions!",
   "token_bonus1": "Текущий бонус ",
   "token_bonus2": " SNC активен:",
   "token_contribute": "СДЕЛАТЬ ВКЛАД",
@@ -154,5 +154,10 @@
   "borisHorvat_title": "PhD Boris Horvat",
   "borisHorvat_desc": "Business Model Advice",
     "jernejTonejc_title": "PhD Jernej Tonejc",
-  "jernejTonejc_desc": "Security Advice"
+  "jernejTonejc_desc": "Security Advice",
+          "ico_contributors": "Number of contributors:",
+  "hitbtc": "HitBTC",
+  "gatehub": "GateHUB",
+  "exchanges": "SNC is already LISTED ON HitBTC and soon will be followed by GateHub:",
+  "distributed_snc": "DISTRIBUTED SNC"
 }

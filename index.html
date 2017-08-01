@@ -10,7 +10,7 @@
 
     <title>SunContract</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -18,21 +18,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-    <link href="css/main.css?v=21" rel="stylesheet" type="text/css">
+    <link href="css/main.css?v=23" rel="stylesheet" type="text/css">
     <link href="css/stepper.css?v=22" rel="stylesheet" type="text/css">
     <link href="css/mailchimp.css?v=16" rel="stylesheet" type="text/css">
 
     <script src="js/i18next.min.js"></script>
     <script src="js/ua-parser.min.js"></script>
-    <script src="js/index.js?v=21"></script>
+    <script src="js/index.js?v=23"></script>
     <script src="js/progressbar.min.js?v=6"></script>
-    
-    <!-- Google Tag Manager --> <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-PSHCP8J');</script> <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-PSHCP8J');</script> <!-- End Google Tag Manager -->
 
     <link id="favicon" rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
 
     <!-- Latest compiled and minified CSS -->
-  
+
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
     <meta property="og:site_name" content="SunContract" />
@@ -41,9 +42,9 @@
     <meta property="og:image" content="https://suncontract.org/img/fb_header.jpg" />
     <!-- Facebook Pixel Code -->
     <script>
-        ! function(f, b, e, v, n, t, s) {
+        ! function (f, b, e, v, n, t, s) {
             if (f.fbq) return;
-            n = f.fbq = function() {
+            n = f.fbq = function () {
                 n.callMethod ?
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
@@ -62,9 +63,10 @@
         fbq('init', '228889184291755'); // Insert your pixel ID here.
         fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
-/></noscript>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+             src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1" />
+    </noscript>
     <!-- DO NOT MODIFY -->
     <!-- End Facebook Pixel Code -->
 </head>
@@ -85,7 +87,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="myNavbar" style="max-height:450px;">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="https://suncontract.org/ico.html" style="color: #73c63a;" data-i18n="[html]translation:token_sale">TOKEN SALE</a></li>
+                   
                     <li><a href="#about" data-i18n="[html]translation:about">ABOUT</a></li>
                     <li><a href="res/whitepaper.pdf" data-role="whitepaper_href" target="_blank" data-i18n="[html]translation:whitepaper">WHITEPAPER</a></li>
                     <li><a id="blog_href" href="http://blog.suncontract.org/" target="_blank" data-i18n="[html]translation:blog">BLOG</a></li>
@@ -120,39 +122,76 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
 
             <div class="info">
                 <div class="data row">
-                    <h1 data-i18n="[html]translation:token_live">SNC Token Sale (ICO) is live!</h1>
-                   
-                    <h3 data-i18n="[html]translation:join_multitrillion">Join the multi trillion energy market</h3>
-                    <div class="left col-md-12">
-                        <div class="row">
-                            <div class="desc karla" data-i18n="[html]translation:ico_ends">Token Sale ends in:</div>
-                            <div class="value opensans" data-role="ico_days_left">-</div>
-                            <a href="ico.html" class="round-btn karla" onclick="fbq('track', 'InitiateCheckout');" data-i18n="[html]translation:token_contribute">CONTRIBUTE NOW</a>
-                        </div>
+                    <h1 data-i18n="[html]translation:token_live">SNC Token Sale has finished!</h1>
 
-                        <div class="row last">
-                            <div class="col-md-6">
+                    <h3 data-i18n="[html]translation:join_multitrillion">Results of Token Sale</h3>
+                    <div class="left col-md-12">
+                        <div class="row ">
+                            <div class="col-md-12">
+                                <div class="desc karla" data-i18n="[html]translation:ico_contributors">Number of contributors:</div>
+                                <div class="value opensans">
+                                    <img src="img/group_of_people.svg" />
+                                    <span data-role="total_contributors" data-speed="1000" data-from="0" data-to="3280">-</span>
+                                </div>
+
+                                <br />
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
                                 <div class="value opensans">
                                     <img src="img/usd.svg" />
                                     <span data-role="total_investment_dollar" data-speed="1000" data-from="0" data-to="0">-</span>
                                 </div>
-                                <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED SO FAR</div>
+                                <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED</div>
                                 <br />
                             </div>
-
-                            <div class="col-md-6">
+                            <div class="col-md-4">
+                                <div class="value opensans">
+                                    <img src="img/snc.png" />
+                                    <span data-role="total_investment_snc" data-speed="1000" data-from="0" data-to="200000">-</span>
+                                </div>
+                                <div class="desc karla" data-i18n="[html]translation:distributed_snc">DISTRIBUTED SNC</div>
+                                <br />
+                            </div>
+                            <div class="col-md-4">
                                 <div class="value opensans">
                                     <img src="img/ethereum-header.png" />
                                     <span data-role="total_investment_eth" data-speed="1000" data-from="0" data-to="0">-</span>
                                 </div>
-                                <div class="desc karla"  data-i18n="[html]translation:token_contributed">CONTRIBUTED SO FAR</div>
+                                <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED</div>
                                 <br />
                             </div>
                         </div>
-                        <!--<div class="row last">
-                            <div class="desc karla" data-i18n="[html]translation:ico_contributors">Number of contributors:</div>
-                            <div class="value opensans" data-role="ico_days_left">-</div>
-                        </div>-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="desc karla" data-i18n="[html]translation:exchanges" style="font-size: 18px;color: white;">SNC is already LISTED ON HitBTC and soon will be followed by GateHub.</div>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <a href="https://hitbtc.com/exchange/SNC-to-ETH" target="_blank">
+                                    <div class="value opensans">
+                                        <img style="height:150px;width:150px;margin:0px;" src="img/hitbtc.png" />
+
+                                    </div>
+                                    <div class="desc karla" data-i18n="[html]translation:hitbtc">hitBTC</div>
+                                    <br />
+                                </a>
+                            </div>
+
+                            <div class="col-md-3">
+                                <a href="https://gatehub.net/" target="_blank">
+                                    <div class="value opensans" style="height:150px;">
+                                        <img style="height:100px;width:100px;margin:0px;" src="img/gatehub.png" />
+                                    </div>
+                                    <div class="desc karla" data-i18n="[html]translation:gatehub">GateHUB</div>
+                                    <br />
+                                </a>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -160,156 +199,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
         </div>
 
     </header>
-    <section class="milestones">
-        <div class="container">
-            <div class="mmm_box rmap_box">
-
-                <div class="mmm_box__in">
-
-                    <div class="rmap clearfix hidden-xs">
-
-                        <div class="rmap__col" data-step="1" style="width:30%">
-                            <h5 style="text-align:left">0 – 5K<br />ETH</h5>
-                            <div class="numb" style="margin-left:0px;">
-                                <span>1</span>
-                            </div>
-                            
-                            <h4 style="text-align:left" data-i18n="[html]translation:t1">P2P Trading Platform</h4>
-                        </div>
-                        <!--.rmap__col-->
-
-                        <div class="rmap__col" data-step="2" style="width:25%">
-                            <h5>5K – 10K<br />ETH</h5>
-                            <div class="numb">
-                                <span>2</span>
-                            </div>
-                            <h4 data-i18n="[html]translation:t2">Implementing the P2P Platform on a national level</h4>
-                        </div>
-                        <!--.rmap__col-->
-
-                        <div class="rmap__col" data-step="3" style="width:17%">
-                            <h5>10K – 25K<br />ETH</h5>
-                            <div class="numb">
-                                <span>3</span>
-                            </div>
-                            <h4  data-i18n="[html]translation:t3">Commercializing the P2P Platform on an international level</h4>
-                        </div>
-                        <!--.rmap__col-->
-
-                        <div class="rmap__col" data-step="4" style="width:15%">
-                            <h5>25K – 40K<br />ETH</h5>
-                            <div class="numb">
-                                <span>4</span>
-                            </div>
-                            <h4  data-i18n="[html]translation:t4">Flexibility market and demand response services</h4>
-                        </div>
-                        <!--.rmap__col-->
-
-                        <div class="rmap__col" data-step="5" style="width:13%">
-                            <h5>40K – 60K<br />ETH</h5>
-                            <div class="numb">
-                                <span>5</span>
-                            </div>
-                            <h4  data-i18n="[html]translation:t5">Increasing the trading volume of P2P Platform with renewables and energy storage</h4>
-                        </div><!--
-                        <div class="rmap__col" data-step="6" style="width:10%">
-                            <h5>60K – 70K ETH</h5>
-                            <div class="numb">
-                                <span>6</span>
-                            </div>
-                            <h4  data-i18n="[html]translation:t6">Increasing the market share, acqusitions and expansions</h4>
-                        </div>
-                        <div class="rmap__col" data-step="7" style="width:9%">
-                            <h5>70K – 100K ETH</h5>
-                            <div class="numb">
-                                <span>7</span>
-                            </div>
-                            <h4  data-i18n="[html]translation:t7">Further grid services development</h4>
-                        </div>
-                        <!--.rmap__col-->
-                    </div>
-                    <!--.rmap-->
-
-                    <div class="mar_box_acc stepper-xs visible-xs">
-
-                        <div class="bar-background"></div>
-
-                        <div class="col row" style="margin-top: 0;" data-step="1">
-                            <div class="numb col-xs-3">
-                                <span>1</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>0 – 5K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t1">P2P Trading Platform</span>
-                            </div>
-                        </div>
-
-                        <div class="col row" data-step="2">
-                            <div class="numb col-xs-3">
-                                <span>2</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>5K – 10K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t2">Implementing the P2P Platform on a national level</span>
-                            </div>
-                        </div>
-
-                        <div class="col row" data-step="3">
-                            <div class="numb col-xs-3">
-                                <span>3</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>10K – 25K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t3">Commercializing the P2P Platform on an international level</span>
-                            </div>
-                        </div>
-                        
-                        <div class="col row" data-step="4">
-                            <div class="numb col-xs-3">
-                                <span>4</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>25K – 40K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t4">Flexibility market and demand response services</span>
-                            </div>
-                        </div>
-
-                        <div class="col row" data-step="5">
-                            <div class="numb col-xs-3">
-                                <span>5</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>40K – 60K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t5">Increasing the trading volume of P2P Platform with renewables and energy storage</span>
-                            </div>
-                        </div><!--
-                        <div class="col row" data-step="6">
-                            <div class="numb col-xs-3">
-                                <span>6</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>60K – 70K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t6">Increasing the market share, acqusitions and expansions</span>
-                            </div>
-                        </div>
-                        <div class="col row" data-step="7">
-                            <div class="numb col-xs-3">
-                                <span>7</span>
-                            </div>
-                            <div class="col-xs-9">
-                                <h4>70K – 100K ETH</h4>
-                                <span class="desc"  data-i18n="[html]translation:t7">Further grid services development</span>
-                            </div>
-                        </div>-->
-
-                    </div>
-
-                </div>
-                <!--.mmm_box__in-->
-            </div>
-            <!--.mmm_box-->
-        </div>
-    </section>
+   
     <section class="tokensale" id="tokensale">
         <div class="custom_container">
             <div class="row top-buffer">
@@ -350,12 +240,14 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
         </div>
     </section>
-   
+
 
     <section class="about opensans" id="about">
         <div class="custom_container">
-            <p data-i18n="[html]translation:content_about">SunContract is an energy trading platform that utilises blockchain technology to create a new business model for buying and selling electricity. If you believe that blockchain technology can solve many of today's problems and that we are the
-                team to take it to the energy sector, you are welcome to contribute.</p>
+            <p data-i18n="[html]translation:content_about">
+                SunContract is an energy trading platform that utilises blockchain technology to create a new business model for buying and selling electricity. If you believe that blockchain technology can solve many of today's problems and that we are the
+                team to take it to the energy sector, you are welcome to contribute.
+            </p>
 
             <div class="grid row">
                 <div class="item col-md-4">
@@ -376,8 +268,10 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
 
             <h1 class="green" data-i18n="[html]translation:be_green_title">Become a part of SunContract</h1>
-            <p data-i18n="[html]translation:be_green_desc">Capital required to launch the SunContract platform will be secured through a crowdfunding campaign - SunContract token sale. By participating in the token sale you will receive SNC tokens. As the only crypto currency we accept on the token
-                sale is Ether, we decided to fix the amount of SNCs to the Ethers we gather. The basis for token issuance is set at a ratio of 10.000 SNCs per 1 ETH. You can read more on the topic in our <a data-role="whitepaper_href" href="res/whitepaper.pdf">whitepaper</a>.</p>
+            <p data-i18n="[html]translation:be_green_desc">
+                Capital required to launch the SunContract platform will be secured through a crowdfunding campaign - SunContract token sale. By participating in the token sale you will receive SNC tokens. As the only crypto currency we accept on the token
+                sale is Ether, we decided to fix the amount of SNCs to the Ethers we gather. The basis for token issuance is set at a ratio of 10.000 SNCs per 1 ETH. You can read more on the topic in our <a data-role="whitepaper_href" href="res/whitepaper.pdf">whitepaper</a>.
+            </p>
 
             <div class="grid row">
                 <div class="item col-md-4">
@@ -450,7 +344,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
             </div>
         </div>
     </section>
-  
+
     <section class="whitepaper" id="whitepaper">
         <div class="custom_container">
             <div class="row top-buffer">
@@ -464,7 +358,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
 
 
 
- 
+
 
     <section class="roadmap" id="roadmap">
         <h1 class="white" data-i18n="[html]translation:timeline_title">Timeline</h1>
@@ -728,7 +622,7 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
                 <div class="position opensans" data-i18n="[html]translation:borisHorvat_desc">Business Model Advice</div>
                 <div class="bio"></div>
             </div>
-                        <div class="item col-md-4">
+            <div class="item col-md-4">
                 <img src="img/faces/jernejTonejc.png">
                 <div class="name opensans">
                     <span data-i18n="[html]translation:jernejTonejc_title">
@@ -783,21 +677,21 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
                 <a href="https://www.cryptocoinsnews.com/suncontract-token-sale-decentralized-energy-market/" target="blank"><img src="img/press/cryptocoinnews_logo.svg"></a>
             </div>
             <div class="item col-md-2">
-                <a href="https://cointelegraph.si/news/suncontract-slovenski-blockchain-projekt-za-trgovanje-z-energijo"target="blank"><img src="img/press/cointelegraphslo_logo.svg"></a>
+                <a href="https://cointelegraph.si/news/suncontract-slovenski-blockchain-projekt-za-trgovanje-z-energijo" target="blank"><img src="img/press/cointelegraphslo_logo.svg"></a>
             </div>
             <div class="item col-md-2">
-                <a href="http://coin-turk.com/elektrik-enerji-projesi-suncontract-platformuyla-tanisin-ico-28-haziranda"target="blank"><img src="img/press/cointurk_logo.svg"></a>
+                <a href="http://coin-turk.com/elektrik-enerji-projesi-suncontract-platformuyla-tanisin-ico-28-haziranda" target="blank"><img src="img/press/cointurk_logo.svg"></a>
             </div>
             <div class="item col-md-2">
-                <a href="https://www.finance.si/8857870/Slovensko-podjetje-pretresa-trg-trgovanja-z-elektricno-energijo"target="blank"><img src="img/press/financesi_logo.svg"></a>
+                <a href="https://www.finance.si/8857870/Slovensko-podjetje-pretresa-trg-trgovanja-z-elektricno-energijo" target="blank"><img src="img/press/financesi_logo.svg"></a>
             </div>
             <div class="item col-md-2">
-                <a href="https://cointelegraph.com/press-releases/suncontract-announces-tokensale-ico-for-june-28th"target="blank"><img src="img/press/cointelegraph_logo.svg"></a>
+                <a href="https://cointelegraph.com/press-releases/suncontract-announces-tokensale-ico-for-june-28th" target="blank"><img src="img/press/cointelegraph_logo.svg"></a>
             </div>
             <div class="item col-md-2">
-                <a href="https://www.coinjoker.com/suncontract-blockchain-energy/"target="blank"><img src="img/press/coinjoker_logo.svg"></a>
+                <a href="https://www.coinjoker.com/suncontract-blockchain-energy/" target="blank"><img src="img/press/coinjoker_logo.svg"></a>
             </div>
-            
+
         </div>
     </section>
 
@@ -820,20 +714,20 @@ src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1"
 
 
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+                    (function (i, s, o, g, r, a, m) {
+                        i['GoogleAnalyticsObject'] = r;
+                        i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                        a = s.createElement(o),
+                            m = s.getElementsByTagName(o)[0];
+                        a.async = 1;
+                        a.src = g;
+                        m.parentNode.insertBefore(a, m)
+                    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-80290754-1', 'auto');
-        ga('send', 'pageview');
+                    ga('create', 'UA-80290754-1', 'auto');
+                    ga('send', 'pageview');
     </script>
 
 </body>

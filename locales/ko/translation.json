@@ -108,7 +108,7 @@
   "start_p1": "6월 28일",
   "start_p2": "번째",
   "start_p3": "2017년",
-  "join_multitrillion": "수조에 달하는 잠재가치를 가진 에너지 시장에 동참하세요",
+  "join_multitrillion": "Results of Token Sale",
   "subscribe": "구독",
   "katja_orign_title": "카티아 오그린(Katja Ogrin)",
   "katja_orign_desc": "SunContract 메사추세츠",
@@ -136,7 +136,7 @@
   "blog_2_date": "2016년 12월 8일",
   "blog_2_description": "",
   "terms_of_use": "이용약관",
-  "token_live": "SNC 토큰 판매(ICO)개 개시되었습니다!",
+  "token_live": "SNC Token Sale has finished! Thank you for your contributions!",
   "token_bonus1": "현 보너스 ",
   "token_bonus2": " SNC의 활성기간:",
   "token_contribute": "지금 동참하세요",
@@ -154,5 +154,10 @@
   "borisHorvat_title": "PhD Boris Horvat",
   "borisHorvat_desc": "Business Model Advice",
     "jernejTonejc_title": "PhD Jernej Tonejc",
-  "jernejTonejc_desc": "Security Advice"
+  "jernejTonejc_desc": "Security Advice",
+        "ico_contributors": "Number of contributors:",
+  "hitbtc": "HitBTC",
+  "gatehub": "GateHUB",
+  "exchanges": "SNC is already LISTED ON HitBTC and soon will be followed by GateHub:",
+  "distributed_snc": "DISTRIBUTED SNC"
 }
