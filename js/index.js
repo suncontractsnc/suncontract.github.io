@@ -34,7 +34,7 @@
         this.browserData = uaParser.getBrowser();
       
 
-        this.getInvestment();
+        //this.getInvestment();
         timer = setInterval(this.getInvestment, 10 * 1000);
         $('.lang').click(function () {
             var lang = $(this).data().lang;
@@ -48,6 +48,8 @@
         item = $('[data-role="total_contributors"]');
         self.updateCountersRound(item);
         item = $('[data-role="total_investment_eth"]');
+        self.updateCountersRound(item);
+        item = $('[data-role="total_investment_dollar"]');
         self.updateCountersRound(item);
     },
     setProgress: function(value) {
