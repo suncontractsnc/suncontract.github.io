@@ -49,8 +49,8 @@
         self.updateCountersRound(item);
         item = $('[data-role="total_investment_eth"]');
         self.updateCountersRound(item);
-        item = $('[data-role="total_investment_dollar"]');
-        self.updateCountersRound(item);
+        //item = $('[data-role="total_investment_dollar"]');
+        //self.updateCountersRound(item);
     },
     setProgress: function(value) {
 
