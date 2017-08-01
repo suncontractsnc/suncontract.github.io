@@ -35,7 +35,7 @@
       
 
         //this.getInvestment();
-        timer = setInterval(this.getInvestment, 10 * 1000);
+        //timer = setInterval(this.getInvestment, 10 * 1000);
         $('.lang').click(function () {
             var lang = $(this).data().lang;
             $('.lang').removeClass('selected');
