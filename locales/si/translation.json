@@ -123,11 +123,11 @@
   "domenButala_desc": "Svetovalec za energetsko trgovanje",
   "borisHorvat_title": "PhD Boris Horvat",
   "borisHorvat_desc": "Svetovalec za poslovne modele",
-    "jernejTonejc_title": "PhD Jernej Tonejc",
+  "jernejTonejc_title": "PhD Jernej Tonejc",
   "jernejTonejc_desc": "Svetovalec za varnost",
-    "ico_contributors": "Število udeležencev:",
+  "ico_contributors": "Število udeležencev:",
   "hitbtc": "HitBTC",
-  "gatehub": "GateHUB",
+  "gatehub": "GateHub",
   "exchanges": "SNC je že na HitBTC-ju, kmalu pa bo tudi na GateHub-u.",
   "distributed_snc": "izdano SNC-jev"
 }
