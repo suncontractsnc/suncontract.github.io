@@ -158,7 +158,8 @@
   "ico_contributors": "Number of contributors:",
   "hitbtc": "HitBTC",
   "gatehub": "GateHub",
-  "exchanges": "SNC is already listed on HitBTC and will be listed on GateHub soon:",
+  "exchanges": "SNC is already listed on HitBTC and EtherDelta:",
   "distributed_snc": "DISTRIBUTED SNC",
-  "total_dollar": "2 million"
+  "total_dollar": "2 million",
+  "etherdelta":"EtherDelta"
 }
