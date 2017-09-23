@@ -86,12 +86,16 @@ footer img {
 
 
 @media (max-width: 600px) {
+    .logo_mini {
+        font-size: 12px !important;
+    }
     .header .logo-sign {
-        font-size: 12px;
+        font-size: 45px;
     }
     .small_screen {
         display:none;
     }
+
     footer {
         height: 133px;
     }
@@ -244,6 +248,6 @@ footer img {
 .ss {
 
     font-family: 'Open Sans', sans-serif;
-  
 }
+
 
