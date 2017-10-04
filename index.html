@@ -16,13 +16,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <link href="css/mailchimp.css?v=16" rel="stylesheet" type="text/css">
-    <script src="js/new_index.js?v=102"></script>
 
-    <link href="css/main.css?v=102" rel="stylesheet" type="text/css">
+    <script src="js/new_index.js?v=104"></script>
+
+    <link href="css/main.css?v=104" rel="stylesheet" type="text/css">
     <link id="favicon" rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-
-    <!-- Latest compiled and minified CSS -->
 
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
@@ -32,10 +30,33 @@
     <meta property="og:image" content="https://suncontract.org/img/fb.png" />
     <meta property="fb:app_id" content="147460225858192" />
     <meta name="twitter:image" content="https://suncontract.org/img/tw.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+
 </head>
 
-<body>
-    <div class="container col-md-12 body-content sidebar">
+<body style="height:100%; background:black;">
+
+    <!-- popup for mobile clients -->
+    <div class="modal fade" id="exampleModal" role="dialog" data-backdrop="static" style="overlay ">
+        <div class="modal-dialog" style="width: 80%; margin-left: 10%; margin-right:10%;  ">
+            <div id="destination" class="modal-content moj-modal" style="background-color: transparent; width: 100%;">
+
+                <div class="wrapper row last" style="padding-top: 40px;">
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 input-wrapper mc-field-group">
+                        <input type="submit" data-dismiss="modal" value="Close" name="subscribe" id="mc-embedded-close" class="closeButton form-control btn btn-link" style="width: 100%; color: #D2D2D2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="cookies_height" style="position: fixed; bottom: 0px; z-index: 3; width: 100%; background-color: white; display: none;">
+        <p class="cookies_notification">This website uses cookies to ensure you get the best experience on our site. <a style="color: grey; text-decoration: underline; ">Learn more</a>
+            <button id="allow_cookies_button" type="button" class="btn btn-success" style="margin-left: 5%; height: 48px; width: 108px; ">Allow cookies</button> </p>
+    </div>
+
+    <div class="container col-md-12 body-content sidebar" id="body_content_padding" style="padding-top: 160px;">
 
         <div class="row text-center logo">
             <img src="img/N symbol.svg" />
@@ -43,122 +64,169 @@
 
         <div class="row text-center header">
             <div class="logo-sign">
-                The future is closer than you think.
+                The future is <br class="br-nodisplay" /> closer than you <br class="br-nodisplay" /> think.
             </div>
         </div>
 
     </div>
-    <div class="col-md-12 join-us-margin" style="text-align:center; ">
+    <div id="button_all" class="col-md-12 join-us-margin" style="text-align:center;">
+        <div class="container">
+            <div class="line_width " style="margin:auto;">
+
+                <div class="jojning_us" style="text-align:center">
+                    <button id="moj" class="form-control btn btn-primary btn-large bold center-block custom_button join-us-button" type="submit" data-target="#exampleModal">
+                        <b> Join us</b>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-md-12 custom_footer" style="margin-top: 10px;">
         <div>
-            <button class="form-control btn btn-primary btn-large bold custom" style="width:260px; height:50px;border-radius:11px;" type="submit">
-                    <b> Join us</b>
-                </button>
+            <a href="/tokensale/index.html" class="tokensale_site" id="continue_to">
+                <p class="ss">Continue to our previous site &nbsp;<span><img src="img/arrow.svg" /></span></p>
+            </a>
+        </div>
+        <div class="bottom-line line_width"></div>
+        <div class="line_width links" style="margin:auto; ">
+            <div style="display: inline-block;">
+                <div class=" custom_padding1" style="padding-bottom: 10px; ">
+                    <a target="_blank" href="https://twitter.com/sun_contract"><img src="./img/icons/tw.svg"><img></a>
+                    <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="./img/icons/fb.svg"><img></a>
+                    <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="./img/icons/in.svg"><img></a>
+                    <a target="_blank" href="https://join.slack.com/t/suncontractteam/shared_invite/MjE5MTEwMTk3OTg3LTE1MDEyNTk1MTAtYjVlMGMxZjUyYw"><img src="./img/icons/slack.svg"><img></a>
+                </div>
+                <div class="custom_padding2" style="padding-bottom: 20px;">
+                    <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="./img/icons/bitcointalk.svg" width="38"><img></a>
+                    <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="./img/icons/reddit.svg" width="40"><img></a>
+                    <a target="_blank" href="https://github.com/SunContract/"><img src="./img/icons/github.svg" style="width: 38px;"><img></a>
+                    <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="./img/icons/telegram.svg" width="34"><img></a>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="col-md-12 container subscribe-us-margin" style=" display:none;">
-        <div class="container">
-            <div class="line_width footer-root-div" style="margin:auto;">
-                <div class="content jojning_us" style="text-align:center">
-                    By joining our mailing list you will be first to receive <br /> newsletters, news and other important announcments.
-                </div>
 
-                <div class="form-group">
-                    <div class="">
-
-                        <div id="mc_embed_signup">
-                            <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                <div id="mc_embed_signup_scroll">
-                                    <div class="mc-field-group">
-                                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="max-width:230px;" placeholder="satoshin@gmx.com">
-                                    </div>
-                                    <div id="mce-responses" class="clear">
-                                        <div class="response" id="mce-error-response" style="display:none"></div>
-                                        <div class="response" id="mce-success-response" style="display:none"></div>
-                                    </div>
-
-                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
-                                    <div class="clear"><input type="submit" value="Subscribe" style=" " name="subscribe" id="mc-embedded-subscribe" class="form-control btn btn-primary btn-large bold"></div>
-                                </div>
-                            </form>
+    <div style="display: none">
+        <div id="source1" class="jojning_us" style="text-align:center; width: 80%; margin: auto;">
+            <br />By joining our mailing list you will be first to receive <br /> newsletters, news and other important announcments.
+        </div>
+        <div id="source" class="form-group form">
+            <div id="mc_embed_signup">
+                <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="nova_forma_signup_scroll" style="margin: auto;">
+                        <div class="wrapper row first" style="padding-top: 30px;">
+                            <div class="col-xs-2" id="icon_place">
+                                <img src="img/mail_login.svg" style="width:26px; height:21px; margin-top:10px;">
+                            </div>
+                            <div id="row_one_desktop" class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 input-wrapper mc-field-group">
+                                <input type="email" value="" name="EMAIL" class="emailPlaceholder required email custom_input custom_float email_input" id="mce-EMAIL" placeholder="E-mail" style="width:100%;">
+                            </div>
                         </div>
-                        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-                        <script type='text/javascript'>
-                            (function($) {
-                                window.fnames = new Array();
-                                window.ftypes = new Array();
-                                fnames[0] = 'EMAIL';
-                                ftypes[0] = 'email';
-                            }(jQuery));
-                            var $mcj = jQuery.noConflict(true);
-                        </script>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none;"></div>
+                            <div class="response" id="mce-success-response" style=" color:white; width: 80%; margin-top: 5px;
+                            margin-left: 10%;"></div>
+                        </div>
+
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
+                        <div class="wrapper row last" style="padding-top: 30px;">
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 input-wrapper mc-field-group">
+                                <input type="submit" value="Subscribe" name="subscribe_popup" id="mc-embedded-subscribe1" class=" form-control btn btn-primary custom_float btn-large bold custom custom_button subButton" style="width: 100%;">
+                            </div>
+                        </div>
                     </div>
-                </div>
-
+                </form>
             </div>
-
+            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+            <script type='text/javascript'>
+                (function($) {
+                    window.fnames = new Array();
+                    window.ftypes = new Array();
+                    fnames[0] = 'EMAIL';
+                    ftypes[0] = 'email';
+                }(jQuery));
+                var $mcj = jQuery.noConflict(true);
+            </script>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <div>
-                <a href="/tokensale/index.html" style="color:white;">
-                    <p class="ss">Continue to our previous site<span><img src="img/arrow.svg" /></span></p>
-                </a>
-            </div>
-            <div class="bottom-line line_width"></div>
-            <div class="line_width" style="margin:auto; ">
-                <a target="_blank" href="https://twitter.com/sun_contract"><img src="./img/icons/tw.svg"><img></a>
-                <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="./img/icons/fb.svg"><img></a>
-                <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="./img/icons/in.svg"><img></a>
-                <a target="_blank" href="https://join.slack.com/t/suncontractteam/shared_invite/MjE5MTEwMTk3OTg3LTE1MDEyNTk1MTAtYjVlMGMxZjUyYw"><img src="./img/icons/slack.svg"><img></a>
-                <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="./img/icons/bitcointalk.svg"><img></a>
-                <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="./img/icons/reddit.svg"><img></a>
-                <a target="_blank" href="https://github.com/SunContract/"><img src="./img/icons/github.svg" style="width: 40px;"><img></a>
-                <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="./img/icons/telegram.svg" style="width: 40px;"><img></a>
-            </div>
-        </div>
-        <!--<div>
-                <span data-i18n="[html]translation:copyright">&copy; 2017 - SunContract</span>
-                <span class="separator">|</span>
-                <a href="/res/Suncontract%20terms%20of%20ICO_v8.pdf" target="_blank" data-i18n="[html]translation:terms_of_use">Terms of use</a>
-            </div>-->
-    </footer>
-
     <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        if (localStorage.getItem("hasShowConsent") != null) {
+            (function(i, s, o, g, r, a, m) {
+                console.log("zacel sem google");
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-80290754-1', 'auto');
-        ga('send', 'pageview');
+            ga('create', 'UA-80290754-1', 'auto');
+            ga('send', 'pageview');
 
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId: '147460225858192',
-                xfbml: true,
-                version: 'v2.10'
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '147460225858192',
+                    xfbml: true,
+                    version: 'v2.10'
+                });
+                FB.AppEvents.logPageView();
+            };
+
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        } else {
+            $("#allow_cookies_button").click(function() {
+                (function(i, s, o, g, r, a, m) {
+                    console.log("zacel sem google");
+                    i['GoogleAnalyticsObject'] = r;
+                    i[r] = i[r] || function() {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                    a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                    a.async = 1;
+                    a.src = g;
+                    m.parentNode.insertBefore(a, m)
+                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+                ga('create', 'UA-80290754-1', 'auto');
+                ga('send', 'pageview');
+
+                window.fbAsyncInit = function() {
+                    FB.init({
+                        appId: '147460225858192',
+                        xfbml: true,
+                        version: 'v2.10'
+                    });
+                    FB.AppEvents.logPageView();
+                };
+
+                (function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) {
+                        return;
+                    }
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/sdk.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
             });
-            FB.AppEvents.logPageView();
-        };
 
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {
-                return;
-            }
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
+        }
     </script>
 </body>
 
