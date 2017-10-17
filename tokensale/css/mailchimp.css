@@ -94,16 +94,16 @@
 }
 
 #mc-embedded-subscribe {
-    background-color: #73c63a;
+    height:65px;
     color: white;
     border: none;
     cursor: pointer;
     font-size: 24px;
-    padding: 15px 100px;
+    padding: 15px 50px;
     border-radius: 15px;
     font-weight: normal;
     box-shadow: 0px 0px 5px #555;
-    width: 350px;
+    width: 270px;
     box-sizing: border-box;
     margin: 0;
     outline: none;

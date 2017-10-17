@@ -18,20 +18,15 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
-    <link href="css/main.css?v=23" rel="stylesheet" type="text/css">
-    <link href="css/stepper.css?v=22" rel="stylesheet" type="text/css">
-    <link href="css/mailchimp.css?v=16" rel="stylesheet" type="text/css">
+    <link href="css/main.css?v=30" rel="stylesheet" type="text/css">
+    <link href="css/stepper.css?v=30" rel="stylesheet" type="text/css">
+    <link href="css/mailchimp.css?v=30" rel="stylesheet" type="text/css">
 
     <script src="js/i18next.min.js"></script>
-    <script src="js/index.js?v=29"></script>
-   
-
-    <!-- Google Tag Manager -->
-    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-PSHCP8J');</script> <!-- End Google Tag Manager -->
-
+    <script src="js/index.js?v=30"></script>
+    <script src="js/scripts.js?v=30" type="text/javascript"></script>
+        
     <link id="favicon" rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-
-    <!-- Latest compiled and minified CSS -->
 
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
@@ -39,192 +34,117 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://suncontract.org/" />
     <meta property="og:image" content="https://suncontract.org/img/fb_header.jpg" />
-    <!-- Facebook Pixel Code -->
-    <script>
-        ! function (f, b, e, v, n, t, s) {
-            if (f.fbq) return;
-            n = f.fbq = function () {
-                n.callMethod ?
-                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
-            };
-            if (!f._fbq) f._fbq = n;
-            n.push = n;
-            n.loaded = !0;
-            n.version = '2.0';
-            n.queue = [];
-            t = b.createElement(e);
-            t.async = !0;
-            t.src = v;
-            s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
-        }(window,
-            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '228889184291755'); // Insert your pixel ID here.
-        fbq('track', 'PageView');
-    </script>
     <noscript>
-        <img height="1" width="1" style="display:none"
+        <img height="1" width="1" class="noscript_image"
              src="https://www.facebook.com/tr?id=228889184291755&ev=PageView&noscript=1" />
     </noscript>
-    <!-- DO NOT MODIFY -->
-    <!-- End Facebook Pixel Code -->
+
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSHCP8J" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
-    <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
+    <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSHCP8J" height="0" width="0"  class="noscript_frame"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+   
+    <!-- Modal window for cookie consent -->
+    <div id="myModal" class="cookies_height">
+        <p class="cookies_notification">This website uses cookies to ensure you get the best experience on our site. <a class="learn_more_cookies">Learn more</a>
+        <button id="allow_cookies_button" type="button" class="btn btn-success allow_cookies">Allow cookies</button> </p>
+    </div>
+
+   <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                <button id="menu_open" type="button" class="navbar-toggle menu_mobile_closed" data-toggle="collapse" data-target="#myNavbar">
                 </button>
                 <a href="#"><img class="navbar-brand" src="img/logo.svg" /></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="myNavbar" style="max-height:450px;">
-                <ul class="nav navbar-nav navbar-right">
+            <div class="collapse navbar-collapse navbar_height" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right navbar_new_font">
                    
-                    <li><a href="#about" data-i18n="[html]translation:about">ABOUT</a></li>
-                    <li><a href="res/whitepaper.pdf" data-role="whitepaper_href" target="_blank" data-i18n="[html]translation:whitepaper">WHITEPAPER</a></li>
-                    <li><a id="blog_href" href="http://blog.suncontract.org/" target="_blank" data-i18n="[html]translation:blog">BLOG</a></li>
-                    <li><a href="https://github.com/SunContract/wiki/wiki/FAQ" target="_blank" data-i18n="[html]translation:faq">FAQ</a></li>
-                    <li>
-                        <div class="dropdown lang-holder">
-                            <div data-toggle="dropdown">
-                                <span class="selected_lang" id="slected_lang">EN</span>
-                                <span class="caret"></span>
-                            </div>
-                            <ul class="dropdown-menu">
-                                <li><span class="lang" data-lang="en">EN</span></li>
-                                <li><span class="lang" data-lang="si">SLO</span></li>
-                                <li><span class="lang" data-lang="cn">中文</span></li>
-                                <li><span class="lang" data-lang="ko">한국어</span></li>
-                                <li><span class="lang" data-lang="jp">日本語</span></li>
-                                <li><span class="lang" data-lang="ru">RU</span></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li class="menu_mobilev"><a href="#about" data-i18n="[html]translation:about">ABOUT</a></li>
+                    <li class="menu_mobilev" ><a href="res/whitepaper.pdf" data-role="whitepaper_href" target="_blank" data-i18n="[html]translation:whitepaper">WHITEPAPER</a></li>
+                    <li class="menu_mobilev" ><a id="blog_href" href="http://blog.suncontract.org/" target="_blank" data-i18n="[html]translation:blog">BLOG</a></li>
+                    <li class="menu_mobilev"><a href="https://github.com/SunContract/wiki/wiki/FAQ" target="_blank" data-i18n="[html]translation:faq">FAQ</a></li>
+                    
                 </ul>
             </div>
-
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 
-    <header>
+    
+    <div id="top_image" class="header_image">
+        <div class="custom_container">
+            <img src="img/logo-big.png" class="header_logo">
+            <h1 class="header_center" >Decentralized Energy Market</h1>
+        </div>
+    </div>
 
-        <div id="top_image">
+    <section class="section2_main">
+        <div class="custom_container">
+            <p class="crowdsale-started-ju" data-i18n="[html]translation:token_summury_start">
+                Disrupting Energy Market with Blockchain Technology
+            </p>
 
-            <div class="info">
-                <div class="data row">
-                    <h1 data-i18n="[html]translation:token_live">SNC Token Sale has finished!</h1>
-
-                    <h3 data-i18n="[html]translation:join_multitrillion">Results of Token Sale</h3>
-                    <div class="left col-md-12">
-                        <div class="row ">
-                            <div class="col-md-12">
-                                <div class="desc karla" data-i18n="[html]translation:ico_contributors">Number of contributors:</div>
-                                <div class="value opensans">
-                                    <img src="img/group_of_people.svg" />
-                                    <span data-role="total_contributors" data-speed="1000" data-from="0" data-to="2274">-</span>
-                                </div>
-
-                                <br />
-                            </div>
-
-                        </div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <div class="value opensans">
-                                    <img src="img/usd.svg" />
-                                    <span data-i18n="[html]translation:total_dollar">2 million</span>
-                                </div>
-                                <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED</div>
-                                <br />
-                            </div>
-                            <div class="col-md-4">
-                                <div class="value opensans">
-                                    <img src="img/snc.png" />
-                                    <span data-role="total_investment_snc" data-speed="1000" data-from="0" data-to="122707502.6929">-</span>
-                                </div>
-                                <div class="desc karla" data-i18n="[html]translation:distributed_snc">DISTRIBUTED SNC</div>
-                                <br />
-                            </div>
-                            <div class="col-md-4">
-                                <div class="value opensans">
-                                    <img src="img/ethereum-header.png" />
-                                    <span data-role="total_investment_eth" data-speed="1000" data-from="0" data-to="8732">-</span>
-                                </div>
-                                <div class="desc karla" data-i18n="[html]translation:token_contributed">CONTRIBUTED</div>
-                                <br />
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="desc karla" data-i18n="[html]translation:exchanges" style="font-size: 18px;color: white;">SNC is already listed on HitBTC and EtherDelta.</div>
-                            </div>
-                            <div class="col-md-3"></div>
-                            <div class="col-md-3">
-                                <a href="https://hitbtc.com/exchange/SNC-to-ETH" target="_blank">
-                                    <div class="value opensans">
-                                        <img style="height:150px;width:150px;margin:0px;" src="img/hitbtc.png" />
-
-                                    </div>
-                                    <div class="desc karla" data-i18n="[html]translation:hitbtc">hitBTC</div>
-                                    <br />
-                                </a>
-                            </div>
-                            <div class="col-md-3">
-                                <a href="https://etherdelta.github.io/#SNC-ETH" target="_blank">
-                                    <div class="value opensans" style="height:150px;">
-                                        <img style="height:90px;width:150px;margin:0px;margin-top:20px;" src="img/etherdelta.png" />
-
-                                    </div>
-                                    <div class="desc karla" data-i18n="[html]translation:etherdelta">EtherDleta</div>
-                                    <br />
-                                </a>
-                            </div>
-
-                            
-                            <div class="col-md-3"></div>
-                        </div>
-
+            <p class="crowdsale-started-ju" data-i18n="[html]translation:token_summary">Crowdsale started June 28th 2017 / ended on August 1st 2017<br class="br-nodisplay"/>
+                Number of tokens ever created: <b> 122,707,503 SNC (<img src="img/snc.png" height="30">)</b><br /> 
+                SNC Token sale price without bonuses: <b> 0.0001 ETH per SNC</b> 
+            </p>
+            <div class="row row_margin_desktop">
+                <div id="one" class="col-sm-12 section2_padding">  
+                    <div class="line-2"></div>
+                    <p class="exchanges" data-i18n="[html]translation:exchanges"> EXCHANGES</p>
+                    <img src="img/hitbtc.png" class="exchange_picture_1" width="142" >
+                    <img src="img/etherdelta.png" class="exchange_picture_2" height="62" width="103" >
+                </div>
+                <div id="two" class="col-sm-12 section2_padding2">
+                    <div class="section2_secondcolumn">
+                        <div class="line-3"></div>
+                        <p class="token-wallet-coinmark "><a class="white" href="https://coinmarketcap.com/currencies/suncontract" data-i18n="[html]translation:conmaketcap">Coinmarketcap <br /> SunContract platform</a></p>
                     </div>
                 </div>
+                <div id="three" class="col-sm-12 section2_padding">
+                    <div class="line-2" ></div>
+                    <p class="buy-with-snc" data-i18n="[html]translation:buy_with"> BUY WITH SNC</p>
+                    <p class="sonce-group-solar-po" data-i18n="[html]translation:buy_sonce"> SONCE Group Solar Power Plants, <br />
+                        Heat pumps; <br />
+                        Bitcoin Association Slovenia</p>
+                </div>            
             </div>
-
         </div>
-
-    </header>
+    </section>
    
     <section class="tokensale" id="tokensale">
         <div class="custom_container">
             <div class="row top-buffer">
-                <h1 class="green" data-i18n="[html]translation:interested_title">SUBSCRIBE</h1>
-                <p data-i18n="[html]translation:interested_desc">
-                    Subscribe now to be informed about SunContract project progress. Or get in touch with us via <a href="https://join.slack.com/t/suncontractteam/shared_invite/MjE5MTEwMTk3OTg3LTE1MDEyNTk1MTAtYjVlMGMxZjUyYw">Slack channel</a>.
+                <h1 data-i18n="[html]translation:interested_title" class="subscribe">SUBSCRIBE</h1>
+                <p data-i18n="[html]translation:interested_desc" class="subscribe-now-to-joi">
+                    Subscribe now to receive latest news about SunContract project and stay informed on project progress. Or get in touch with us via <a href="https://join.slack.com/t/suncontractteam/shared_invite/MjE5MTEwMTk3OTg3LTE1MDEyNTk1MTAtYjVlMGMxZjUyYw">Slack channel</a>.
                 </p>
                 <!-- Begin MailChimp Signup Form -->
-                <div id="mc_embed_signup">
-                    <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div id="mc_embed_signup_scroll">
-                            <div class="mc-field-group">
-                                <label for="mce-EMAIL" data-i18n="[html]translation:email_title">Email Address </label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="satoshin@gmx.com">
+                <div id="mc_embed_signup" class="form_top_margin">
+                <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="nova_forma_signup_scroll form_input_div">
+                        <div class="wrapper row first form_input_div2">
+                            <div id="row_one_desktop" class="input-wrapper mc-field-group">
+                                <input type="email" value="" name="EMAIL" class="emailPlaceholder required email custom_input custom_float email_input" id="mce-EMAIL" placeholder="E-mail">
                             </div>
-                            <div id="mce-responses" class="clear">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
                         </div>
-                    </form>
+                        <div id="mce-responses" class="clear">
+                            <div class="response res_neg" id="mce-error-response"></div>
+                            <div class="response res_pos" id="mce-success-response"></div>
+                        </div>
+
+                        <div class="form_hidden" aria-hidden="true"><input type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
+                        <div class="wrapper row last form_but_mar" >
+                            <div class="input-wrapper mc-field-group">
+                                <input type="submit" value="Subscribe" name="subscribe_popup" id="mc-embedded-subscribe1" class=" form-control btn btn-primary custom_float btn-large rectangle-5" >
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 </div>
                 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
                 <script type='text/javascript'>
@@ -236,60 +156,61 @@
                     }(jQuery));
                     var $mcj = jQuery.noConflict(true);
                 </script>
-                <!--End mc_embed_signup-->
-
             </div>
         </div>
     </section>
 
-
-    <section class="about opensans" id="about">
-        <div class="custom_container">
-            <p data-i18n="[html]translation:content_about">
+    <section class="about opensans" id="about" >
+        <div class="custom_container white">
+            <p data-i18n="[html]translation:content_about" class="article white">
                 SunContract is an energy trading platform that utilises blockchain technology to create a new business model for buying and selling electricity. If you believe that blockchain technology can solve many of today's problems and that we are the
                 team to take it to the energy sector, you are welcome to contribute.
             </p>
 
-            <div class="grid row">
-                <div class="item col-md-4">
+            <div class="grid row article">
+                <div id="five" class="item ">
                     <img src="img/transparency.png">
                     <div><b data-i18n="[html]translation:about_transparency_title">Transparency</b></div>
                     <div data-i18n="[html]translation:about_transparency_content">All funds and their allocations will be public and you will be able to monitor them in real time.</div>
                 </div>
-                <div class="item col-md-4">
-                    <img src="img/5TD.png">
+                <div id="six" class="item ">
+                    <img src="img/5TD.png" width="120">
                     <div><b data-i18n="[html]translation:about_5t_5d_title">5T and 5D</b></div>
                     <div data-i18n="[html]translation:about_5t_5d_content">SunContract’s disruptive model joins the best features of blockchain technology (5T) and renewable energy (5D) to create an entirely new service.</div>
                 </div>
-                <div class="item col-md-4">
+                <div id="seven" class="item ">
                     <img src="img/security.png">
                     <div><b data-i18n="[html]translation:about_security_title">Security</b></div>
-                    <div data-i18n="[html]translation:about_security_content">Security is our number one priority. We have several security experts in our team.</div>
+                    <div data-i18n="[html]translation:about_security_content">Security is our number one priority. We have several security experts in our team that will continue monitoring all vital parts of our project.</div>
                 </div>
             </div>
-
+        </div>
+    </section>
+    
+    <section class="about opensans about_margin white_bg">
+        <div class="custom_container">
             <h1 class="green" data-i18n="[html]translation:be_green_title">Become a part of SunContract</h1>
-            <p data-i18n="[html]translation:be_green_desc">
-                Capital required to launch the SunContract platform will be secured through a crowdfunding campaign - SunContract token sale. By participating in the token sale you will receive SNC tokens. As the only crypto currency we accept on the token
+            <p data-i18n="[html]translation:be_green_desc" class="article">
+                Capital required to launch the SunContract platform was secured through a crowdfunding campaign - SunContract token sale. By participating in the token sale you will receive SNC tokens. As the only crypto currency we accept on the token
                 sale is Ether, we decided to fix the amount of SNCs to the Ethers we gather. The basis for token issuance is set at a ratio of 10.000 SNCs per 1 ETH. You can read more on the topic in our <a data-role="whitepaper_href" href="res/whitepaper.pdf">whitepaper</a>.
             </p>
 
-            <div class="grid row">
-                <div class="item col-md-4">
+            <div class="grid row article">
+                <div id="eight" class="item">
                     <img src="img/ethereum-based.png">
-                    <div><b data-i18n="[html]translation:eth_based_title">Ethereum based</b></div>
+                    <div><b data-i18n="[html]translation:eth_based_title">Ethereum based </b><br />&nbsp;</div>
                     <div data-i18n="[html]translation:eth_based_desc">SNC coin will be an Ethereum based token of value, which gives us stability and security.</div>
                 </div>
 
-                <div class="item col-md-4">
+                <div id="nine" class="item">
                     <img src="img/SNC-value.png">
                     <div><b data-i18n="[html]translation:purchase_dig_com_title">Purchase of digitally-tradable crypto-token </b></div>
                     <div data-i18n="[html]translation:purchase_dig_com_desc">SNC coin has a real value attached to it in the form of digital electricity.</div>
                 </div>
 
-                <div class="item col-md-4">
+                <div id="ten" class="item ">
                     <img src="img/currencies.png">
-                    <div><b data-i18n="[html]translation:crypto_cur_title">Crypto currencies</b></div>
+                    <div><b data-i18n="[html]translation:crypto_cur_title">Crypto currencies</b><br />&nbsp;</div>
                     <div data-i18n="[html]translation:crypto_desc">We accept ethereum (ETH) cryptocurrency.</div>
                 </div>
             </div>
@@ -297,130 +218,514 @@
     </section>
 
     <section class="video">
-
         <div class="videocontainer">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/hk40TibbfQc?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
         </div>
-
     </section>
 
     <section class="vision">
-
         <div class="custom_container">
             <div class="row top-buffer">
-                <div class="col-md-12">
-                    <div class="col-md-6 image">
-                        <div>
-                            <img class="visionimage" src="img/2-scheme.svg">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                <div id="eleven" >
+                    <div id="twelve" >
                         <div id="visionright">
                             <h1 data-i18n="[html]translation:decentralized_title">Decentralized. Smart. Clean.</h1>
                             <p data-i18n="[html]translation:decentralized_desc">SunContract's goal is to contribute to greater independence when it comes to energy, finance and mobility.</p>
                         </div>
                     </div>
+                    <div id="threeten" class=" image">
+                        <div>
+                            <img class="visionimage" src="img/2-scheme.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
     </section>
 
     <section class="howitworks">
         <div class="custom_container">
             <div class="row top-buffer">
-                <div class="col-md-12">
-                    <div class="col-md-6">
-                        <div>
-                            <img class="visionimage" src="img/4-scheme.svg">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                <div id="fourteen" >
+                    <div id="fifthteen">
                         <div id="visionright">
                             <h1 data-i18n="[html]translation:how_it_works_title">How it works</h1>
                             <p data-i18n="[html]translation:how_it_works_desc">SunContract joins together Independent Power Producers and Consumers. They connect to the decentralized energy market platform through SunContract mobile APP.</p>
                         </div>
                     </div>
+                    <div id="sixtheen">
+                        <div>
+                            <img class="visionimage" src="img/4-scheme.svg">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="whitepaper" id="whitepaper">
+    <section class="whitepaper" id="whitepaper" >
         <div class="custom_container">
             <div class="row top-buffer">
-                <h1 class="blue" data-i18n="[html]translation:content_whitepaper">Whitepaper</h1>
-                <p data-i18n="[html]translation:content_withepaper_click">Click the button below to download our whitepaper.</p>
-                <a href="res/whitepaper.pdf" data-role="whitepaper_href" target="_blank" class="button" data-i18n="[html]translation:download">Download</a>
+                <h1 class="whitepaper_h1" data-i18n="[html]translation:content_whitepaper">Whitepaper</h1>
+                <a class="whitepaper_a button" href="res/whitepaper.pdf" data-role="whitepaper_href" target="_blank">Download PDF</a>
             </div>
         </div>
     </section>
-
-
-
-
-
 
     <section class="roadmap" id="roadmap">
-        <h1 class="white" data-i18n="[html]translation:timeline_title">Timeline</h1>
-        <div class="timeline">
-            <div class="item">
-                <div class="content vertical-center">
-                    <img src="img/timeline1.png">
-                    <div class="x">
-                        <div data-i18n="[html]translation:q1_2016_title">Q1 2016</div>
-                        <div><b data-i18n="[html]translation:q1_2016_desc">SunContract idea</b></div>
+        <div class="custom_container timeline_desktop">
+            <div class="col-md-12 map_bg">
+                <div class="clipped" ></div>
+                <h1 class="white roadmap_h1" data-i18n="[html]translation:timeline_title">Roadmap</h1>
+                
+                <div class="width_100">
+                    <div class="col-md-6 times timeline_one"> 
+                        <span class="timeline_one_span" data-i18n="[html]translation:timline_s1_title">Q1 2016 </span>
+                        <div class="timeline_line1">
+                            <img src="img/timeline-dot.svg" align="left" class="timeline_dot_image">
+                        </div>
+                    </div>
+                    <div class="col-md-1 numbers timeline_div_one"> 
+                        1
+                    </div>
+                    <div class="col-md-5 timeline_text timeline_text_one" data-i18n="[html]translation:timline_s1_content"> 
+                        SunContract idea
                     </div>
                 </div>
-                <div class="line"></div>
-            </div>
-            <div class="item">
-                <div class="content vertical-center">
-                    <img src="img/timeline2.png">
-                    <div class="x">
-                        <div data-i18n="[html]translation:june_2016_title">June 2016</div>
-                        <div><b data-i18n="[html]translation:june_2016_desc">Domain SunContract.org registered</b></div>
+
+                <div class="width_100">
+                    <div class="col-md-6 times timeline_two"> 
+                        <span class="timeline_two_span" data-i18n="[html]translation:timline_s2_title">June 2016 </span>
+                        <div class="timeline_line2">
+                            <img src="img/timeline-dot.svg" align="left" class="timeline_dot_image">       
+                        </div>
+                    </div>
+                    <div class="col-md-1 numbers timeline_two_div"> 
+                        2
+                    </div>
+                    <div class="col-md-5 timeline_text tl_mar_top1" data-i18n="[html]translation:timline_s2_content"> 
+                        Domain SunContract.org  <br />registered
                     </div>
                 </div>
-                <div class="line"></div>
-            </div>
-            <div class="item">
-                <div class="content vertical-center">
-                    <img src="img/timeline3.png">
-                    <div class="x">
-                        <div data-i18n="[html]translation:may_2017_title">May 2017</div>
-                        <div><b data-i18n="[html]translation:may_2017_desc">Whitepaper published</b></div>
+                
+                <div  class="width_100_opacity">
+                    <div class="col-md-6 times timeline_three"> 
+                        <span class="timeline_three_span" data-i18n="[html]translation:timline_s3_title">May 2017 </span>
+                        <div class="timeline_line1" >
+                             <img src="img/timeline-dot.svg" align="left" class="timeline_dot_image">
+                        </div>
+                    </div>
+                    <div class="col-md-1 numbers timeline_three_div"> 
+                        3
+                    </div>
+                    <div class="col-md-5 timeline_text tl_mar_top2" data-i18n="[html]translation:timline_s3_content"> 
+                        Whitepaper published
                     </div>
                 </div>
-                <div class="line"></div>
-            </div>
-            <div class="item">
-                <div class="content vertical-center">
-                    <img src="img/timeline4.png">
-                    <div class="x">
-                        <div data-i18n="[html]translation:june_2017_title">June 2017</div>
-                        <div><b data-i18n="[html]translation:june_2017_desc">Token sale</b></div>
+                            
+                <div class="width_100_opacity">
+                    <div class="col-md-6 times timeline_four"> 
+                        <span class="timeline_four_span" data-i18n="[html]translation:timline_s4_title">June 2017 </span>
+                        <div class="timeline_line2">
+                            <img src="img/timeline-dot.svg" align="left" class="timeline_dot_image">
+                        </div>
+                    </div>
+                    <div class="col-md-1 numbers timeline_four_div"> 
+                        4
+                    </div>
+                    <div class="col-md-5 timeline_text tl_mar_top3" data-i18n="[html]translation:timline_s4_content"> 
+                        Token sale
                     </div>
                 </div>
-                <div class="line"></div>
+                            
+                <div class="width_100_opacity">
+                    <div class="col-md-6 times timeline_five"> 
+                        <span  class="timeline_five_span" data-i18n="[html]translation:timline_s5_title">Q1 2018 </span>
+                        <div class="timeline_line1">
+                           <img src="img/timeline-dot.svg" align="left" class="timeline_dot_image">
+                        </div>
+                    </div>
+                    <div class="col-md-1 numbers timeline_five_div"> 
+                        5
+                    </div>
+                    <div class="col-md-5 timeline_text tl_mar_top4" data-i18n="[html]translation:timline_s5_content"> 
+                        SunContract platform
+                    </div>
+                </div>
+
             </div>
-            <div class="item">
-                <div class="content vertical-center">
-                    <img src="img/timeline5.png">
-                    <div class="x">
-                        <div data-i18n="[html]translation:q1_2018_title">Q1 2018</div>
-                        <div><b data-i18n="[html]translation:q1_2018_desc">SunContract platform</b></div>
+        </div>
+        <div class="custom_container timeline_mobile">  
+             <h1 class="white timeline_pad" data-i18n="[html]translation:timeline_title">Timeline</h1>
+             <div class="row row_first_mobile_tl">
+                 <div class="col-xs-4 col-sm-6 mobile_number_tl">1</div>
+                 <div class="col-xs-8 col-sm-6 mobile_text_tl"> 
+                 <span class="mobile_display_block"><b  data-i18n="[html]translation:timline_s1_title">Q1 2016 </b></span><br/> 
+                 <span class="timeline_mobile_line"  data-i18n="[html]translation:timline_s1_content"> Suncontract idea </span></div>
+             </div>
+             <div class="row row_first_mobile_tl">
+                 <div class="col-xs-4 col-sm-6 mobile_number_tl">2</div>
+                 <div class="col-xs-8 col-sm-6 mobile_text_tl"> 
+                 <span class="mobile_display_block"><b  data-i18n="[html]translation:timline_s2_title">June 2016 </b></span> <br/> 
+                 <span class="timeline_mobile_line1"  data-i18n="[html]translation:timline_s2_content"> Domain SunContract.org registered </span></div>
+             </div>
+              <div class="row row_first_mobile_tl">
+                 <div class="col-xs-4 col-sm-6 mobile_number_tl">3</div>
+                 <div class="col-xs-8 col-sm-6 mobile_text_tl"> <span class="mobile_display_block"><b  data-i18n="[html]translation:timline_s3_title">May 2017 </b> </span> <br/> 
+                  <span class="timeline_mobile_line1"  data-i18n="[html]translation:timline_s3_content"> Whitepaper published </span></div>
+             </div>
+             <div class="row row_first_mobile_tl">
+                 <div class="col-xs-4 col-sm-6 mobile_number_tl">4</div>
+                 <div class="col-xs-8 col-sm-6 mobile_text_tl"> <span class="mobile_display_block"><b  data-i18n="[html]translation:timline_s4_title">June 2017 </b></span> <br/>
+                 <span class="timeline_mobile_line1" data-i18n="[html]translation:timline_s4_content"> Token sale </span></div>
+             </div>
+            <div class="row row_first_mobile_tl mob_timeline_padding_bottom">
+                 <div class="col-xs-4 col-sm-6 mobile_number_tl">5</div>
+                 <div class="col-xs-8 col-sm-6 mobile_text_tl"> <span class="mobile_display_block"><b  data-i18n="[html]translation:timline_s5_title">Q1 2018 </b> </span><br/> 
+                <span class="timeline_mobile_line1" data-i18n="[html]translation:timline_s5_content">SunContract platform </span></div>
+             </div>
+            
+        </div>
+    </section>
+
+    <section class="team">
+        <h1 class="blue" data-i18n="[html]translation:team_title">Team</h1>
+        <div class="row">
+            <div class="item col-md-4">
+                <img src="img/faces/GregorNovak.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:gregor_novak_title">MSc Gregor Novak</span>
+                    <a href="https://www.linkedin.com/in/gregor-novak-520b72142/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:gregor_novak_desc">Co-founder, CEO</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/mojcaBajec.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:mojca_bajec_title">Mojca Bajec</span>
+                    <a href="https://www.linkedin.com/in/mojca-bajec-9770264a" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+
+                <div class="position opensans" data-i18n="[html]translation:mojca_bajec_desc">Co-founder, CFO</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/martinaGabor.jpg">
+                <div class="name opensans" data-i18n="[html]translation:martina_gabor_title">Martina Gabor</div>
+                <div class="position opensans" data-i18n="[html]translation:martina_gabor_desc">CIO</div>
+                <div class="bio"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="item col-md-4">
+                <img src="img/faces/mitjaBlatnik.jpg">
+                <div class="name opensans" data-i18n="[html]translation:mitja_blatnik_title">Mitja Blatnik</div>
+                <div class="position opensans" data-i18n="[html]translation:mitja_blatnik_desc">Project Manager</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/AndrazVerdev.jpg">
+                <div class="name opensans" data-i18n="[html]translation:andraz_verdev_title">Andraz Verdev</div>
+                <div class="position opensans" data-i18n="[html]translation:andraz_verdev_desc">Blockchain Ecosystem</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/klemenStopar.jpg">
+                <div class="name opensans" data-i18n="[html]translation:klemen_stopar_title">PhD Klemen Stopar</div>
+                <div class="position opensans" data-i18n="[html]translation:klemen_stopar_desc">Energy Ecosystem</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/AlesKroflic.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:ales_kroflic_title">PhD Ales Kroflic</span>
+                    <a href="https://www.linkedin.com/in/ales-kroflic-08480258/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:ales_kroflic_desc">Analysis</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/lp.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:luka_pusic_title">Luka Pusic</span>
+                    <a href="https://www.linkedin.com/in/lukapusic/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:luka_pusic_desc">Information Security</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/JernejBlaj.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:jernej_blaj_title">Jernej Blaj</span>
+                    <a href="https://www.linkedin.com/in/jernej-blaj-44178110/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:jernej_blaj_desc">SunContract Middle East</div>
+                <div class="bio"></div>
+            </div>
+                        <div class="item col-md-4">
+                <img src="img/faces/AlesFrece.jpg">
+                <div class="name opensans" data-i18n="[html]translation:ales_frece_title">PhD Ales Frece</div>
+                <div class="position opensans" data-i18n="[html]translation:ales_frece_desc">Software Engineer</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/RokGornik.jpg">
+                <div class="name opensans" data-i18n="[html]translation:rok_gornik_title">Rok Gornik</div>
+                <div class="position opensans" data-i18n="[html]translation:rok_gornik_desc">Community Manager</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/KatjaOgrin.jpg">
+                <div class="name opensans" data-i18n="[html]translation:KatjaOgrin">Katja Ogrin</div>
+                <div class="position opensans" data-i18n="[html]translation:KatjaOgrin">SunContract Massachusetts</div>
+                <div class="bio"></div>
+            </div>
+
+        </div>
+        <h1 class="blue" data-i18n="[html]translation:advisors_title">Advisors</h1>
+        <div class="row">
+            <div class="item col-md-4">
+                <img src="img/faces/JonathanGalea.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:jonathan_galea_title">Jonathan Galea</span>
+                    <a href="https://www.linkedin.com/in/jonathan-galea-5421419a/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:jonathan_galea_desc">Blockchain Legal Advice, Founder of BitMalta</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/milanGabor.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:milan_gabor_title">Milan Gabor</span>
+                    <a href="https://www.linkedin.com/in/milan-gabor-1257051/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:milan_gabor_desc">Information Security</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/tomazLajovic.jpg">
+
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:tomaz_lajovic_title">Tomaz Lajovic</span>
+                    <a href="https://www.linkedin.com/in/tomazlajovic/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:tomaz_lajovic_desc">Energy Legal Advice</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/JesusNietoMartin.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:jnm_title">Dr Jesus Nieto Martin</span>
+                    <a href="https://www.linkedin.com/in/jesusnietomartin/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:jnm_desc">Energy Market Advice</div>
+                <div class="bio"></div>
+            </div>
+            
+            <div class="item col-md-4">
+                <img src="img/faces/tomislavMucic.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:tomi_title">
+                        Tomislav Mucic
+                    </span>
+                    <a href="https://www.linkedin.com/in/tomislav-mu%C4%8Di%C4%8D-8486a7/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:tomi_desc">Blockchain Consultant</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/gregorKarlovsek.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:gregorKarlovsek_title">
+                        Gasper Karlovsek
+                    </span>
+                    <a href="https://www.linkedin.com/in/gregorkarlovsek/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:gregorKarlovsek_desc">Blockchain Energy Advice</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/sebastjanStucl.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:sebastjanStucl_title">
+                        Gasper Karlovsek
+                    </span>
+                    <a href="https://www.linkedin.com/in/sebastjan-stucl-74596730/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:sebastjanStucl_desc">Blockchain Business Advice</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/domenButala.png">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:domenButala_title">
+                        Domen Butala
+                    </span>
+                    <a href="https://www.linkedin.com/in/domen-butala/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:domenButala_desc">Energy Trading Advice</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/borisHorvat.png">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:borisHorvat_title">
+                        Boris Horvat
+                    </span>
+                    <a href="https://www.linkedin.com/in/borishorvat/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:borisHorvat_desc">Business Model Advice</div>
+                <div class="bio"></div>
+            </div>
+            <div class="item col-md-4">
+                <img src="img/faces/jernejTonejc.png">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:jernejTonejc_title">
+                        PhD Jernej Tonejc
+                    </span>
+                    <a href="https://www.linkedin.com/in/jernej-tonejc-a1568a10/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:jernejTonejc_desc">Security Advice</div>
+                <div class="bio"></div>
+            </div>
+
+        </div>
+
+        <h1 class="blue" data-i18n="[html]translation:escrow_title">Escrow</h1>
+        <div class="row">
+            <div class="item col-md-3"></div>
+            <div class="item col-md-6">
+                <img src="img/faces/JuricMatjaz.jpg">
+                <div class="name opensans">
+                    <span data-i18n="[html]translation:matjaz_b_juric_title">PhD Matjaz B. Juric</span>
+                    <a href="https://www.linkedin.com/in/matjaz-b-juric-93b645/" target="_blank"><img class="linkedin" src="./img/linkedin.png"></a>
+                </div>
+                <div class="position opensans" data-i18n="[html]translation:matjaz_b_juric_desc">Full Professor at University of Ljubljana</div>
+                <div class="bio" data-i18n="[html]translation:matjaz_b_juric_bio">
+                    Matjaz B. Juric holds a Ph.D. in computer and information science. He is a Full Professor at the University of Ljubljana, Faculty of Computer and Information Science. Matjaz is the head of Laboratory for Integration of Information Systems
+                    and the head of the SOA and Cloud Computing Competence Centre. Matjaz is a Java Champion, IBM Champion and Oracle ACE Director. He has gathered extensive experience in cloud and blockchain projects. More specificaly, he has been leading
+                    Horizont 2020 research projects utilizing blockchain and smart contracts on the Ethereum platform. <a target="_blank" href="res/MatjazBJuric.pdf">Learn more</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section_news">
+        <div class="custom_container">  
+            <h1 class="black section_sponsors">Latest from SunContract</h1>
+    
+            <div id="news_carousel" class="carousel slide n_carousel" data-ride="carousel">
+                <ol class="carousel-indicators" >
+                    <li id="dot_one" data-target="#carousel"  data-slide-to="0" class="active"></li>
+                    <li id="dot_two" data-target="#carousel"  data-slide-to="1"></li>
+                    <li id="dot_three" data-target="#carousel"  data-slide-to="2"></li>
+                </ol>
+                    
+                <div class="carousel-inner">
+                    <div id="slide_one" class="active item">
+                        <div class="news_carousel_div">
+                            <div class="row news_carousel_inner_div">
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card_div">
+                                        <img src="img/news.jpg" height="167" width="300" class="card_image">
+                                        <p class="news_title">SunContract</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text">Last Week on Tuesday with SunContract</p>
+                                        <a class="news_readmore" href="http://blog.suncontract.org/post/166288879378/last-week-on-tuesday-with-suncontract">READ MORE ... </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 news_mobile_display">
+                                    <div class="card_div">
+                                         <iframe class="card_image" width="300" height="167" src="https://www.youtube.com/embed/vA9BcTuTT4Y" frameborder="0" allowfullscreen></iframe>
+                                        <p class="news_title">CEO of SunContract presenting project on Cutting Edge conference</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text"></p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 news_mobile_display">
+                                    <div class="card_div">
+                                        <iframe class="card_image" width="300" height="167" src="https://www.youtube.com/embed/LojCYme1J-g" frameborder="0" allowfullscreen></iframe>
+                                        <p class="news_title">Review of SunContract</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slide_two" class="item">
+                        <div class="news_carousel_div">
+                            <div class="row news_carousel_inner_div">
+                                <div class="col-md-4 col-sm-12 news_mobile_display">
+                                    <div class="card_div">
+                                        <img src="img/scpool.gif" height="167" width="300" class="card_image">
+                                        <p class="news_title">Green energy trading platform</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text"></p>
+                                        <a class="news_readmore" href="https://www.linkedin.com/pulse/green-energy-trading-platform-top-blockchain-ico-zdravstvena-info/?trk=v-feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B%2Bw9C4EN6L%2B9zBmYvAnO8zw%3D%3D&trk=v-feed&lipi=urn%3Ali%3Apage%3Ad_flagship3_company%3BIWDPZaPconIW%2BYHHA7wgxA%3D%3D">READ MORE ... </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card_div">
+                                        <img src="img/scnews.jpg" height="167" width="300" class="card_image">
+                                        <p class="news_title">News BTC</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text">SunContract Brings Real Value of Blockchain to Renewable Energy P2P Market Place</p>
+                                        <a class="news_readmore" href="http://www.newsbtc.com/2017/07/25/suncontract-brings-real-value-blockchain-renewable-energy-p2p-market-place/">READ MORE ... </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 news_mobile_display">
+                                    <div class="card_div">
+                                        <iframe class="card_image" width="300" height="167" src="https://www.youtube.com/embed/Etj8Mjc6-XE" frameborder="0" allowfullscreen></iframe>
+                                        <p class="news_title">SNC update</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="slide_three" class="item">
+                        <div class="news_carousel_div">
+                            <div class="row news_carousel_inner_div">
+                                <div class="col-md-4 col-sm-12 news_mobile_display">
+                                    <div class="card_div">
+                                        <img src="img/sc.jpg" height="167" width="300" class="card_image">
+                                        <p class="news_title">Bitcoin exchange guide</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text">SunContract – ICO Cryptocurrency SNC Token For Solar Energy?</p>
+                                        <a class="news_readmore" href="https://bitcoinexchangeguide.com/suncontract/">READ MORE ... </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12 news_mobile_display">
+                                    <div class="card_div">
+                                        <img src="img/coinnews.jpg" height="167" width="300" class="card_image">
+                                        <p class="news_title">Cryptocoins</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text">SunContract Token Sale for Decentralized Energy Market</p>
+                                        <a class="news_readmore" href="https://www.cryptocoinsnews.com/suncontract-token-sale-decentralized-energy-market/">READ MORE ... </a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-12">
+                                    <div class="card_div">
+                                        <iframe class="card_image" width="300" height="167" src="https://www.youtube.com/embed/58xtN6Dw8kw" frameborder="0" allowfullscreen></iframe>
+                                        <p class="news_title">Blockchain change</p>
+                                        <p class="news_date"></p>
+                                        <p class="news_text">7 Ways Blockchain Can Stop Climate Change & Save The Environment (SunContract project is presented at time 2:42)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                              
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
     <section class="team">
-        
-        <h1 class="blue" data-i18n="[html]translation:press_title">SunContract is present</h1>
+        <h1 class="blue" data-i18n="[html]translation:press_title">Others about us</h1>
         <div class="row">
             <div class="item col-md-2">
                 <a href="https://www.cryptocoinsnews.com/suncontract-token-sale-decentralized-energy-market/" target="blank"><img src="img/press/cryptocoinnews_logo.svg"></a>
@@ -440,45 +745,33 @@
             <div class="item col-md-2">
                 <a href="https://www.coinjoker.com/suncontract-blockchain-energy/" target="blank"><img src="img/press/coinjoker_logo.svg"></a>
             </div>
-
         </div>
     </section>
 
-    </div>
-    </div>
-    <footer>
-        <a target="_blank" href="https://twitter.com/sun_contract"><img src="./img/tw.png"><img></a>
-        <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="./img/fb.png"><img></a>
-        <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="./img/in.png"><img></a>
-        <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="./img/bitcointalk.svg"><img></a>
-        <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="./img/reddit.svg"><img></a>
-        <a target="_blank" href="https://github.com/SunContract/"><img src="./img/github.svg" style="width: 40px;"><img></a>
-        <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="./img/telegram.png" style="width: 40px;"><img></a>
-        <div>
-            <span data-i18n="[html]translation:copyright">&copy; 2017 - SunContract</span>
-            <span class="separator">|</span>
-            <a href="res/Suncontract%20terms%20of%20ICO_v8.pdf" target="_blank" data-i18n="[html]translation:terms_of_use">Terms of use</a>
+    <div class="space"></div>
+    <footer class="footer_for_desktop">
+        <div class="icon_groups">
+            <div class="footer_icons_inline">
+                <div class=" custom_padding1">
+                    <a target="_blank" href="https://twitter.com/sun_contract"><img src="./img/tw.png"><img></a>
+                    <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="./img/fb.png"><img></a>
+                    <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="./img/in.png"><img></a>
+                    <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="./img/bitcointalk.svg" width="38"><img></a>
+                </div>
+                <div class="custom_padding2">
+                    <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="./img/reddit.png" width="40"><img></a>
+                    <a target="_blank" href="https://github.com/SunContract/"><img src="./img/github.svg" class="github_icon" ><img></a>
+                    <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="./img/telegram.png" width="34"><img></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_div">
+            <a class="whitepaper-terms-blo" target="_blank" href="res/whitepaper.pdf" data-i18n="[html]translation:whitepaper">WHITEPAPER</a>
+            <a class="whitepaper-terms-blo middle" target="_blank" href="res/Suncontract%20terms%20of%20ICO_v8.pdf" data-i18n="[html]translation:terms_of_use">TERMS</a>
+            <a class="whitepaper-terms-blo" target="_blank" href="http://blog.suncontract.org/" data-i18n="[html]translation:blog">BLOG</a> <br class="br-nodisplay" />
+            <span data-i18n="[html]translation:copyright" class="sonce-ico">&copy; 2017 - SunContract</span>
         </div>
     </footer>
-
-
-    <script>
-                    (function (i, s, o, g, r, a, m) {
-                        i['GoogleAnalyticsObject'] = r;
-                        i[r] = i[r] || function () {
-                            (i[r].q = i[r].q || []).push(arguments)
-                        }, i[r].l = 1 * new Date();
-                        a = s.createElement(o),
-                            m = s.getElementsByTagName(o)[0];
-                        a.async = 1;
-                        a.src = g;
-                        m.parentNode.insertBefore(a, m)
-                    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-                    ga('create', 'UA-80290754-1', 'auto');
-                    ga('send', 'pageview');
-    </script>
-
 </body>
 
 </html>
