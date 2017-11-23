@@ -97,7 +97,7 @@ input:required {
 
 @media screen and (max-width: 1020px) and (min-height: 793px) {
     body {
-        min-height: 550px;
+        min-height: 400px;
     }
     .body-content {
         height: 550px;
@@ -179,7 +179,7 @@ input:required {
 
 @media screen and (max-width: 1020px) and (max-height: 794px) {
     body {
-        min-height: 550px;
+        min-height: 400px;
     }
     .body-content {
         height: 550px;
@@ -259,7 +259,15 @@ input:required {
 /* large desktops and up ----------- */
 @media screen and (min-width: 1020px) and (min-height: 1056px) {
     body {
-        min-height: 900px;
+        min-height: 750px;
+
+    }
+
+    .custom_padding1{
+        width: 45% !important;
+    }
+    .custom_padding2{
+        width: 55% !important;
     }
     .body-content {
         height: 900px;
@@ -344,13 +352,20 @@ input:required {
 
 @media screen and (min-width: 1020px) and (max-height: 1056px) {
     .body-content {
-        height: 900px;
+        height: 800px;
     }
     .line_width {
         width:480px;
     }
     .cookies_height{
         height: 96px;
+    }
+
+        .custom_padding1{
+        width: 45% !important;
+    }
+    .custom_padding2{
+        width: 55% !important;
     }
 
    #body_content_padding{
@@ -362,7 +377,7 @@ input:required {
         /*position:absolute;*/
     }
     .join-us-margin {
-        bottom: 240px;
+        bottom: 140px;
         /*   position: absolute;*/
     } 
     .br-nodisplay {
