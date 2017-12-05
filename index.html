@@ -1,7 +1,7 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="SunContract - Decentralized Energy Market">
@@ -9,20 +9,21 @@
     <meta name="author" content="SunContract Team">
 
     <title>SunContract</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/icons/favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script src="js/new_index.js?v=106"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link href="css/main.css?v=108" rel="stylesheet" type="text/css">
-    <link id="favicon" rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <link rel="stylesheet" type="text/css" href="assets/css/mailchimp.css">
+    <link href="https://fonts.googleapis.com/css?family=Karla|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/karmilla" type="text/css" />
 
-    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=1">
 
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
@@ -32,344 +33,202 @@
     <meta property="og:image" content="https://suncontract.org/img/fb.png" />
     <meta property="fb:app_id" content="147460225858192" />
     <meta name="twitter:image" content="https://suncontract.org/img/tw.png" />
-
-    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
     <script type="text/javascript">
         $(document).ready(function() {
-
-            $('#mc-embedded-subscribe-form').submit(function() {
-                $.ajax({
-                    url: $('#mc-embedded-subscribe-form').attr('action'),
-                    type: 'POST',
-                    data: $('#mc-embedded-subscribe-form').serialize(),
-                    success: function(res) {
-                        var string = res;
-                        substring = "To complete the subscription process, please click the link in the email we just sent you.";
-                        var r = string.indexOf(substring);
-                        if (r != -1) {
-                            $("#mce-EMAIL").css("display", "none");
-                            $("#icon_place").css("display", "none");
-                            $('#mc-embedded-subscribe1').attr("disabled", true);
-                        }
-                    }
-                });
-                return false;
-            });
-
-            $("#mc-embedded-subscribe1").click(function() {
-                $('#mce-EMAIL').off('blur');
-            })
-
-            window.addEventListener('click', function(e) {
-                var handler_on = true;
-                if (document.getElementById('mce-EMAIL').contains(e.target)) {
-                    if (handler_on == true) {
-                        handler_on = false;
+            var scroll_start = 0;
+            var startchange = $('#scr');
+            var offset = startchange.offset();
+            if (startchange.length) {
+                $(document).scroll(function() {
+                    scroll_start = $(this).scrollTop();
+                    if (scroll_start > offset.top) {
+                        $(".navbar").css('background-color', 'black');
                     } else {
-                        handler_on = true;
-                        $('#mce-EMAIL').on('blur');
+                        $('.navbar').css('background-color', 'transparent');
                     }
-                } else {
-
-                    if (handler_on == true) {
-                        $('#mce-EMAIL').off('blur');
-                        handler_on = false;
-                    }
-                }
-            });
-
-            //when loading check thw width of screen and apply needed classes
-            var width = $(window).width();
-            if (width < 1024) {
-                $("#source").detach().prependTo("#destination");
-                $("#source1").detach().prependTo("#destination");
-                $("#icon_place").addClass("hide_icon");
-
-            } else {
-                $("#source").detach().prependTo("#destination2");
-                $("#source1").detach().prependTo("#destination2");
-                $("#row_one_desktop").removeClass("col-sm-offset-2");
-                $("#row_one_desktop").removeClass("col-xs-offset-1");
-
-            }
-
-            //when screen resizes check width and act accordingly
-            $(window).on("resize", function() {
-                width = $(window).width();
-                if (width < 1024) {
-                    $("#source").detach().prependTo("#destination");
-                    $("#source1").detach().prependTo("#destination");
-                    $("#icon_place").addClass("hide_icon");
-                    $("#row_one_desktop").addClass("col-sm-offset-2");
-                    $("#row_one_desktop").addClass("col-xs-offset-1");
-                } else {
-                    $("#source").detach().prependTo("#destination2");
-                    $("#source1").detach().prependTo("#destination2");
-                    $("#row_one_desktop").removeClass("col-sm-offset-2");
-                    $("#row_one_desktop").removeClass("col-xs-offset-1");
-                    $("#icon_place").removeClass("hide_icon");
-                }
-            })
-
-            //on click join_us we get the action based on screen width
-            $("#moj").click(function() {
-                var screenwidth = $(window).width();
-                if (screenwidth < 1024) {
-                    $("#moj").attr("data-toggle", "modal");
-                    $("#big_screen_join_us").hide();
-                    $("#button_all").show();
-                    screenwidth = 0;
-                } else {
-                    $('html,body').animate({
-                            scrollTop: $("#big_screen_join_us").offset().top
-                        },
-                        1000);
-                }
-            })
-
-            $("#mc-embedded-close").click(function() {
-                $("#moj").removeAttr("data-toggle", "modal");
-            })
-
-            $('#mce-EMAIL').blur(function(event) {
-                setTimeout(function() {
-                    $("#mce-EMAIL").focus();
-                }, 20);
-            });
-
-            $('#mce-EMAIL').click(function() {
-                $('#mce-EMAIL').blur(function(event) {
-                    setTimeout(function() {
-                        $("#mce-EMAIL").focus();
-                    }, 20);
                 });
-            });
-
-
+            }
         });
     </script>
 </head>
 
-<body style="height:100%; background:black;">
-
-    <!-- MODALNO OKNO SUBSCRIBE NA MOBILE  -->
-    <div class="modal fade" id="exampleModal" role="dialog" data-backdrop="static" style="overlay ">
-        <div class="modal-dialog" style="width: 80%; margin-left: 10%; margin-right:10%;  ">
-            <div id="destination" class="modal-content moj-modal" style="background-color: transparent; width: 100%;">
-
-                <div class="wrapper row last" style="padding-top: 40px;">
-                    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 input-wrapper mc-field-group">
-                        <input type="submit" data-dismiss="modal" value="Close" name="subscribe" id="mc-embedded-close" class="closeButton form-control btn btn-link" style="width: 100%; color: #D2D2D2">
+<body>
+    <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <span class="menu_mobilev tog-log"><a href="https://suncontract.energy/login" target="_blank" class="white" >LOGIN</a></span>
+                <button id="menu_open" type="button" class="navbar-toggle menu_mobile_closed" data-toggle="collapse" data-target="#myNavbar">
+                	<i class="fa fa-bars icon" aria-hidden="true"></i>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar_height" id="myNavbar">
+                <ul class="nav navbar-nav navbar-left navbar_new_font">
+                    <li class="menu_mobilev"><a href="/tokensale/" class="white">TOKEN SALE PAGE</a></li>
+                    <li class="menu_mobilev hide-log"><a href="https://suncontract.energy/login" target="_blank" class="white">LOGIN</a></li>
+                    <li class="menu_mobilev"><a href="https://suncontract.energy/register" target="_blank" class="white">REGISTER</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <div>
+        <div class="main_container">
+            <div class="first_container">
+                <div id="scr" class="content-container">
+                    <img src="assets/img/SUNCONTRACT-LOGO-WHITE.svg" class="logo">
+                    <p class="subtitle">Open energy market </p>
+                    <a href="https://suncontract.energy/login" target="_blank">
+                        <div class="button-join"><label class="button-label">Join the Revolution</label></div>
+                    </a>
+                </div>
+            </div>
+            <div class="second_container">
+                <div class="content-container extra-padding">
+                    <p class="what-is">It is time for you to seize control of your local energy market</p>
+                    <p class="desc">
+                        The SunContract platform empowers individuals, with an emphasis on home owners, to freely buy, sell or trade electricity. Instead of being hamstrung by natural monopoly of traditional power generators and distributors, you can exchange electricity with
+                        any person you wish directly. You can simply join the platform and choose different types of services.
+                        <br/><br/> This way SunContract gives you the opportunity to become completely energy self-sufficient. Through the platform you can buy electricity, solar power plants, heat pumps and storage units and select between a wide array
+                        of energy products and services. For the first time in history you can decide on how much to pay for and to what extent even sell home-generated, green and blockchain-backed energy. Choose what to do with your energy needs. You
+                        can build an idea of energetically self-sufficient community in real life.
+                    </p>
+                </div>
+            </div>
+            <div class="third_container">
+                <div class="box-container">
+                    <div class="black-box">
+                        <p class="box-title">SUPPORT ENVIROMENT</p>
+                        <p class="box-text">By buying green energy products from the SunContract platform, you can now back a community of small, local power producers. Moreover, you can become one; for the first time SunContract gives you an opportunity to directly support
+                            renewable sources of energy. There are different ways for you to join this Green Energetic Revolution while helping the environment.</p>
+                        <p class="box-more"></p>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="myModal" class="cookies_height" style="position: fixed; bottom: 0px; z-index: 3; width: 100%; background-color: white; display: none;">
-        <p class="cookies_notification">This website uses cookies to ensure you get the best experience on our site. <a style="color: grey; text-decoration: underline; ">Learn more</a>
-            <button id="allow_cookies_button" type="button" class="btn btn-success" style="margin-left: 5%; height: 48px; width: 108px; ">Allow cookies</button> </p>
-    </div>
-
-    <script type='text/javascript'>
-        var modal = document.getElementById('myModal');
-        var span = document.getElementById("allow_cookies_button");
-
-        function show_consent() {
-            modal.style.display = "block";
-            span.onclick = function() {
-                modal.style.display = "none";
-
-            }
-        }
-
-        window.onload = function() {
-            if (localStorage.getItem("hasShowConsent") === null) {
-                show_consent();
-                $("#allow_cookies_button").click(function() {
-                    localStorage.setItem("hasShowConsent", true);
-                });
-            } else {}
-        }
-    </script>
-
-    <div class="container col-md-12 body-content sidebar" id="body_content_padding" style="padding-top: 160px;">
-
-        <div class="row text-center logo">
-            <img src="img/N symbol.svg" />
-        </div>
-
-        <div class="row text-center header">
-            <div class="logo-sign">
-                The future is <br class="br-nodisplay" /> closer than you <br class="br-nodisplay" /> think.
-                 
-                <p class="comming-sun">
-                <br />    <b> Stay tuned! <br> We are coming soon...</b>
-                </p>
-            </div>
-        </div>
-
-    </div>
-    <div id="button_all" class="col-md-12 join-us-margin" style="text-align:center;">
-        <div class="container">
-            <div class="line_width " style="margin:auto;">
-
-                <div class="jojning_us" style="text-align:center">
-                    <button id="moj" class="form-control btn btn-primary btn-large bold center-block custom_button join-us-button" type="submit" data-target="#exampleModal">
-                            <b> Join us</b>
-                        </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-12 subscribe-us-position" id="big_screen_join_us" style="display:none;">
-        <div class="container">
-            <div class="line_width subscribe-us" id="destination2">
-            </div>
-        </div>
-    </div>
-
-    <div class="container col-md-12 custom_footer" style="margin-top: 10px;">
-        <div style="padding-bottom: 100px;">
-            <a href="/tokensale/index.html" class="tokensale_site" id="continue_to">
-                <p class="ss">Continue to our previous site &nbsp;<span><img src="img/arrow.svg" /></span></p>
-            </a>
-        </div>
-        <div class="bottom-line line_width"></div>
-        <div class="line_width links" style="margin:auto; ">
-            <div style="display: inline-block;">
-                <div class=" custom_padding1" style="padding-bottom: 10px">
-                    <a target="_blank" href="https://twitter.com/sun_contract"><img src="./img/icons/tw.svg"><img></a>
-                    <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="./img/icons/fb.svg"><img></a>
-                    <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="./img/icons/in.svg"><img></a>
-                </div>
-                <div class="custom_padding2" style="padding-bottom: 20px">
-                    <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="./img/icons/bitcointalk.svg" width="35"><img></a>
-                    <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="./img/icons/reddit.svg" width="35"><img></a>
-                    <a target="_blank" href="https://github.com/SunContract/"><img src="./img/icons/github.svg" style="width: 35px;"><img></a>
-                    <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="./img/icons/telegram.svg" width="30"><img></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div style="display: none">
-        <div id="source1" class="jojning_us" style="text-align:center; width: 80%; margin: auto;">
-            <br />By joining our mailing list you will be first to receive <br /> newsletters, news and other important announcments.
-        </div>
-        <div id="source" class="form-group form">
-            <div id="mc_embed_signup">
-                <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="nova_forma_signup_scroll" style="margin: auto;">
-                        <div class="wrapper row first" style="padding-top: 30px;">
-                            <div class="col-xs-2" id="icon_place">
-                                <img src="img/mail_login.svg" style="width:26px; height:21px; margin-top:10px;">
-                            </div>
-                            <div id="row_one_desktop" class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 input-wrapper mc-field-group">
-                                <input type="email" value="" name="EMAIL" class="emailPlaceholder required email custom_input custom_float email_input" id="mce-EMAIL" placeholder="E-mail" style="width:100%;">
-                            </div>
-                        </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none;"></div>
-                            <div class="response" id="mce-success-response" style=" color:white; width: 80%; margin-top: 5px;
-                                margin-left: 10%;"></div>
-                        </div>
-
-                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
-                        <div class="wrapper row last" style="padding-top: 30px;">
-                            <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 input-wrapper mc-field-group">
-                                <input type="submit" value="Subscribe" name="subscribe_popup" id="mc-embedded-subscribe1" class=" form-control btn btn-primary custom_float btn-large bold custom custom_button subButton" style="width: 100%;">
-                            </div>
-                        </div>
+            <div class="fourth_container">
+                <div class="box-container">
+                    <div class="black-box1">
+                        <p class="box-title">TIME FOR ENERGY INDEPENDENCE</p>
+                        <p class="box-text">For more than a century Electric Power Industry dominated the electricity markets. They had full sovereignty over generating, transmitting, distributing and selling of electric power. This “natural monopoly” is to change with SunContract.
+                            Anyone will be free to pick their energy producer. An individual will be able to engage in an exchange of electricity directly with neighbors and local community. From now on, you will be able to produce electricity in your
+                            home or buy it directly from people you know. </p>
+                        <p class="box-more"></p>
                     </div>
-                </form>
+                </div>
             </div>
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-            <script type='text/javascript'>
-                (function($) {
-                    window.fnames = new Array();
-                    window.ftypes = new Array();
-                    fnames[0] = 'EMAIL';
-                    ftypes[0] = 'email';
-                }(jQuery));
-                var $mcj = jQuery.noConflict(true);
-            </script>
+            <div class="fifth_container">
+                <div class="box-container">
+                    <div class="black-box">
+                        <p class="box-title">SAVINGS</p>
+                        <p class="box-text">Spending money wisely is important. With SunContract platform, you have an option to pick energy supply origin and price you are comfortable with from financial and ecological standpoint. On your personal dashboard you are able
+                            to follow your daily energy needs and adjust consumption of your home as you see fit.</p>
+                        <p class="box-more"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="sixth_container">
+                <div class="box-container">
+                    <div class="black-box1">
+                        <p class="box-title">BLOCKCHAIN AS A SAFEGUARD</p>
+                        <p class="box-text">SunContract is devoted to the development and implementation of the latest technological breakthroughs. Blockchain is bringing us the next generation of data storage solutions. This ensures high level of transparency for all and
+                            lowers barriers between participants on the market. SunContract platform enables full overview of your personal data, transparency and trustworthiness.</p>
+                        <p class="box-more"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="seventh_container">
+                <div class="content-container">
+                    <p class="what-is pionner">Become the pioneer!</p>
+                    <a href="https://suncontract.energy/login" target="_blank">
+                        <div class="button-platform "><label class="button-label">Join the Platform</label></div>
+                    </a>
+                    <!--
+                    <a href='https://play.google.com/store/apps/details?id=org.suncontract.app'>
+                        <img width="150" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/>
+                    </a>-->
+                </div>
+            </div>
+            <div class="eight_container">
+                <div class="content-container">
+                    <p class="how-it-works">Open energy market</p>
+                    <div class="videocontainer">
+                        <iframe class="video" src="https://www.youtube.com/embed/BD8izBMyx80?controls=0&showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="ninth_container">
+                <div class="content-container center">
+                    <p class="what-is">Get up to date!</p>
+
+                    <section class="tokensale" id="tokensale">
+                        <div class="custom_container">
+                            <div class="row top-buffer">
+                                <!-- Begin MailChimp Signup Form -->
+                                <div id="mc_embed_signup" class="form_top_margin">
+                                    <form action="//suncontract.us16.list-manage.com/subscribe/post?u=6abb619ad804927437e5b23d7&amp;id=578f719573" method="post" id="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                        <div id="nova_forma_signup_scroll form_input_div">
+                                            <div class="wrapper row first form_input_div2">
+                                                <div id="row_one_desktop" class="input-wrapper mc-field-group">
+                                                    <input type="email" value="" name="EMAIL" class="input required email custom_input custom_float email_input" id="mce-EMAIL" placeholder="E-mail">
+                                                </div>
+                                            </div>
+                                            <div id="mce-responses" class="clear">
+                                                <div class="response res_neg" id="mce-error-response"></div>
+                                                <div class="response res_pos" id="mce-success-response"></div>
+                                            </div>
+                                            <div class="form_hidden" aria-hidden="true"><input style="display: none;" type="text" name="b_6abb619ad804927437e5b23d7_578f719573" tabindex="-1" value=""></div>
+                                            <div class="wrapper row last form_but_mar">
+                                                <div class="input-wrapper mc-field-group">
+                                                    <input type="submit" value="Subscribe to the Newsletter" name="subscribe_popup" id="mc-embedded-subscribe1" class="button-platform news button-label">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+                                <script type='text/javascript'>
+                                    (function($) {
+                                        window.fnames = new Array();
+                                        window.ftypes = new Array();
+                                        fnames[0] = 'EMAIL';
+                                        ftypes[0] = 'email';
+                                    }(jQuery));
+                                    var $mcj = jQuery.noConflict(true);
+                                </script>
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                    <!--				<div class="button-platform news"><label class="button-label">Subscribe to the Newsletter</label></div>-->
+                </div>
+            </div>
         </div>
+        <footer class="footer_for_desktop">
+            <div class="icon_groups">
+                <div class="footer_icons_inline">
+                    <div class=" custom_padding1">
+                        <a target="_blank" href="https://twitter.com/sun_contract"><img src="assets/icons/tw.png" width="33"><img></a>
+                        <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="assets/icons/fb.png" width="33"><img></a>
+                        <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="assets/icons/in.png" width="33"><img></a>
+                        <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="assets/icons/bitcointalk.png" width="36"><img></a>
+                    </div>
+                    <div class="custom_padding2">
+                        <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="assets/icons/reddit.png" width="40"><img></a>
+                        <a target="_blank" href="https://github.com/SunContract/"><img src="assets/icons/github.png" width="32"><img></a>
+                        <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="assets/icons/telegram.png" width="34"><img></a>
+                        <a target="_blank" href="https://medium.com/suncontract"><img src="assets/icons/medion.png" width="34" style="opacity: 0.9"><img></a>
+                    </div>
+                </div>
+            </div>
+            
+        </footer>
     </div>
-    <script>
-        if (localStorage.getItem("hasShowConsent") != null) {
-            (function(i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function() {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-            ga('create', 'UA-80290754-1', 'auto');
-            ga('send', 'pageview');
-
-            window.fbAsyncInit = function() {
-                FB.init({
-                    appId: '147460225858192',
-                    xfbml: true,
-                    version: 'v2.10'
-                });
-                FB.AppEvents.logPageView();
-            };
-
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {
-                    return;
-                }
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/en_US/sdk.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        } else {
-            $("#allow_cookies_button").click(function() {
-                (function(i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function() {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                        m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-                ga('create', 'UA-80290754-1', 'auto');
-                ga('send', 'pageview');
-
-                window.fbAsyncInit = function() {
-                    FB.init({
-                        appId: '147460225858192',
-                        xfbml: true,
-                        version: 'v2.10'
-                    });
-                    FB.AppEvents.logPageView();
-                };
-
-                (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) {
-                        return;
-                    }
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/en_US/sdk.js";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-            });
-
-        }
-    </script>
 </body>
 
 </html>

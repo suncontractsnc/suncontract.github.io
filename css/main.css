@@ -22,13 +22,6 @@
     text-align: center;
 }
 
-
-.comming-sun{
-    font-size: 30px;
-    line-height: 36px;
-    margin-top: 30px;
-}
-
 .content-box {
     margin-top: 370px;
     background-color: black !important;
@@ -113,13 +106,6 @@ input:required {
     
     }
 
-    .comming-sun{
-        font-size: 20px;
-        line-height: 26px;
-        margin-top: 30px;
-    }
-
-
     #body_content_padding{
         padding-top: 60px !important;
     }
@@ -201,13 +187,6 @@ input:required {
     .subscribe-us {
     
     }
-
-    .comming-sun{
-        font-size: 30px;
-        line-height: 36px;
-        margin-top: 20px;
-    }
-
 
     #body_content_padding{
         padding-top: 60px !important;

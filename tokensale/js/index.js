@@ -130,10 +130,10 @@ var Localization = {
       
         $('[data-role="flag"]').removeClass("selected_flag");
         if (newLang == "si") {
-            $("#blog_href").attr("href", "http://blogslo.suncontract.org")
+            $("#blog_href").attr("href", "https://medium.com/suncontract")
             $("#flag_si").addClass("selected_flag");
         } else {
-            $("#blog_href").attr("href", "http://blog.suncontract.org/")
+            $("#blog_href").attr("href", "https://medium.com/suncontract")
             $("#flag_en").addClass("selected_flag");
         }
         if (newLang === "jp") {
