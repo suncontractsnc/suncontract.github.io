@@ -5,11 +5,11 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width:100%;
-    height: 668px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+     overflow-y: hidden;
 
 }
 
@@ -21,6 +21,12 @@
   background-color: transparent !important;
   color:#0096D5 !important; 
 }
+
+video { 
+  max-height: 100%;
+}
+
+
 
 .content-container{
   width: 1024px;
@@ -202,6 +208,10 @@ a:focus, a:hover{
   margin-top: 35px;
 }
 
+.large{
+  height: 100%; width: 100%; background-color: black;
+}
+
 
 .button-join{
   height: 48px;
@@ -214,6 +224,21 @@ a:focus, a:hover{
     cursor:pointer;
 
 }
+
+.button-join1{
+  height: 48px;
+  width: 192px;
+  position: relative;
+  top: -100px;
+    margin: auto;
+    border-radius: 6px;
+    background-color: #0096D5;  
+    box-shadow: 0 0 4px 0 rgba(0,0,0,0.5);
+    text-align: center;
+    cursor:pointer;
+
+}
+
 
 .button-label{
   height: 19px; 
@@ -366,6 +391,18 @@ a:focus, a:hover{
     text-align: center;
   }
 
+  .large{
+    display: none;
+  }
+
+  video{
+    display: none;
+  }
+
+  .first_container{
+    height: 668px;
+  }
+
   .logo{
     margin-top: 180px;
     width: 290px;
@@ -479,12 +516,40 @@ a:focus, a:hover{
 
 }
 
+@media screen and (min-width: 1352px){
+  video{ 
+    position: relative;
+  transition: 1s opacity;
+
+  }
+  .first_container{
+    max-height: 2000px;
+  }
+
+}
+
 @media screen and (min-width: 550px) and (max-width: 768px) {
   .content-container{
     width: 550px;
     padding: 15px;
     margin: auto;
     text-align: center;
+  }
+
+  .first_container{
+    height: 668px;
+  }
+
+  .show-normal{
+    display: initial;
+  }
+
+    .large{
+    display: none;
+  }
+
+  video{
+    display: none;
   }
 
   .tog-log{
@@ -554,6 +619,10 @@ a:focus, a:hover{
      width:100%;
      height:480px;
     }
+
+      .show-normal{
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -590,6 +659,10 @@ a:focus, a:hover{
     padding: 15px;
     margin: auto;
     text-align: center;
+  }
+
+    .show-normal{
+    display: none;
   }
 
   .logo{
