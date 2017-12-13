@@ -1,8 +1,8 @@
 
             $( document ).ready(function() {
                     function add_Class(){
-                        $("#one").addClass("col-md-4");
-                        $("#two").addClass("col-md-4"); 
+                        $("#one").addClass("col-md-6");
+                        $("#two").addClass("col-md-2"); 
                         $("#three").addClass("col-md-4");
                         $("#five").addClass("col-md-4");
                         $("#six").addClass("col-md-4");

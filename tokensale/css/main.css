@@ -1827,7 +1827,7 @@ footer .separator {
     .sponsor_picture4 {width: 107px;}
 
 .clipped{
-      clip-path: inset(0px 0px 610px 0px); 
+      clip-path: inset(0px 0px 490px 0px); 
       height: 1128px; width: 400px; position: absolute; right: 610px; background: url('../img/timeline-crtice-01.svg') center no-repeat;
 }
 

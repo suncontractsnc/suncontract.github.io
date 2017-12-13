@@ -36,23 +36,7 @@
 
             Localization.setLang(lang);
         });
-        var item = $('[data-role="total_investment_snc"]');
-        self.updateCountersRound(item);
-        item = $('[data-role="total_contributors"]');
-        self.updateCountersRound(item);
-        item = $('[data-role="total_investment_eth"]');
-        self.updateCountersRound(item);
-    },
-    updateCountersRound: function(item) {
-        item.countTo({
-            from: parseFloat(item.attr("data-from")),
-            to: item.attr("data-to"),
-            refreshInterval: 20,
-            speed: item.attr("data-speed") || 1000,
-            formatter: function(value, options) {
-                return Number(Math.round(value)).toLocaleString('en');
-            }
-        });
+       
     }
 }
 
