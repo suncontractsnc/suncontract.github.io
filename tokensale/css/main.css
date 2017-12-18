@@ -135,6 +135,7 @@ section {
 
 
 .numbers {   color: #FFFFFF; font-family: "Open Sans";   font-size: 48px;    font-weight: 300;   line-height: 60px;  text-align: center;}
+.numbers1 {   color: rgba(255,255,255,0.6); font-family: "Open Sans";   font-size: 48px;    font-weight: 300;   line-height: 60px;  text-align: center;}
 
 .timeline_text {
  
@@ -146,13 +147,27 @@ section {
     text-align: left;
 }
 
+.timeline_text1{
+       color: rgba(255,255,255,0.6);
+    font-family: Karla;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 10px;
+    text-align: left;
+}
+
 .times {    color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px;}
+.times1 {    color: rgba(255,255,255,0.6); font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px;}
 
 .timeline_line {
     box-sizing: border-box;
     height: 2px;
     border: 1px solid #FFFFFF;
     background-color: white;
+}
+
+.opacit{
+    opacity: 0.6;
 }
 
 button {
@@ -1695,7 +1710,9 @@ footer .separator {
 
 @media (min-width: 970px){
 
-
+    .opacitiy_mobile{
+        opacity: 0.6;
+    }
 
     .footer_for_desktop{
         height: 108px; margin-top: 0px;
@@ -2030,7 +2047,8 @@ footer .separator {
 }
 
 .width_100_opacity{
-    width: 100%; opacity: 0.6;
+    width: 100%; 
+    color: rgba(255,255,255,0.6);
 }
 
 .timeline_three{
@@ -2106,4 +2124,9 @@ position: relative; left: 50px;
 .noscript_frame{
     display:none !important;
     visibility:hidden !important;
+}
+
+.white_color{
+    color: white;
+    opacity: 1;
 }
