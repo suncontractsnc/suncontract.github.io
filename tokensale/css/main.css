@@ -1437,7 +1437,7 @@ footer .separator {
     .section2_padding2{padding-left: 50px;}
     .wallets {  height: 16px;   width: 69px;  margin-left: 9px; margin-bottom: 4px;  color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px;}
     .token-wallet-coinmark {  color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 19px; text-align: left; margin-left: 12px;}
-    .section2_secondcolumn{height: 40px; margin-top: -8px;}
+    .section2_secondcolumn{height: 40px; margin-top: 0px;}
     .buy-with-snc { height: 24px; width: 112px; color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 18px;  margin-left: 9px;}
     .sonce-group-solar-po { height: 72px;   width: 264px; text-align: left; margin-left: 12px;  color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 24px;}
     .subscribe-now-to-joi { height: 84px;   width: 100%;   color: #393939; font-family: "Open Sans";   font-size: 28px;    line-height: 42px;  text-align: center;}
@@ -1675,7 +1675,7 @@ footer .separator {
     .wallets { color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px; margin-bottom: 0px;}
     .token-wallet-coinmark {  color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 19px; text-align: center; margin-left: 12px;}
     .section2_secondcolumn{height: 40px; margin-top: 25px;}
-    .buy-with-snc { color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 18px; text-align: center; margin-top: 60px;}
+    .buy-with-snc { color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 18px; text-align: center; margin-top: 90px;}
     .sonce-group-solar-po { margin-bottom: 50px; text-align: center;   color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 24px;}
     .subscribe-now-to-joi { width: 100%;   color: #393939; font-family: "Open Sans";    font-size: 20px;   line-height: 36px;  text-align: center;}
 
