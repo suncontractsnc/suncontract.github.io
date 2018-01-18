@@ -1762,21 +1762,21 @@ footer .separator {
 }
 }
 
-@media (min-width: 520px){
+@media (min-width: 540px){
 
     .custom_padding1{
         padding-right: 0px;
-        width: 55%;
+        width: 45%;
         float: left;
     }
     .custom_padding2{
         padding-left: 0px;
-        width: 45%;
+        width: 55%;
         float: right;
     }
 }
 
-@media (max-width: 520px){
+@media (max-width: 540px){
 
     .space{background-color: white; height: 140px; width: 100%;}
 

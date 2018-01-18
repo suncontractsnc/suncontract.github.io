@@ -679,7 +679,7 @@ a:focus, a:hover{
 }
 
 
-@media (max-width: 520px){
+@media (max-width: 540px){
 
     .footer_for_desktop{
         height: 150px !important;
@@ -702,16 +702,16 @@ a:focus, a:hover{
     }
 }
 
-@media (min-width: 520px){
+@media (min-width: 540px){
 
     .custom_padding1{
         padding-right: 0px;
-        width: 50%;
+        width: 45%;
         float: left;
     }
     .custom_padding2{
         padding-left: 0px;
-        width: 50%;
+        width: 55%;
         float: right;
     }
 }
@@ -720,6 +720,8 @@ a:focus, a:hover{
   .icon_groups{
     float: none;
     padding-left: 0px;
+    padding-right: 10px;
+
   }
 
   .footer_for_desktop{
