@@ -1432,7 +1432,7 @@ footer .separator {
     .exchanges {height: 24px;   width: 94px;    color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px; margin-left: 9px;}
     .line-3 {   box-sizing: border-box; height: 100%;   width: 3px; border: 1px solid #FFFFFF; float: left; background-color: rgba(255,255,255,1);}
     .exchange_picture_1{float: left; margin-left: 15px; margin-top: 28px;}
-    .exchange_picture_2{float: left; margin-left: 15px; margin-top: 28px;}
+    .exchange_picture_2{float: left; margin-left: 35px; margin-top: 28px;}
     .section2_padding{padding-left: 37.5px;}
     .section2_padding2{padding-left: 50px;}
     .wallets {  height: 16px;   width: 69px;  margin-left: 9px; margin-bottom: 4px;  color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px;}
