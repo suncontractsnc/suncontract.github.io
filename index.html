@@ -12,7 +12,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/icons/favicon.ico">
-
+    <script src="./assets/mobile-detect.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Karla|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/karmilla" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=3">
+    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=5">
 
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
@@ -34,53 +34,88 @@
     <meta property="fb:app_id" content="147460225858192" />
     <meta name="twitter:image" content="https://suncontract.org/img/tw.png" />
     <script type="text/javascript">
-        $(document).ready(function() {
-            var scroll_start = 0;
-            var startchange = $('#scr');
-            var offset = startchange.offset();
-            if (startchange.length) {
-                $(document).scroll(function() {
-                    scroll_start = $(this).scrollTop();
-                    if (scroll_start > offset.top) {
-                        $(".navbar").css('background-color', 'black');
-                    } else {
-                        $('.navbar').css('background-color', 'transparent');
-                    }
-                });
+        window.onload = function () {
+            $(document).ready(function () {
+                var scroll_start = 0;
+                var startchange = $('#scr');
+                var offset = startchange.offset();
+                if (startchange.length) {
+                    $(document).scroll(function () {
+                        scroll_start = $(this).scrollTop();
+                        if (scroll_start > offset.top) {
+                            //$(".navbar").css('background-color', 'black');
+                        } else {
+                            if (!md.mobile()) {
+                              //  $('.navbar').css('background-color', 'transparent');
+                            }
+                        }
+                    });
+                }
+            });
+
+           
+            $(".xbutton").click(function () {
+                $('.andorid').css('display', 'none');
+                $('.ios').css('display', 'none');
+            });
+
+            var md = new MobileDetect(window.navigator.userAgent);
+            if (md.mobile()) {
+                if (md.os() == "AndroidOS") {
+                    $('.andorid').css('display', 'block');
+                   // $('.navbar').css('background-color', 'black');
+                }
+                else if (md.os() == "iOS") {
+                    $('.ios').css('display', 'block');
+                    //$('.navbar').css('background-color', 'black');
+                }
             }
-        });
+
+        }
     </script>
 </head>
 
 <body>
-    <nav class="navbar navbar-fixed-top navbar-custom" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <span class="menu_mobilev tog-log"><a href="https://suncontract.energy/login" target="_blank" class="white" >LOGIN</a></span>
-                <button id="menu_open" type="button" class="navbar-toggle menu_mobile_closed" data-toggle="collapse" data-target="#myNavbar">
-                	<i class="fa fa-bars icon" aria-hidden="true"></i>
-                </button>
+    
+        <nav class="navbar navbar-fixed-top">
+            <div style="background:white; height:60px;">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar black"></span>
+                            <span class="icon-bar black"></span>
+                            <span class="icon-bar black"></span>
+                        </button>
+                        <a class="navbar-brand"><img src="assets/img/SUNCONTRACT-LOGO.png" class="nav-logo"></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar_height" id="myNavbar1">
+                        <ul class="nav navbar-nav navbar-right no">
+
+                            <li class="links"><a href="/tokensale/index.html" class="links-sign"> TOKEN SALE <div class="line"></div></a></li>
+                            <li class="links"><a href="https://suncontract.energy/login" class="links-sign"> LOGIN <div class="line"></div></a> </li>
+                            <li class="links"><a href="/pioneer/index.html" class="links-sign"> PIONEERS <div class="line"></div></a></li>
+
+
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar_height" id="myNavbar">
-                <ul class="nav navbar-nav navbar-left navbar_new_font">
-                    <li class="menu_mobilev"><a href="https://suncontract.org/tokensale/" class="white">TOKEN SALE PAGE</a></li>
-                    <li class="menu_mobilev hide-log"><a href="https://suncontract.energy/login" target="_blank" class="white">LOGIN</a></li>
-                    <li class="menu_mobilev"><a href="https://suncontract.energy/register" target="_blank" class="white">REGISTER</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+
+        </nav>
+
+
     <div>
         <div class="main_container">
             <div class="first_container">
                 <div class="large">
                     <video id="bgvid" playsinline autoplay muted loop width="100%">
-                    <source src="assets/img/suncontract_video.mp4" type="video/mp4" >
-                </video>
+                        <source src="assets/img/suncontract_video.mp4" type="video/mp4">
+                    </video>
                     <div style="height: 0px;">
                         <a href="https://suncontract.energy/login" target="_blank">
                             <div class="button-join1"><label class="button-label">Join the Revolution</label></div>
@@ -104,7 +139,7 @@
                     <p class="desc">
                         The SunContract platform empowers individuals, with an emphasis on home owners, to freely buy, sell or trade electricity. Instead of being hamstrung by natural monopoly of traditional power generators and distributors, you can exchange electricity with
                         any person you wish directly. You can simply join the platform and choose different types of services.
-                        <br/><br/> This way SunContract gives you the opportunity to become completely energy self-sufficient. Through the platform you can buy electricity, solar power plants, heat pumps and storage units and select between a wide array
+                        <br /><br /> This way SunContract gives you the opportunity to become completely energy self-sufficient. Through the platform you can buy electricity, solar power plants, heat pumps and storage units and select between a wide array
                         of energy products and services. For the first time in history you can decide on how much to pay for and to what extent even sell home-generated, green and blockchain-backed energy. Choose what to do with your energy needs. You
                         can build an idea of energetically self-sufficient community in real life.
                     </p>
@@ -114,19 +149,24 @@
                 <div class="box-container">
                     <div class="black-box">
                         <p class="box-title">SUPPORT ENVIROMENT</p>
-                        <p class="box-text">By buying green energy products from the SunContract platform, you can now back a community of small, local power producers. Moreover, you can become one; for the first time SunContract gives you an opportunity to directly support
-                            renewable sources of energy. There are different ways for you to join this Green Energetic Revolution while helping the environment.</p>
+                        <p class="box-text">
+                            By buying green energy products from the SunContract platform, you can now back a community of small, local power producers. Moreover, you can become one; for the first time SunContract gives you an opportunity to directly support
+                            renewable sources of energy. There are different ways for you to join this Green Energetic Revolution while helping the environment.
+                        </p>
                         <p class="box-more"></p>
                     </div>
                 </div>
             </div>
             <div class="fourth_container">
-                <div class="box-container">
+                <div class="box-container">
+                    
                     <div class="black-box1">
                         <p class="box-title">TIME FOR ENERGY INDEPENDENCE</p>
-                        <p class="box-text">For more than a century Electric Power Industry dominated the electricity markets. They had full sovereignty over generating, transmitting, distributing and selling of electric power. This “natural monopoly” is to change with SunContract.
+                        <p class="box-text">
+                            For more than a century Electric Power Industry dominated the electricity markets. They had full sovereignty over generating, transmitting, distributing and selling of electric power. This “natural monopoly” is to change with SunContract.
                             Anyone will be free to pick their energy producer. An individual will be able to engage in an exchange of electricity directly with neighbors and local community. From now on, you will be able to produce electricity in your
-                            home or buy it directly from people you know. </p>
+                            home or buy it directly from people you know.
+                        </p>
                         <p class="box-more"></p>
                     </div>
                 </div>
@@ -135,8 +175,10 @@
                 <div class="box-container">
                     <div class="black-box">
                         <p class="box-title">SAVINGS</p>
-                        <p class="box-text">Spending money wisely is important. With SunContract platform, you have an option to pick energy supply origin and price you are comfortable with from financial and ecological standpoint. On your personal dashboard you are able
-                            to follow your daily energy needs and adjust consumption of your home as you see fit.</p>
+                        <p class="box-text">
+                            Spending money wisely is important. With SunContract platform, you have an option to pick energy supply origin and price you are comfortable with from financial and ecological standpoint. On your personal dashboard you are able
+                            to follow your daily energy needs and adjust consumption of your home as you see fit.
+                        </p>
                         <p class="box-more"></p>
                     </div>
                 </div>
@@ -145,8 +187,10 @@
                 <div class="box-container">
                     <div class="black-box1">
                         <p class="box-title">BLOCKCHAIN AS A SAFEGUARD</p>
-                        <p class="box-text">SunContract is devoted to the development and implementation of the latest technological breakthroughs. Blockchain is bringing us the next generation of data storage solutions. This ensures high level of transparency for all and
-                            lowers barriers between participants on the market. SunContract platform enables full overview of your personal data, transparency and trustworthiness.</p>
+                        <p class="box-text">
+                            SunContract is devoted to the development and implementation of the latest technological breakthroughs. Blockchain is bringing us the next generation of data storage solutions. This ensures high level of transparency for all and
+                            lowers barriers between participants on the market. SunContract platform enables full overview of your personal data, transparency and trustworthiness.
+                        </p>
                         <p class="box-more"></p>
                     </div>
                 </div>
@@ -204,13 +248,13 @@
                                 </div>
                                 <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
                                 <script type='text/javascript'>
-                                    (function($) {
+                                    (function ($) {
                                         window.fnames = new Array();
                                         window.ftypes = new Array();
                                         fnames[0] = 'EMAIL';
                                         ftypes[0] = 'email';
                                     }(jQuery));
-                                    var $mcj = jQuery.noConflict(true);
+                                var $mcj = jQuery.noConflict(true);
                                 </script>
                             </div>
                         </div>
@@ -223,26 +267,31 @@
                 </div>
             </div>
         </div>
-        <footer class="footer_for_desktop">
-            <div class="icon_groups">
-                <div class="footer_icons_inline">
-                    <div class=" custom_padding1">
-                        <a target="_blank" href="https://twitter.com/sun_contract"><img src="assets/icons/tw.png" width="33"><img></a>
-                        <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img src="assets/icons/fb.png" width="33"><img></a>
-                        <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img src="assets/icons/in.png" width="33"><img></a>
-                        <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img src="assets/icons/bitcointalk.png" width="36"><img></a>
-                    </div>
-                    <div class="custom_padding2">
-                        <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img src="assets/icons/reddit.png" width="40"><img></a>
-                        <a target="_blank" href="https://github.com/SunContract/"><img src="assets/icons/github.png" width="32"><img></a>
-                        <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img src="assets/icons/telegram.png" width="34"><img></a>
-                        <a target="_blank" href="https://medium.com/suncontract"><img src="assets/icons/medion.png" width="34" style="opacity: 0.9"><img></a>
-                        <a target="_blank" href="tokensale/wechat.html"><img src="assets/icons/wechat.png" width="34" ><img></a>
-                    </div>
+        <div class="full footer">
+            <div class="icons">
+                <div style="display: inline-block; ">
+                    <a target="_blank" href="https://twitter.com/sun_contract"><img class="icon" id="twitter"><img></a>
+                    <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img class="icon" id="facebook"><img></a>
+                    <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img class="icon"  id="linkedin"><img></a>
+                    <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img class="icon" id="bitcoin" ><img></a>
+                    <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img id="reddit" class="icon" ><img></a>
+                </div>
+                <div style="display: inline-block;" >
+                    <a target="_blank" href="https://github.com/SunContract/"><img id="github" class="icon" ><img></a>
+                    <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img id="telegram" class="icon" ><img></a>
+                    <a target="_blank" href="https://medium.com/suncontract"><img id="medium" class="icon" ><img></a>
+                    <a target="_blank" href="/tokensale/wechat.html"><img id="wechat" class="icon" ><img></a>                    
                 </div>
             </div>
-
-        </footer>
+           <!-- <div class="legal">
+                <a href="#"><div class="legal-sign" > Legal informations </div></a>
+                <a href="#"><div class="legal-sign"  > Terms of service </div></a>
+                <a href="#"><div class="legal-sign" > Privacy Policy </div></a>
+            </div>-->
+            <div class="rights"></div><p class="rights-sign">
+                Copyright © 2018 All rigths reserved
+                </p>        
+        </div>
     </div>
 
 </body>

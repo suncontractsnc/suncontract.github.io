@@ -1,0 +1,667 @@
+@font-face {
+  font-family: 'Geomanist';
+  src: url('fonts/geomanist-bold-webfont'); /* IE9 Compat Modes */
+  src: url('fonts/geomanist-bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/geomanist-bold-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/geomanist-bold-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Geomanist-reg';
+  src: url('fonts/geomanist-regular-webfont'); /* IE9 Compat Modes */
+  src: url('fonts/geomanist-regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/geomanist-regular-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/geomanist-regular-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Geomanist-medium';
+  src: url('fonts/geomanist-medium-webfont'); /* IE9 Compat Modes */
+  src: url('fonts/geomanist-medium-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/geomanist-medium-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/geomanist-medium-webfont.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+
+.full{
+	width: 100%;
+}
+.container{
+	width: 1024px;
+	margin: auto;
+	padding: 15px;
+}
+
+.pictureOne{
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0)10%, rgba(0, 0, 0, 0.38) 100%), url("img/first-part.jpg") no-repeat center center;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	min-height: 800px;
+	text-align: center;
+	
+}
+
+.pictureThree{
+	background: url("img/third-part.jpg") no-repeat center center;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	min-height: 1200px;
+	text-align: center;
+}
+
+.pictureTwo{
+	background: #e4e4e4;
+	min-height: 1300px;
+	text-align: center;
+}
+
+.pictureFour{
+	background: #e4e4e4;
+	min-height: 950px;
+	text-align: center;
+}
+
+.divide{
+	height: 9px;
+	background-color: #0096d5;
+}
+
+.logo{
+	margin-top: 170px;
+	height: 93px;
+}
+
+.title{
+	font-family: 'Geomanist';
+	margin-top: 25px;
+	font-weight: bold;
+	font-size: 80px;
+	line-height: 80px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.sub-title{
+	  font-family: 'Geomanist-reg';
+	margin-top: 20px;
+	font-weight: normal;
+	font-size: 40px;
+	line-height: 40px;
+	color: white;
+}
+
+.button-one{
+	border: solid 5px white;
+	padding: 10px;
+	padding-top: 16px; 
+	margin: auto;
+	width: 270px;
+	margin-top: 130px;
+	cursor: pointer;
+}
+
+.button-second{
+	border: solid 5px #0096d5;
+	padding: 10px;
+	padding-top: 16px; 
+	margin: auto;
+	width: 270px;
+	margin-top: 80px;
+	cursor: pointer;
+
+}
+
+.button-fourth{
+	border: solid 5px #0096d5;
+	padding: 10px;
+	padding-top: 16px; 
+	margin: auto;
+	width: 270px;
+	margin-top: 80px;
+	position: relative;
+	top: 60px;
+	cursor: pointer;
+}
+
+.button-third{
+	border: solid 5px white;
+	padding: 10px;
+	padding-top: 16px; 
+	margin: auto;
+	width: 270px;
+	margin-bottom: 35px;
+	margin-top: 80px;
+	cursor: pointer;
+}
+
+.no-display{
+	display: none;
+}
+
+.button-sign{
+	font-family: 'Geomanist';
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 28px;
+	color: white;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.blue-title{
+	width: 512px;
+	background-color: #0096d5;
+	margin: auto;
+	padding: 10px;
+	margin-top: 50px;
+}
+
+.title-sign{
+	font-family: 'Geomanist-medium';
+	margin-bottom: 0px;
+	font-weight: 600;
+	font-size: 40px;
+	line-height: 40px;
+	color: white;
+	text-transform: uppercase;
+}
+
+.sub-title-sign {
+    font-family: 'Geomanist-medium';
+    margin-top: 13px;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 30px;
+    color: #363636;
+    text-transform: uppercase;
+}
+
+.article {
+    font-family: 'Geomanist-reg';
+    margin-top: 45px;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 26px;
+    color: #414141;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.icon-holder{
+	width: 200px; 
+	display: inline-block; 
+	margin-top: 60px;
+	vertical-align: top;
+}
+
+.margins{
+	margin-left: 160px; 
+	margin-right: 160px;
+}
+
+.linetwo-first{
+	margin-right: 90px;
+}
+
+.linetwo-second{
+	margin-left: 90px;
+}
+
+.icon-text {
+    font-family: 'Geomanist';
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 30px;
+    color: #414141;
+    text-transform: uppercase;
+}
+
+.form-label {
+    font-family: 'Geomanist';
+    width: 255px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 32px;
+    display: table-cell;
+    color: #414141;
+    text-transform: uppercase;
+}
+
+.icons-subtext{
+	font-weight: 200;
+	font-size: 24px;
+	line-height: 26px;
+	color: white;
+	font-family: 'Geomanist-reg';
+	margin-top: -5px; 
+}
+
+.blue{
+	color: #0096d5;
+}
+
+.white{
+	color: white;
+}
+
+.margin-left{
+	margin-right:60px; 
+}
+
+.last-width{
+	width: 540px;
+}
+
+/* Customize the label (the container) */
+.container2 {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 22px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+/* Hide the browser's default radio button */
+.container2 input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 10px;
+  padding-left: 15px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+
+}
+
+.checkmark2 {
+  position: absolute;
+  top: -22px;
+  left: 60px;
+  padding-top: 10px;
+  padding-left: 17px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+
+}
+
+/* On mouse-over, add a grey background color */
+.container2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container2:hover input ~ .checkmark2 {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container2 input:checked ~ .checkmark {
+  background-color: #0096d5;
+}
+.container2 input:checked ~ .checkmark2 {
+  background-color: #0096d5;
+}
+
+.catalog-holder{
+	width: 490px; 
+	vertical-align: middle; 
+	margin-top: 40px; 
+	display: inline-block
+}
+
+.form-holder{
+	width: 490px; 
+	vertical-align: middle; 
+	margin-top: 40px; 
+	display: inline-block
+}
+
+.form-margin{
+	margin-bottom: 30px;
+}
+
+.form-line{
+	text-align: left; 
+	width: 480px; 
+	display: table;
+}
+
+.custom-input{
+	display: table-cell; 
+	height: 50px; 
+	margin-bottom: 5px; 
+	width: 100%;
+}
+/*
+.navbar{
+	width: 90%;
+	margin: 30px auto 0px auto;	
+}*/
+
+.container-fluid{
+	border-radius: 0px;
+	background-color: white;
+	min-height: 60px;
+	max-width: 1024px;
+}
+
+.nav-logo{
+	padding-top: 6px;
+	padding-left: 20px;
+}
+
+#twitter{
+	content: url('./icons/twitter.png');
+}
+
+#twitter:hover {
+    content: url('./icons/twitter_w.png');
+}
+
+#facebook{
+	content: url('./icons/facebook.png');
+}
+
+#facebook:hover {
+    content: url('./icons/facebook_w.png');
+}
+
+#bitcoin{
+	content: url('./icons/bitcoin.png');
+}
+
+#bitcoin:hover {
+    content: url('./icons/bitcoin_w.png');
+}
+
+#reddit{
+	content: url('./icons/reddit.png');
+}
+
+#reddit:hover {
+    content: url('./icons/reddit_w.png');
+}
+
+#linkedin{
+	content: url('./icons/linkedin.png');
+}
+
+#linkedin:hover {
+    content: url('./icons/linkedin_w.png');
+}
+
+#github{
+	content: url('./icons/github.png');
+}
+
+#github:hover {
+    content: url('./icons/github_w.png');
+}
+
+#telegram{
+	content: url('./icons/telegram.png');
+}
+
+#telegram:hover {
+    content: url('./icons/telegram_w.png');
+}
+#wechat{
+	content: url('./icons/wechat.png');
+}
+
+#wechat:hover {
+    content: url('./icons/wechat_w.png');
+}
+#medium{
+	content: url('./icons/medium.png');
+}
+
+#medium:hover {
+    content: url('./icons/medium_w.png');
+}
+
+
+
+.links{
+	
+	font-family: 'Geomanist';
+}
+
+.no{
+	padding-right: 15px;
+}
+
+.links-sign{
+	color: black;
+	height: 60px;
+}
+
+.navbar-nav>li>a{
+	padding-top: 21px;
+}
+
+.black{
+	background-color: black;
+}
+
+.navbar-toggle{
+	margin-top: 13px;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+	background-color: transparent;
+	color: #0096d5;
+}
+
+.line{
+	display: none;
+}
+
+.nav>li>a:hover .line{
+	display : block;
+	background-color: #0096d5;
+	height: 4px;
+	width: 100%;
+	position: relative;
+	top: 15px;
+}
+
+.nav>li>a:focus .line{
+	display : block;
+	background-color: #0096d5;
+	height: 4px;
+	width: 100%;
+	position: relative;
+	top: 15px;
+}
+
+.footer{
+	background-color: #54545c;
+	text-align: center;
+	min-height: 200px;
+}
+
+.icons{
+	padding-top: 50px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.icon{
+	padding: 10px;
+	width: 50px;
+}
+
+.legal{
+	margin-top: 50px;
+}
+
+.rights{
+	margin-top: 50px;
+	font-family: 'Geomanist-reg';
+	font-size: 14px;
+}
+
+.rights-sign{
+	margin-bottom: 0px;
+	padding-bottom: 40px;
+	color: #e4e4e4 !important;
+}
+
+.legal-sign{
+	display: inline-block; 
+	width: 30%;
+	color: #e4e4e4;
+	font-family: 'Geomanist-reg';
+	text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 375px) {
+	.nav-logo{
+		width: 199px;
+		padding-top: 8px;
+		padding-left: 10px;
+	}
+}
+
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 640px;
+        padding: 0px;
+    }
+    .icon-holder {
+        width:300px;
+    }
+
+	.no-display{
+		display: initial;
+	}	
+
+	.logo{
+		margin-top: 170px;
+		height: 63px;
+	}
+
+	.title{
+		margin-top: 40px;
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	.sub-title{
+		font-size: 20px;
+		line-height: 23px;
+		margin-top: 15px;
+	}
+
+	.button-one{
+		border: solid 5px white;
+		padding: 10px;
+		padding-top: 16px; 
+		margin: auto;
+		width: 210px;
+		cursor: pointer;
+		margin-top: 290px;
+	}
+
+	.button-sign{
+		font-size: 20px;
+		line-height: 20px;
+		cursor: pointer;
+	}
+
+	.blue-title{
+		width: auto;
+	}
+
+	.margins{
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.linetwo-first{
+		margin-right: auto;
+	}
+
+	.linetwo-second{
+		margin-left: auto;
+	}
+
+	.button-second{
+		margin-bottom: 50px;
+	}
+
+	.button-third{
+		margin-bottom: 50px;
+	}
+
+	.margin-left{
+		margin-right: 0px;
+	}
+
+	.katalog{
+		width: 300px;
+	}
+
+	.catalog-holder{
+		width: 300px;	
+	}
+
+	.form-holder{
+		width: 300px;
+	}
+
+	.form-label{
+		display: block;
+		margin-top: 15px;
+	}
+
+	.form-line{
+		width: 300px;
+	}
+
+	.custom-input{
+		width: 290px;
+	}
+
+	.checkmark2 {
+  		top: -17px;
+	}
+
+	.button-fourth{
+		position: initial;
+		margin-bottom: 50px;
+	}
+}
+@media screen and (max-width: 660px) {
+    .container {
+        width: 310px;
+        padding: 0px;
+    }
+}
