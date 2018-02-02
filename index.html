@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/icons/favicon.ico">
     <script src="./assets/mobile-detect.min.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -23,7 +24,8 @@
     <link href="https://fonts.googleapis.com/css?family=Karla|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/karmilla" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=5">
+    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=6">
+    <script src="/tokensale/js/scripts.js?v=34" type="text/javascript"></script>
 
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
@@ -46,14 +48,14 @@
                             //$(".navbar").css('background-color', 'black');
                         } else {
                             if (!md.mobile()) {
-                              //  $('.navbar').css('background-color', 'transparent');
+                                //  $('.navbar').css('background-color', 'transparent');
                             }
                         }
                     });
                 }
             });
 
-           
+
             $(".xbutton").click(function () {
                 $('.andorid').css('display', 'none');
                 $('.ios').css('display', 'none');
@@ -63,7 +65,7 @@
             if (md.mobile()) {
                 if (md.os() == "AndroidOS") {
                     $('.andorid').css('display', 'block');
-                   // $('.navbar').css('background-color', 'black');
+                    // $('.navbar').css('background-color', 'black');
                 }
                 else if (md.os() == "iOS") {
                     $('.ios').css('display', 'block');
@@ -76,37 +78,44 @@
 </head>
 
 <body>
-    
-        <nav class="navbar navbar-fixed-top">
-            <div style="background:white; height:60px;">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar black"></span>
-                            <span class="icon-bar black"></span>
-                            <span class="icon-bar black"></span>
-                        </button>
-                        <a class="navbar-brand"><img src="assets/img/SUNCONTRACT-LOGO.png" class="nav-logo"></a>
-                    </div>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse navbar_height" id="myNavbar1">
-                        <ul class="nav navbar-nav navbar-right no">
-
-                            <li class="links"><a href="/tokensale/index.html" class="links-sign"> TOKEN SALE <div class="line"></div></a></li>
-                            <li class="links"><a href="https://suncontract.energy/login" class="links-sign"> LOGIN <div class="line"></div></a> </li>
-                            <li class="links"><a href="/pioneer/index.html" class="links-sign"> PIONEERS <div class="line"></div></a></li>
-
-
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
+    <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSHCP8J" height="0" width="0" class="noscript_frame"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->
+    <!-- Modal window for cookie consent -->
+    <div id="myModal" class="cookies_height">
+        <p class="cookies_notification">
+            This website uses cookies to ensure you get the best experience on our site.
+            <button id="allow_cookies_button" type="button" class="btn btn-success allow_cookies">Allow cookies</button>
+        </p>
+    </div>
+    <nav class="navbar navbar-fixed-top">
+        <div style="background:white; height:60px;">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar black"></span>
+                        <span class="icon-bar black"></span>
+                        <span class="icon-bar black"></span>
+                    </button>
+                    <a class="navbar-brand"><img src="assets/img/SUNCONTRACT-LOGO.png" class="nav-logo"></a>
                 </div>
-                <!-- /.container -->
-            </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar_height" id="myNavbar1">
+                    <ul class="nav navbar-nav navbar-right no">
 
-        </nav>
+                        <li class="links"><a href="/tokensale/index.html" class="links-sign"> TOKEN SALE <div class="line"></div></a></li>
+                        <li class="links"><a href="https://suncontract.energy/login" class="links-sign"> LOGIN <div class="line"></div></a> </li>
+                        <li class="links"><a href="/pioneer/index.html" class="links-sign"> PIONEERS <div class="line"></div></a></li>
+
+
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </div>
+
+    </nav>
 
 
     <div>
@@ -272,25 +281,25 @@
                 <div style="display: inline-block; ">
                     <a target="_blank" href="https://twitter.com/sun_contract"><img class="icon" id="twitter"><img></a>
                     <a target="_blank" href="https://www.facebook.com/suncontractorg/"><img class="icon" id="facebook"><img></a>
-                    <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img class="icon"  id="linkedin"><img></a>
-                    <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img class="icon" id="bitcoin" ><img></a>
-                    <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img id="reddit" class="icon" ><img></a>
+                    <a target="_blank" href="https://www.linkedin.com/company-beta/22304821/"><img class="icon" id="linkedin"><img></a>
+                    <a target="_blank" href="https://bitcointalk.org/index.php?topic=1934763.0"><img class="icon" id="bitcoin"><img></a>
+                    <a target="_blank" href="https://www.reddit.com/r/suncontract/"><img id="reddit" class="icon"><img></a>
                 </div>
-                <div style="display: inline-block;" >
-                    <a target="_blank" href="https://github.com/SunContract/"><img id="github" class="icon" ><img></a>
-                    <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img id="telegram" class="icon" ><img></a>
-                    <a target="_blank" href="https://medium.com/suncontract"><img id="medium" class="icon" ><img></a>
-                    <a target="_blank" href="/tokensale/wechat.html"><img id="wechat" class="icon" ><img></a>                    
+                <div style="display: inline-block;">
+                    <a target="_blank" href="https://github.com/SunContract/"><img id="github" class="icon"><img></a>
+                    <a target="_blank" href="https://t.me/joinchat/GL05EULsRTS7hxxMfXCTVw"><img id="telegram" class="icon"><img></a>
+                    <a target="_blank" href="https://medium.com/suncontract"><img id="medium" class="icon"><img></a>
+                    <a target="_blank" href="/tokensale/wechat.html"><img id="wechat" class="icon"><img></a>
                 </div>
             </div>
-           <!-- <div class="legal">
-                <a href="#"><div class="legal-sign" > Legal informations </div></a>
-                <a href="#"><div class="legal-sign"  > Terms of service </div></a>
-                <a href="#"><div class="legal-sign" > Privacy Policy </div></a>
-            </div>-->
+            <!-- <div class="legal">
+                 <a href="#"><div class="legal-sign" > Legal informations </div></a>
+                 <a href="#"><div class="legal-sign"  > Terms of service </div></a>
+                 <a href="#"><div class="legal-sign" > Privacy Policy </div></a>
+             </div>-->
             <div class="rights"></div><p class="rights-sign">
                 Copyright © 2018 All rigths reserved
-                </p>        
+            </p>
         </div>
     </div>
 

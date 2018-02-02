@@ -72,7 +72,16 @@
                     else{
                         remove_class();
                     }
+                    if (localStorage.getItem("hasShowConsent") === null) {
+                        show_consent();
 
+                        $("#allow_cookies_button").click(function () {
+                            localStorage.setItem("hasShowConsent", true);
+                            facebook_pixel();
+                            google_tag();
+                            google_ana();
+                        });
+                    }
                 $( window ).resize(function() {
                    if($(window).width() >= 1020 ){
                         add_Class();
@@ -123,16 +132,7 @@
             });
         }
         window.onload = function() {
-            if (localStorage.getItem("hasShowConsent") === null) {
-                show_consent();
-
-                $("#allow_cookies_button").click(function() {
-                    localStorage.setItem("hasShowConsent", true);
-                    facebook_pixel();
-                    google_tag();
-                    google_ana();
-                });
-            }
+            
         }
 
             function remove_active(name, name1, name2, name3){
