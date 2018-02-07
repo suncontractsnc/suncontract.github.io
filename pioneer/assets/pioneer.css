@@ -31,6 +31,25 @@
 	margin: auto;
 	padding: 15px;
 }
+.cookies_height {
+    height: 96px;
+    position: fixed;
+    bottom: 0px;
+    display: none;
+    z-index: 3;
+    width: 100%;
+    background-color: white;
+}
+
+.cookies_notification {
+    height: 24px;
+    color: #000000;
+    line-height: 24px;
+    font-weight: bold;
+    font-size: 16px;
+    padding-top: 24px;
+    text-align: center;
+}
 
 .pictureOne{
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0)10%, rgba(0, 0, 0, 0.38) 100%), url("img/first-part.jpg") no-repeat center center;
