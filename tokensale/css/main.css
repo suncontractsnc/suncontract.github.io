@@ -135,64 +135,48 @@ section {
 
 .pic1{
     display: inline-block;
-    width: 95px;
+    width: 145px;
 }
 
 .pic2{
     display: inline-block;
-    width: 97px;
-    margin-left: 25px;
+    width: 145px;
 }
 
 .pic3{
-    width: 45px;
-    margin-left: 25px;
-    margin-right: 110px;
+    width: 55px;
 }
 
 .pic4{
-        width: 50px;
-    margin-top: 20px;
-    margin-right: 20px;
-    position: relative;
-    left: -65px;
+        width: 60px;
 }
 
 .pic5{
-    width: 50px;
-    margin-top: 17px;
-    margin-left: 20px;
-    position: relative;
-    left: -45px;
+    width: 60px;
 }
+
+.pic1, .pic2,.pic3,.pic4,.pic5{
+    margin-top: 75px;
+    margin-bottom: 100px;
+}
+
+.pic2,.pic3,.pic4,.pic5{
+    margin-left: 80px;
+}
+
+.token-wallet-coinmark {  color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 19px; text-align: left; margin-left: 12px;}
+
+.section-exchanges{
+    width: 100%;
+    background-color: #0096d5;
+}
+
+
 
 @media(max-width: 1024px) {
     .pic1, .pic2, .pic3, .pic4, .pic5{
-        display: inline-block;
-    }
-
-    .pic2{
-        margin-right: 35px;
-        position: relative;
-        top: 5px;
-     
-    }
-    .pic3{
-         margin-left: 0px;
-    margin-right: 0px;
-    position: relative;
-    left: -26px;
-    top: 10px;
-}
-    
-
-    .pic4{
-        left: 0px;
-        margin-right: 0px;
-    }
-    .pic5{
-        left: 0px;
-        margin-right: 0px;
+        display: block;
+        margin: 45px auto;
     }
 }
 
@@ -1263,6 +1247,8 @@ footer .separator {
         padding: 0px;
         padding-top: 50px;
     }
+
+
     .vision #visionright p {
         padding-top: 0px;
         text-align: justify;
@@ -1449,7 +1435,7 @@ footer .separator {
 }
 
     .row_margin_desktop{
-        margin-top: 82px;
+        margin-top: 45px;
     }
 
     .subscribe {    
@@ -1488,17 +1474,22 @@ footer .separator {
     color: white !important;
     }
 
+    .section2_padding{
+        display: inline-block;
+        width: 30%;
+    }
 
+    #two{
+        margin-left: 23%;
+    }
 
     .line-2 {   box-sizing: border-box; height: 107px;  width: 3px; border: 1px solid #FFFFFF; float: left; background-color: rgba(255,255,255,1);}
     .exchanges {height: 24px;   width: 94px;    color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px; margin-left: 9px;}
     .line-3 {   box-sizing: border-box; height: 100%;   width: 3px; border: 1px solid #FFFFFF; float: left; background-color: rgba(255,255,255,1);}
     .exchange_picture_1{float: left; margin-left: 15px; margin-top: 28px;}
     .exchange_picture_2{float: left; margin-left: 35px; margin-top: 28px;}
-    .section2_padding{padding-left: 37.5px;}
-    .section2_padding2{padding-left: 50px;}
     .wallets {  height: 16px;   width: 69px;  margin-left: 9px; margin-bottom: 4px;  color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 24px;}
-    .token-wallet-coinmark {  color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 19px; text-align: left; margin-left: 12px;}
+    
     .section2_secondcolumn{height: 40px; margin-top: 0px;}
     .buy-with-snc { height: 24px; width: 112px; color: #FFFFFF; font-family: Karla; font-size: 16px;    font-weight: bold;  line-height: 18px;  margin-left: 9px;}
     .sonce-group-solar-po { height: 72px;   width: 264px; text-align: left; margin-left: 12px;  color: #FFFFFF; font-family: Karla; font-size: 16px;    line-height: 24px;}
@@ -1703,7 +1694,7 @@ footer .separator {
     margin-left: -19px;
     }
         .row_margin_desktop{
-        margin-top: 50px;
+        margin-top: 30px;
     }
 
     .subscribe {    
@@ -1889,6 +1880,12 @@ footer .separator {
         
         margin-right: 5px;
     }
+
+
+    .mobile-title{
+        margin-top: 50px;   
+    }
+
 }
 
 .menu_mobile_closed{
@@ -1906,7 +1903,7 @@ footer .separator {
     .sponsor_picture4 {width: 107px;}
 
 .clipped{
-      clip-path: inset(0px 0px 490px 0px); 
+      clip-path: inset(0px 0px 125px 0px); 
       height: 1128px; width: 400px; position: absolute; right: 610px; background: url('../img/timeline-crtice-01.svg') center no-repeat;
 }
 
@@ -1994,7 +1991,7 @@ footer .separator {
 }
 
 .section2_main{
-    background-color: #3491D2; min-height: 482px;
+    background-color: #3491D2; min-height: 420px;
 }
 
 .sec2_top{
