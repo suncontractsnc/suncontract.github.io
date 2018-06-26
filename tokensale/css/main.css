@@ -40,6 +40,8 @@ body {
     height: 0;
     padding-bottom: 56.25%;
 }
+
+
 .videocontainer iframe {
     position: absolute;
     top: 0;
@@ -2188,4 +2190,11 @@ position: relative; left: 50px;
 .white_color{
     color: white;
     opacity: 1;
+}
+
+.spider-logo{
+    width: 100px !important;
+    height: 100px !important;
+    margin-top: 25px;
+
 }
