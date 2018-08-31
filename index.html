@@ -24,8 +24,8 @@
     <link href="https://fonts.googleapis.com/css?family=Karla|Open+Sans" rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/karmilla" type="text/css" />
 
-    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=6">
-    <script src="/tokensale/js/scripts.js?v=34" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/index-page.css?v=7">
+    <script src="/tokensale/js/scripts.js?v=35" type="text/javascript"></script>
 
     <meta property="og:title" content="SunContract" />
     <meta property="og:description" content="SunContract - Decentralized Energy Market" />
@@ -36,39 +36,36 @@
     <meta property="fb:app_id" content="147460225858192" />
     <meta name="twitter:image" content="https://suncontract.org/img/tw.png" />
     <script type="text/javascript">
-        window.onload = function () {
+        window.onload = function () { 
             $(document).ready(function () {
-                var scroll_start = 0;
-                var startchange = $('#scr');
-                var offset = startchange.offset();
-                if (startchange.length) {
-                    $(document).scroll(function () {
-                        scroll_start = $(this).scrollTop();
-                        if (scroll_start > offset.top) {
-                            //$(".navbar").css('background-color', 'black');
-                        } else {
-                            if (!md.mobile()) {
-                                //  $('.navbar').css('background-color', 'transparent');
-                            }
-                        }
-                    });
-                }
+                $.ajax({url: "https://publicapi.suncontract.energy/api/v1/CoinMarketCap/GetCurrentPrice", success: function(result){
+                    var t = result.priceEur.toFixed(4);
+                    document.getElementById('coinmarket-price').innerHTML = '€' + t
+                    var percent = result.change1h.toFixed(2);
+                    if(percent < 0){
+                        $("#coinmarket-percent").addClass("lower");
+                        document.getElementById('coinmarket-percent').innerHTML = "<i class='fa fa-long-arrow-down'></i>("+percent+"%)"
+                    }else{
+                        $("#coinmarket-percent").addClass("higher");
+                        document.getElementById('coinmarket-percent').innerHTML = "<i class='fa fa-long-arrow-up'></i>("+percent+"%)"
+                    }
+                }});
             });
 
-
             $(".xbutton").click(function () {
-                $('.andorid').css('display', 'none');
+                $('.android').css('display', 'none');
                 $('.ios').css('display', 'none');
             });
 
             var md = new MobileDetect(window.navigator.userAgent);
+            console.log(md);
             if (md.mobile()) {
                 if (md.os() == "AndroidOS") {
-                    $('.andorid').css('display', 'block');
+                    $('.android').css('display', 'block');
                     // $('.navbar').css('background-color', 'black');
                 }
                 else if (md.os() == "iOS") {
-                 //   $('.ios').css('display', 'block');
+                    $('.ios').css('display', 'block');
                     //$('.navbar').css('background-color', 'black');
                 }
             }
@@ -85,10 +82,11 @@
             This website uses cookies to ensure you get the best experience on our site.
             <button id="allow_cookies_button" type="button" class="btn btn-success allow_cookies">Allow cookies</button>
         </p>
-    </div>
+    </div>  
+
     <nav class="navbar navbar-fixed-top">
         <div style="background:white; height:60px;">
-            <div class="container-fluid">
+            <div class="container-fluid white-color">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
@@ -105,6 +103,7 @@
                        
                         <li class="links"><a href="/tokensale/index.html" class="links-sign"> ABOUT <div class="line"></div></a></li>
                         <li class="links"><a href="https://suncontract.energy" class="links-sign"> LOGIN <div class="line"></div></a> </li>
+                        <li class="links"><a href="/history/index.html" class="links-sign"> PLATFORM RATE <div class="line"></div></a></li>
                         <li class="links"><a href="https://auth.suncontract.org/auth/realms/SunContract/protocol/openid-connect/registrations?client_id=account-management-web&redirect_uri=https%3A%2F%2Fsuncontract.energy%2F&state=64eb081c-2875-430e-855d-d79d2e11af68&nonce=26dafa29-3cb7-4507-820d-e5d03b9d1708&response_mode=fragment&response_type=code&scope=openid"> JOIN PLATFORM <div class="line"></div></a></li>
 
 
@@ -112,6 +111,41 @@
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
+            <div class="coinmarket">
+                    <p> 
+                        <img src="assets/img/Nsymbol.svg" class="snc-logo-white">
+                        <span>SunContract (SNC)</span> 
+                        <span class="coinmarket-price" id="coinmarket-price"> €0.0</span> 
+                        <span class="coinmarket-percent" id="coinmarket-percent"> <i class="fa fa-long-arrow-down"></i>(0,0%) </span>
+                    </p>
+            </div>
+            <div class="getapp android">
+                <div class="container-fluid header">
+                    <div class="header-text"> Get SunContract app for Android </div> 
+                    <div class="header-image">
+                    <a href='https://play.google.com/store/apps/details?id=org.suncontract.app'>
+                        <img height="40" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' />
+                    </a>
+                    </div>
+                    <div class="header-exit">
+                    <img src="./assets/img/x.png"  width="13" class="xbutton">
+                    </div>
+                </div>
+            </div>
+            <div class="getapp ios">
+                <div class="container-fluid header">
+                    <div class="header-text"> Get SunContract app for iOS </div> 
+                    <div class="header-image">
+                        <a href='https://itunes.apple.com/si/app/suncontract/id1324953609?mt=8'>
+                            <img height="35" alt='Downlaod on the App Store' src='https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg' />
+                        </a>
+                    </div>
+                    <div class="header-exit">
+                    <img src="./assets/img/x.png"  width="13" class="xbutton">
+                    </div>
+                </div>
+            </div>
+
             <!-- /.container -->
         </div>
 
@@ -213,6 +247,9 @@
                     </a>
                     <a href='https://play.google.com/store/apps/details?id=org.suncontract.app'>
                         <img width="150" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' />
+                    </a>
+                    <a href='https://itunes.apple.com/si/app/suncontract/id1324953609?mt=8'>
+                        <img width="150" alt='Downlaod on the App Store' style="height: 43.5px;" src='https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg' />
                     </a>
                    
                 </div>

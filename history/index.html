@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="description" content="SunContract - Decentralized Energy Market">
+        <meta name="keywords" content="SunContract,Decentralized,Energy Market,Ethereum,ETH,Solar, Blockchain, P2P Energy">
+        <meta name="author" content="SunContract Team"> -->
+    <title>SunContract</title>
+    <link rel="icon" href="assets/icons/favicon.ico">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/index-page.css?v=6">
+    <link rel="stylesheet" type="text/css" href="./assets/css/history.css?v=6">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <meta property="og:title" content="SunContract" />
+    <meta property="og:description" content="SunContract - Decentralized Energy Market" />
+    <meta property="og:site_name" content="SunContract" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://suncontract.org/" />
+    <meta property="og:image" content="https://suncontract.org/img/fb.png" />
+    <meta property="fb:app_id" content="147460225858192" />
+    <meta name="twitter:image" content="https://suncontract.org/img/tw.png" />
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $.ajax({
+            url: "https://publicapi.suncontract.energy/api/v1/CoinMarketCap/GetCurrentPrice",
+            success: function(result) {
+                var t = result.priceEur.toFixed(4);
+                document.getElementById('coinmarket-price').innerHTML = '€' + t
+                document.getElementById('eurovalue').innerHTML = t
+                var percent = result.change1h.toFixed(2);
+                if (percent < 0) {
+                    $("#coinmarket-percent").addClass("lower");
+                    document.getElementById('coinmarket-percent').innerHTML = "<i class='fa fa-long-arrow-down'></i>(" + percent + "%)"
+                } else {
+                    $("#coinmarket-percent").addClass("higher");
+                    document.getElementById('coinmarket-percent').innerHTML = "<i class='fa fa-long-arrow-up'></i>(" + percent + "%)"
+                }
+            }
+        });
+    })
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div style="background:white; height:60px;">
+            <div class="container-fluid white-color">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar black"></span>
+                        <span class="icon-bar black"></span>
+                        <span class="icon-bar black"></span>
+                    </button>
+                    <a class="navbar-brand"><img src="../assets/img/SUNCONTRACT-LOGO.png" class="nav-logo"></a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar_height" id="myNavbar1">
+                    <ul class="nav navbar-nav navbar-right no">
+                        <li class="links"><a href="/tokensale/index.html" class="links-sign"> ABOUT <div class="line"></div></a></li>
+                        <li class="links"><a href="https://suncontract.energy" class="links-sign"> LOGIN <div class="line"></div></a> </li>
+                        <li class="links"><a href="/history/index.html" class="links-sign active-history"> HISTORY <div class="line"></div></a></li>
+                        <li class="links"><a href="https://auth.suncontract.org/auth/realms/SunContract/login-actions/authenticate?client_id=account-management-web&tab_id=1I4fulwzNLw"> JOIN PLATFORM <div class="line"></div></a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <div class="coinmarket">
+                <p>
+                    <img src="../assets/img/Nsymbol.svg" class="snc-logo-white">
+                    <span>SunContract (SNC)</span>
+                    <span class="coinmarket-price" id="coinmarket-price"> €0.0</span>
+                    <span class="coinmarket-percent" id="coinmarket-percent"> <i class="fa fa-long-arrow-down"></i>(0,0%) </span>
+                </p>
+            </div>
+        </div>
+    </nav>
+    <div class="history_container">
+        <p class="rates">SNC/EUR exchange rates for specific month</p>
+
+        <div class="history-half">
+            <p class="history-converter-title">1 SNC = <span id="eurovalue">0,0</span> EUR</p>
+            <p class="history-converter-text">Real-time data</p>
+        </div>
+        <div class="history-half second">
+            <div class="datepicker-holder">
+                <p class="datepicker-label">Select a month: </p>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar">
+                                </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $(function() {
+                $('#datetimepicker').datetimepicker({
+                    viewMode: 'months',
+                    format: 'MM / YYYY',
+                    minDate: moment("2018-07-01"),
+                    maxDate: moment(),
+                    defaultDate: moment().add(-1, 'days'),
+                    debug: true
+                });
+            });
+            var loading = false;
+            $('#datetimepicker').on("dp.change", function() {
+                if (!loading) {
+                    loading = true;
+                    if ($('#datetimepicker').data('DateTimePicker') != null) {
+                        var SelectedDate = $('#datetimepicker').data('DateTimePicker').date();
+                        var month = SelectedDate.month() + 1;
+                        var year = SelectedDate.year();
+                    } else {
+                        var SelectedDate = moment();
+                        var month = SelectedDate.month() + 1;
+                        var year = SelectedDate.year();
+                    }
+                    $.ajax({
+                        url: "https://publicapi.suncontract.energy/api/v1/CoinMarketCap/GetAveragePrices?year=" + year + "&month=" + month,
+                        success: function(result) {
+                            $('#table').find('tbody').empty()
+                            $.each(result, function(index, object) {
+                                $('#table').find('tbody').prepend(
+                                    "<tr>" +
+                                    "<td>" + moment(object.dateTime).format("D MMM YYYY") + "</td>" +
+                                    "<td>" + object.averagePrice.toFixed(4) + "</td>" +
+                                    "</tr>"
+                                );
+                            });
+                            $('#table').find('tbody').append("<p style=\"font-family: 'Geomanist-reg';font-size: 7pt;\">The daily rate is determined as the average exchange rate EUR / SNC published between 12.00 and 16.00 (UTC) on the <a href=\"https://coinmarketcap.com\">https://coinmarketcap.com</a>.</p>");
+                            loading = false;
+                        },
+                        error: function(error) {
+                            loading = false;
+                            console.log(error)
+                        }
+                    });
+                }
+            });
+            </script>
+        </div>
+        <div>
+            <table class="table table-striped" id="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Rate (EUR)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                 
+            </table>
+
+        </div>
+    </div>
+</body>
+
+</html>
