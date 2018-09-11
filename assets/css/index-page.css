@@ -480,6 +480,41 @@ a:focus, a:hover{
 }
 
 
+.mos_bg{
+    background-image: url('../img/MOS_banner.png');
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.modal-header{
+  border-bottom: none;
+}
+
+.modal-footer{
+  border-top: none;
+  margin-top: 400px;
+  text-align: center;
+}
+
+.mos_redirect{
+    width: 35%;
+    color: black;
+    display: inline-block;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 0px 1px white;
+    cursor: pointer;
+    background-color: #0096d5;
+    border-radius: 6px;
+    margin: 0px 20px;
+}
+
+.noOpacity{
+  opacity: 1;
+}
+
      /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 550px) {
   .content-container{
@@ -857,6 +892,33 @@ a:focus, a:hover{
     .coinmarket{
     font-size: 12px;
   }
+
+  .mos_bg{
+    height: 90vw;
+    background-size: cover;
+  }
+
+  .modal-footer {
+    border-top: none;
+    margin-top: 46vw;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .modal-footer {
+    border-top: none;
+    margin-top: 33vw;
+  }
+
+  .mos_redirect{
+    font-size: 18px;
+    width: 32%;
+  }
+
+  .btn-mobile{
+    font-size: 12px;
+  }
+
 }
 
 @media screen and (max-width: 375px) {
